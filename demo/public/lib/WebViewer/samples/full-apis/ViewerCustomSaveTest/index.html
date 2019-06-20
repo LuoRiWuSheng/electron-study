@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html">
+    <script src="../../../lib/webviewer.min.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+    <script src="../modernizr.custom.min.js"></script>
+
+</head>
+
+<body style="width:100%;height:100%;margin:0px;padding:0px;overflow:hidden">
+    <div id="viewer" style="height: 100%; overflow: hidden;"></div>
+    <script>
+    /* global Modernizr */
+    var viewerElement = document.getElementById('viewer');
+    Modernizr.addTest('async', function() {
+      try {
+        var result;
+        // eslint-disable-next-line no-eval
+        eval('var a = () => {result = "success"}; var b = async () => {await a()}; b()');
+        return result === 'success';
+      } catch (e) {
+        return false;
+      }
+    });
+    var config = Modernizr.async ? 'config.js' : 'configES5.js';
+    // eslint-disable-next-line no-unused-vars
+    var myWebViewer = new PDFTron.WebViewer({
+      type: 'html5',
+      path: '../../../lib',
+      l: window.sampleL, // replace with your own license key and remove the license-key.js script tag
+      initialDoc: '../TestFiles/form1.pdf',
+      config: config,
+      documentType: 'pdf',
+      showLocalFilePicker: true,
+      annotationAdmin: true,
+      fullAPI: true
+    }, viewerElement);
+    </script>
+</body>
+</html>

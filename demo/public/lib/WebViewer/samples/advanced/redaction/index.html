@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../../lib/webviewer.min.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Redaction sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Choose a file to view</h2>
+      <select id="select" style="width: 100%">
+        <option value="../../../samples/full-apis/TestFiles/newsletter.pdf">../../../samples/full-apis/TestFiles/newsletter.pdf</option>
+      </select>
+      <h2>Or pass a url to a document</h2>
+      <form id="url-form">
+        <input id="url" type="text" style="width: 100%" />
+        <input type="submit" value="Submit">
+      </form>
+      <h2>Or choose your own</h2>
+      <input id="file-picker" type="file" accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.pptx,.md" />
+      <hr />
+      <h1>Instructions</h1>
+      <p>Select the redaction tool from toolbar and select text or a region of the document.
+        When you're ready to apply the redactions and permanently remove selected text or regions,
+        select the redaction button from toolbar and choose the apply redaction option from the sub-menu.</p>
+    </aside>
+    <div id="viewer"></div>
+    <script src="../../menu-button.js"></script>
+    <script src="redaction-viewer.js"></script>
+
+  </body>
+</html>

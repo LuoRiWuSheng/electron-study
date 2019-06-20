@@ -1,0 +1,2320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>PDFTron WebViewer HTML5 Class: PDFACompliance</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">PDFTron WebViewer HTML5</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Actions.html">Actions</a></li><li><a href="Annotations.html">Annotations</a></li><li><a href="CoreControls.html">CoreControls</a></li><li><a href="PartRetrievers.html">PartRetrievers</a></li><li><a href="PDFNet.html">PDFNet</a></li><li><a href="PDFTron.html">PDFTron</a></li><li><a href="Tools.html">Tools</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Actions.Action.html">Actions.Action</a></li><li><a href="Actions.Dispatcher.html">Actions.Dispatcher</a></li><li><a href="Actions.GoTo.html">Actions.GoTo</a></li><li><a href="Actions.GoTo.Dest.html">Actions.GoTo.Dest</a></li><li><a href="Actions.GoToR.html">Actions.GoToR</a></li><li><a href="Actions.Hide.html">Actions.Hide</a></li><li><a href="Actions.JavaScript.html">Actions.JavaScript</a></li><li><a href="Actions.Named.html">Actions.Named</a></li><li><a href="Actions.ResetForm.html">Actions.ResetForm</a></li><li><a href="Actions.SubmitForm.html">Actions.SubmitForm</a></li><li><a href="Actions.URI.html">Actions.URI</a></li><li><a href="Annotations.Annotation.html">Annotations.Annotation</a></li><li><a href="Annotations.Border.html">Annotations.Border</a></li><li><a href="Annotations.BoxControlHandle.html">Annotations.BoxControlHandle</a></li><li><a href="Annotations.BoxSelectionModel.html">Annotations.BoxSelectionModel</a></li><li><a href="Annotations.ButtonWidgetAnnotation.html">Annotations.ButtonWidgetAnnotation</a></li><li><a href="Annotations.CalloutControlHandle.html">Annotations.CalloutControlHandle</a></li><li><a href="Annotations.CalloutSelectionModel.html">Annotations.CalloutSelectionModel</a></li><li><a href="Annotations.CaretAnnotation.html">Annotations.CaretAnnotation</a></li><li><a href="Annotations.CheckButtonWidgetAnnotation.html">Annotations.CheckButtonWidgetAnnotation</a></li><li><a href="Annotations.ChoiceWidgetAnnotation.html">Annotations.ChoiceWidgetAnnotation</a></li><li><a href="Annotations.Color.html">Annotations.Color</a></li><li><a href="Annotations.ControlHandle.html">Annotations.ControlHandle</a></li><li><a href="Annotations.CustomAnnotation.html">Annotations.CustomAnnotation</a></li><li><a href="Annotations.EllipseAnnotation.html">Annotations.EllipseAnnotation</a></li><li><a href="Annotations.Font.html">Annotations.Font</a></li><li><a href="Annotations.Forms.html">Annotations.Forms</a></li><li><a href="Annotations.Forms.Field.html">Annotations.Forms.Field</a></li><li><a href="Annotations.Forms.FieldManager.html">Annotations.Forms.FieldManager</a></li><li><a href="Annotations.FreeHandAnnotation.html">Annotations.FreeHandAnnotation</a></li><li><a href="Annotations.FreeTextAnnotation.html">Annotations.FreeTextAnnotation</a></li><li><a href="Annotations.FreeTextSelectionModel.html">Annotations.FreeTextSelectionModel</a></li><li><a href="Annotations.HTMLAnnotation.html">Annotations.HTMLAnnotation</a></li><li><a href="Annotations.IPathAnnotation.html">Annotations.IPathAnnotation</a></li><li><a href="Annotations.LineAnnotation.html">Annotations.LineAnnotation</a></li><li><a href="Annotations.LineControlHandle.html">Annotations.LineControlHandle</a></li><li><a href="Annotations.LineSelectionModel.html">Annotations.LineSelectionModel</a></li><li><a href="Annotations.Link.html">Annotations.Link</a></li><li><a href="Annotations.ListWidgetAnnotation.html">Annotations.ListWidgetAnnotation</a></li><li><a href="Annotations.MarkupAnnotation.html">Annotations.MarkupAnnotation</a></li><li><a href="Annotations.PathControlHandle.html">Annotations.PathControlHandle</a></li><li><a href="Annotations.PathSelectionModel.html">Annotations.PathSelectionModel</a></li><li><a href="Annotations.Point.html">Annotations.Point</a></li><li><a href="Annotations.PolygonAnnotation.html">Annotations.PolygonAnnotation</a></li><li><a href="Annotations.PolygonControlHandle.html">Annotations.PolygonControlHandle</a></li><li><a href="Annotations.PolygonSelectionModel.html">Annotations.PolygonSelectionModel</a></li><li><a href="Annotations.PolylineAnnotation.html">Annotations.PolylineAnnotation</a></li><li><a href="Annotations.PopupAnnotation.html">Annotations.PopupAnnotation</a></li><li><a href="Annotations.Quad.html">Annotations.Quad</a></li><li><a href="Annotations.RadioButtonWidgetAnnotation.html">Annotations.RadioButtonWidgetAnnotation</a></li><li><a href="Annotations.Rect.html">Annotations.Rect</a></li><li><a href="Annotations.RectangleAnnotation.html">Annotations.RectangleAnnotation</a></li><li><a href="Annotations.RedactionAnnotation.html">Annotations.RedactionAnnotation</a></li><li><a href="Annotations.RedactionSelectionModel.html">Annotations.RedactionSelectionModel</a></li><li><a href="Annotations.SelectionModel.html">Annotations.SelectionModel</a></li><li><a href="Annotations.SignatureWidgetAnnotation.html">Annotations.SignatureWidgetAnnotation</a></li><li><a href="Annotations.StampAnnotation.html">Annotations.StampAnnotation</a></li><li><a href="Annotations.StickyAnnotation.html">Annotations.StickyAnnotation</a></li><li><a href="Annotations.TextHighlightAnnotation.html">Annotations.TextHighlightAnnotation</a></li><li><a href="Annotations.TextMarkupAnnotation.html">Annotations.TextMarkupAnnotation</a></li><li><a href="Annotations.TextSelectionModel.html">Annotations.TextSelectionModel</a></li><li><a href="Annotations.TextSquigglyAnnotation.html">Annotations.TextSquigglyAnnotation</a></li><li><a href="Annotations.TextStrikeoutAnnotation.html">Annotations.TextStrikeoutAnnotation</a></li><li><a href="Annotations.TextUnderlineAnnotation.html">Annotations.TextUnderlineAnnotation</a></li><li><a href="Annotations.TextWidgetAnnotation.html">Annotations.TextWidgetAnnotation</a></li><li><a href="Annotations.WidgetAnnotation.html">Annotations.WidgetAnnotation</a></li><li><a href="Annotations.WidgetFlags.html">Annotations.WidgetFlags</a></li><li><a href="CoreControls.AnnotationManager.html">CoreControls.AnnotationManager</a></li><li><a href="CoreControls.BlackBoxAnnotationManager.html">CoreControls.BlackBoxAnnotationManager</a></li><li><a href="CoreControls.Bookmark.html">CoreControls.Bookmark</a></li><li><a href="CoreControls.DisplayMode.html">CoreControls.DisplayMode</a></li><li><a href="CoreControls.DisplayModeManager.html">CoreControls.DisplayModeManager</a></li><li><a href="CoreControls.Document.html">CoreControls.Document</a></li><li><a href="CoreControls.DocumentViewer.html">CoreControls.DocumentViewer</a></li><li><a href="PartRetrievers.AndroidContentPartRetriever.html">PartRetrievers.AndroidContentPartRetriever</a></li><li><a href="PartRetrievers.ArrayBufferPdfPartRetriever.html">PartRetrievers.ArrayBufferPdfPartRetriever</a></li><li><a href="PartRetrievers.AzurePartRetriever.html">PartRetrievers.AzurePartRetriever</a></li><li><a href="PartRetrievers.ExternalPdfPartRetriever.html">PartRetrievers.ExternalPdfPartRetriever</a></li><li><a href="PartRetrievers.HttpPartRetriever.html">PartRetrievers.HttpPartRetriever</a></li><li><a href="PartRetrievers.IOSPartRetriever.html">PartRetrievers.IOSPartRetriever</a></li><li><a href="PartRetrievers.LocalPartRetriever.html">PartRetrievers.LocalPartRetriever</a></li><li><a href="PartRetrievers.LocalPdfPartRetriever.html">PartRetrievers.LocalPdfPartRetriever</a></li><li><a href="PartRetrievers.MagicPartRetriever.html">PartRetrievers.MagicPartRetriever</a></li><li><a href="PartRetrievers.PartRetriever.html">PartRetrievers.PartRetriever</a></li><li><a href="PartRetrievers.RangeStreamingPartRetriever.html">PartRetrievers.RangeStreamingPartRetriever</a></li><li><a href="PartRetrievers.StreamingPartRetriever.html">PartRetrievers.StreamingPartRetriever</a></li><li><a href="PartRetrievers.WinRTPartRetriever.html">PartRetrievers.WinRTPartRetriever</a></li><li><a href="PDFNet.Action.html">PDFNet.Action</a></li><li><a href="PDFNet.ActionParameter.html">PDFNet.ActionParameter</a></li><li><a href="PDFNet.Annot.html">PDFNet.Annot</a></li><li><a href="PDFNet.AnnotBorderStyle.html">PDFNet.AnnotBorderStyle</a></li><li><a href="PDFNet.AppearanceReferenceList.html">PDFNet.AppearanceReferenceList</a></li><li><a href="PDFNet.AttrObj.html">PDFNet.AttrObj</a></li><li><a href="PDFNet.Bookmark.html">PDFNet.Bookmark</a></li><li><a href="PDFNet.CaretAnnot.html">PDFNet.CaretAnnot</a></li><li><a href="PDFNet.ChunkRenderer.html">PDFNet.ChunkRenderer</a></li><li><a href="PDFNet.CircleAnnot.html">PDFNet.CircleAnnot</a></li><li><a href="PDFNet.ClassMap.html">PDFNet.ClassMap</a></li><li><a href="PDFNet.ColorPt.html">PDFNet.ColorPt</a></li><li><a href="PDFNet.ColorSpace.html">PDFNet.ColorSpace</a></li><li><a href="PDFNet.ContentItem.html">PDFNet.ContentItem</a></li><li><a href="PDFNet.ContentReplacer.html">PDFNet.ContentReplacer</a></li><li><a href="PDFNet.ConversionMonitor.html">PDFNet.ConversionMonitor</a></li><li><a href="PDFNet.Convert.html">PDFNet.Convert</a></li><li><a href="PDFNet.Date.html">PDFNet.Date</a></li><li><a href="PDFNet.Destination.html">PDFNet.Destination</a></li><li><a href="PDFNet.DictIterator.html">PDFNet.DictIterator</a></li><li><a href="PDFNet.DocumentConversion.html">PDFNet.DocumentConversion</a></li><li><a href="PDFNet.Element.html">PDFNet.Element</a></li><li><a href="PDFNet.ElementBuilder.html">PDFNet.ElementBuilder</a></li><li><a href="PDFNet.ElementReader.html">PDFNet.ElementReader</a></li><li><a href="PDFNet.ElementWriter.html">PDFNet.ElementWriter</a></li><li><a href="PDFNet.FDFDoc.html">PDFNet.FDFDoc</a></li><li><a href="PDFNet.FDFField.html">PDFNet.FDFField</a></li><li><a href="PDFNet.Field.html">PDFNet.Field</a></li><li><a href="PDFNet.FileAttachmentAnnot.html">PDFNet.FileAttachmentAnnot</a></li><li><a href="PDFNet.FileSpec.html">PDFNet.FileSpec</a></li><li><a href="PDFNet.Filter.html">PDFNet.Filter</a></li><li><a href="PDFNet.FilterReader.html">PDFNet.FilterReader</a></li><li><a href="PDFNet.FilterWriter.html">PDFNet.FilterWriter</a></li><li><a href="PDFNet.Flattener.html">PDFNet.Flattener</a></li><li><a href="PDFNet.Font.html">PDFNet.Font</a></li><li><a href="PDFNet.FreeTextAnnot.html">PDFNet.FreeTextAnnot</a></li><li><a href="PDFNet.Function.html">PDFNet.Function</a></li><li><a href="PDFNet.GeometryCollection.html">PDFNet.GeometryCollection</a></li><li><a href="PDFNet.GState.html">PDFNet.GState</a></li><li><a href="PDFNet.HighlightAnnot.html">PDFNet.HighlightAnnot</a></li><li><a href="PDFNet.Highlights.html">PDFNet.Highlights</a></li><li><a href="PDFNet.HTML2PDF.html">PDFNet.HTML2PDF</a></li><li><a href="PDFNet.HTML2PDF_Proxy.html">PDFNet.HTML2PDF_Proxy</a></li><li><a href="PDFNet.HTML2PDF_TOCSettings.html">PDFNet.HTML2PDF_TOCSettings</a></li><li><a href="PDFNet.HTML2PDF_WebPageSettings.html">PDFNet.HTML2PDF_WebPageSettings</a></li><li><a href="PDFNet.Image.html">PDFNet.Image</a></li><li><a href="PDFNet.InkAnnot.html">PDFNet.InkAnnot</a></li><li><a href="PDFNet.Iterator.html">PDFNet.Iterator</a></li><li><a href="PDFNet.KeyStrokeActionResult.html">PDFNet.KeyStrokeActionResult</a></li><li><a href="PDFNet.KeyStrokeEventData.html">PDFNet.KeyStrokeEventData</a></li><li><a href="PDFNet.LineAnnot.html">PDFNet.LineAnnot</a></li><li><a href="PDFNet.LinkAnnot.html">PDFNet.LinkAnnot</a></li><li><a href="PDFNet.MarkupAnnot.html">PDFNet.MarkupAnnot</a></li><li><a href="PDFNet.Matrix2D.html">PDFNet.Matrix2D</a></li><li><a href="PDFNet.MovieAnnot.html">PDFNet.MovieAnnot</a></li><li><a href="PDFNet.NameTree.html">PDFNet.NameTree</a></li><li><a href="PDFNet.NumberTree.html">PDFNet.NumberTree</a></li><li><a href="PDFNet.Obj.html">PDFNet.Obj</a></li><li><a href="PDFNet.ObjSet.html">PDFNet.ObjSet</a></li><li><a href="PDFNet.OCG.html">PDFNet.OCG</a></li><li><a href="PDFNet.OCGConfig.html">PDFNet.OCGConfig</a></li><li><a href="PDFNet.OCGContext.html">PDFNet.OCGContext</a></li><li><a href="PDFNet.OCMD.html">PDFNet.OCMD</a></li><li><a href="PDFNet.Optimizer.html">PDFNet.Optimizer</a></li><li><a href="PDFNet.OwnedBitmap.html">PDFNet.OwnedBitmap</a></li><li><a href="PDFNet.Page.html">PDFNet.Page</a></li><li><a href="PDFNet.PageLabel.html">PDFNet.PageLabel</a></li><li><a href="PDFNet.PageSet.html">PDFNet.PageSet</a></li><li><a href="PDFNet.PatternColor.html">PDFNet.PatternColor</a></li><li><a href="PDFNet.PDFACompliance.html">PDFNet.PDFACompliance</a></li><li><a href="PDFNet.PDFDC.html">PDFNet.PDFDC</a></li><li><a href="PDFNet.PDFDCEX.html">PDFNet.PDFDCEX</a></li><li><a href="PDFNet.PDFDoc.html">PDFNet.PDFDoc</a></li><li><a href="PDFNet.PDFDocInfo.html">PDFNet.PDFDocInfo</a></li><li><a href="PDFNet.PDFDocViewPrefs.html">PDFNet.PDFDocViewPrefs</a></li><li><a href="PDFNet.PDFDraw.html">PDFNet.PDFDraw</a></li><li><a href="PDFNet.PDFNet.html">PDFNet.PDFNet</a></li><li><a href="PDFNet.PDFRasterizer.html">PDFNet.PDFRasterizer</a></li><li><a href="PDFNet.PDFView.html">PDFNet.PDFView</a></li><li><a href="PDFNet.PDFViewCtrl.html">PDFNet.PDFViewCtrl</a></li><li><a href="PDFNet.Point.html">PDFNet.Point</a></li><li><a href="PDFNet.PolygonAnnot.html">PDFNet.PolygonAnnot</a></li><li><a href="PDFNet.PolyLineAnnot.html">PDFNet.PolyLineAnnot</a></li><li><a href="PDFNet.PopupAnnot.html">PDFNet.PopupAnnot</a></li><li><a href="PDFNet.ProgressMonitor.html">PDFNet.ProgressMonitor</a></li><li><a href="PDFNet.QuadPoint.html">PDFNet.QuadPoint</a></li><li><a href="PDFNet.Rect.html">PDFNet.Rect</a></li><li><a href="PDFNet.Redaction.html">PDFNet.Redaction</a></li><li><a href="PDFNet.RedactionAnnot.html">PDFNet.RedactionAnnot</a></li><li><a href="PDFNet.RedactionAppearance.html">PDFNet.RedactionAppearance</a></li><li><a href="PDFNet.Redactor.html">PDFNet.Redactor</a></li><li><a href="PDFNet.RoleMap.html">PDFNet.RoleMap</a></li><li><a href="PDFNet.RubberStampAnnot.html">PDFNet.RubberStampAnnot</a></li><li><a href="PDFNet.ScreenAnnot.html">PDFNet.ScreenAnnot</a></li><li><a href="PDFNet.SDFDoc.html">PDFNet.SDFDoc</a></li><li><a href="PDFNet.SecurityHandler.html">PDFNet.SecurityHandler</a></li><li><a href="PDFNet.SElement.html">PDFNet.SElement</a></li><li><a href="PDFNet.Shading.html">PDFNet.Shading</a></li><li><a href="PDFNet.SignatureHandler.html">PDFNet.SignatureHandler</a></li><li><a href="PDFNet.SoundAnnot.html">PDFNet.SoundAnnot</a></li><li><a href="PDFNet.SquareAnnot.html">PDFNet.SquareAnnot</a></li><li><a href="PDFNet.SquigglyAnnot.html">PDFNet.SquigglyAnnot</a></li><li><a href="PDFNet.Stamper.html">PDFNet.Stamper</a></li><li><a href="PDFNet.STree.html">PDFNet.STree</a></li><li><a href="PDFNet.StrikeOutAnnot.html">PDFNet.StrikeOutAnnot</a></li><li><a href="PDFNet.TextAnnot.html">PDFNet.TextAnnot</a></li><li><a href="PDFNet.TextExtractor.html">PDFNet.TextExtractor</a></li><li><a href="PDFNet.TextExtractorLine.html">PDFNet.TextExtractorLine</a></li><li><a href="PDFNet.TextExtractorStyle.html">PDFNet.TextExtractorStyle</a></li><li><a href="PDFNet.TextExtractorWord.html">PDFNet.TextExtractorWord</a></li><li><a href="PDFNet.TextMarkupAnnot.html">PDFNet.TextMarkupAnnot</a></li><li><a href="PDFNet.TextSearch.html">PDFNet.TextSearch</a></li><li><a href="PDFNet.UnderlineAnnot.html">PDFNet.UnderlineAnnot</a></li><li><a href="PDFNet.Vector.html">PDFNet.Vector</a></li><li><a href="PDFNet.ViewChangeCollection.html">PDFNet.ViewChangeCollection</a></li><li><a href="PDFNet.WatermarkAnnot.html">PDFNet.WatermarkAnnot</a></li><li><a href="PDFNet.WidgetAnnot.html">PDFNet.WidgetAnnot</a></li><li><a href="PDFTron.WebViewer.html">PDFTron.WebViewer</a></li><li><a href="Tools.AnnotationEditTool.html">Tools.AnnotationEditTool</a></li><li><a href="Tools.AnnotationSelectTool.html">Tools.AnnotationSelectTool</a></li><li><a href="Tools.AreaMeasurementCreateTool.html">Tools.AreaMeasurementCreateTool</a></li><li><a href="Tools.ArrowCreateTool.html">Tools.ArrowCreateTool</a></li><li><a href="Tools.CalloutCreateTool.html">Tools.CalloutCreateTool</a></li><li><a href="Tools.DistanceMeasurementCreateTool.html">Tools.DistanceMeasurementCreateTool</a></li><li><a href="Tools.EllipseCreateTool.html">Tools.EllipseCreateTool</a></li><li><a href="Tools.FreeHandCreateTool.html">Tools.FreeHandCreateTool</a></li><li><a href="Tools.FreeTextCreateTool.html">Tools.FreeTextCreateTool</a></li><li><a href="Tools.GenericAnnotationCreateTool.html">Tools.GenericAnnotationCreateTool</a></li><li><a href="Tools.LineCreateTool.html">Tools.LineCreateTool</a></li><li><a href="Tools.MarqueeZoomTool.html">Tools.MarqueeZoomTool</a></li><li><a href="Tools.PanTool.html">Tools.PanTool</a></li><li><a href="Tools.PerimeterMeasurementCreateTool.html">Tools.PerimeterMeasurementCreateTool</a></li><li><a href="Tools.PolygonCloudCreateTool.html">Tools.PolygonCloudCreateTool</a></li><li><a href="Tools.PolygonCreateTool.html">Tools.PolygonCreateTool</a></li><li><a href="Tools.PolylineCreateTool.html">Tools.PolylineCreateTool</a></li><li><a href="Tools.RectangleCreateTool.html">Tools.RectangleCreateTool</a></li><li><a href="Tools.RedactionCreateTool.html">Tools.RedactionCreateTool</a></li><li><a href="Tools.SignatureCreateTool.html">Tools.SignatureCreateTool</a></li><li><a href="Tools.StampCreateTool.html">Tools.StampCreateTool</a></li><li><a href="Tools.StickyCreateTool.html">Tools.StickyCreateTool</a></li><li><a href="Tools.TextAnnotationCreateTool.html">Tools.TextAnnotationCreateTool</a></li><li><a href="Tools.TextHighlightCreateTool.html">Tools.TextHighlightCreateTool</a></li><li><a href="Tools.TextSelectTool.html">Tools.TextSelectTool</a></li><li><a href="Tools.TextSquigglyCreateTool.html">Tools.TextSquigglyCreateTool</a></li><li><a href="Tools.TextStrikeoutCreateTool.html">Tools.TextStrikeoutCreateTool</a></li><li><a href="Tools.TextTool.html">Tools.TextTool</a></li><li><a href="Tools.TextUnderlineCreateTool.html">Tools.TextUnderlineCreateTool</a></li><li><a href="Tools.Tool.html">Tools.Tool</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Annotations.Forms.Field.html#event:calculate">Annotations.Forms.Field#event:calculate</a></li><li><a href="Annotations.Forms.Field.html#event:change">Annotations.Forms.Field#event:change</a></li><li><a href="Annotations.Forms.Field.html#event:commit">Annotations.Forms.Field#event:commit</a></li><li><a href="CoreControls.AnnotationManager.html#event:addReply">CoreControls.AnnotationManager#event:addReply</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationChanged">CoreControls.AnnotationManager#event:annotationChanged</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationDoubleClicked">CoreControls.AnnotationManager#event:annotationDoubleClicked</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationHidden">CoreControls.AnnotationManager#event:annotationHidden</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationSelected">CoreControls.AnnotationManager#event:annotationSelected</a></li><li><a href="CoreControls.AnnotationManager.html#event:deleteReply">CoreControls.AnnotationManager#event:deleteReply</a></li><li><a href="CoreControls.AnnotationManager.html#event:fieldChanged">CoreControls.AnnotationManager#event:fieldChanged</a></li><li><a href="CoreControls.AnnotationManager.html#event:notify">CoreControls.AnnotationManager#event:notify</a></li><li><a href="CoreControls.AnnotationManager.html#event:setNoteText">CoreControls.AnnotationManager#event:setNoteText</a></li><li><a href="CoreControls.AnnotationManager.html#event:updateAnnotationPermission">CoreControls.AnnotationManager#event:updateAnnotationPermission</a></li><li><a href="CoreControls.BlackBoxAnnotationManager.html#event:blackBoxAnnotationsDisabled">CoreControls.BlackBoxAnnotationManager#event:blackBoxAnnotationsDisabled</a></li><li><a href="CoreControls.BlackBoxAnnotationManager.html#event:blackBoxAnnotationsEnabled">CoreControls.BlackBoxAnnotationManager#event:blackBoxAnnotationsEnabled</a></li><li><a href="CoreControls.Document.html#event:colorSeparationAdded">CoreControls.Document#event:colorSeparationAdded</a></li><li><a href="CoreControls.DocumentViewer.html#event:annotationsLoaded">CoreControls.DocumentViewer#event:annotationsLoaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:beforeDocumentLoaded">CoreControls.DocumentViewer#event:beforeDocumentLoaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:changePage">CoreControls.DocumentViewer#event:changePage</a></li><li><a href="CoreControls.DocumentViewer.html#event:click">CoreControls.DocumentViewer#event:click</a></li><li><a href="CoreControls.DocumentViewer.html#event:dblClick">CoreControls.DocumentViewer#event:dblClick</a></li><li><a href="CoreControls.DocumentViewer.html#event:displayModeUpdated">CoreControls.DocumentViewer#event:displayModeUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:displayPageLocation">CoreControls.DocumentViewer#event:displayPageLocation</a></li><li><a href="CoreControls.DocumentViewer.html#event:documentLoaded">CoreControls.DocumentViewer#event:documentLoaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:documentUnloaded">CoreControls.DocumentViewer#event:documentUnloaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:fitModeUpdated">CoreControls.DocumentViewer#event:fitModeUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:keyDown">CoreControls.DocumentViewer#event:keyDown</a></li><li><a href="CoreControls.DocumentViewer.html#event:keyUp">CoreControls.DocumentViewer#event:keyUp</a></li><li><a href="CoreControls.DocumentViewer.html#event:layoutChanged">CoreControls.DocumentViewer#event:layoutChanged</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseEnter">CoreControls.DocumentViewer#event:mouseEnter</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseLeave">CoreControls.DocumentViewer#event:mouseLeave</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseLeftDown">CoreControls.DocumentViewer#event:mouseLeftDown</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseLeftUp">CoreControls.DocumentViewer#event:mouseLeftUp</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseMove">CoreControls.DocumentViewer#event:mouseMove</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseRightDown">CoreControls.DocumentViewer#event:mouseRightDown</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseRightUp">CoreControls.DocumentViewer#event:mouseRightUp</a></li><li><a href="CoreControls.DocumentViewer.html#event:pageComplete">CoreControls.DocumentViewer#event:pageComplete</a></li><li><a href="CoreControls.DocumentViewer.html#event:pageNumberUpdated">CoreControls.DocumentViewer#event:pageNumberUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:rotationUpdated">CoreControls.DocumentViewer#event:rotationUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:searchInProgress">CoreControls.DocumentViewer#event:searchInProgress</a></li><li><a href="CoreControls.DocumentViewer.html#event:textSelected">CoreControls.DocumentViewer#event:textSelected</a></li><li><a href="CoreControls.DocumentViewer.html#event:toolModeUpdated">CoreControls.DocumentViewer#event:toolModeUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:zoomUpdated">CoreControls.DocumentViewer#event:zoomUpdated</a></li><li><a href="Tools.AreaMeasurementCreateTool.html#event:annotationAdded">Tools.AreaMeasurementCreateTool#event:annotationAdded</a></li><li><a href="Tools.AreaMeasurementCreateTool.html#event:annotationCreated">Tools.AreaMeasurementCreateTool#event:annotationCreated</a></li><li><a href="Tools.ArrowCreateTool.html#event:annotationAdded">Tools.ArrowCreateTool#event:annotationAdded</a></li><li><a href="Tools.ArrowCreateTool.html#event:annotationCreated">Tools.ArrowCreateTool#event:annotationCreated</a></li><li><a href="Tools.CalloutCreateTool.html#event:annotationAdded">Tools.CalloutCreateTool#event:annotationAdded</a></li><li><a href="Tools.CalloutCreateTool.html#event:annotationCreated">Tools.CalloutCreateTool#event:annotationCreated</a></li><li><a href="Tools.DistanceMeasurementCreateTool.html#event:annotationAdded">Tools.DistanceMeasurementCreateTool#event:annotationAdded</a></li><li><a href="Tools.DistanceMeasurementCreateTool.html#event:annotationCreated">Tools.DistanceMeasurementCreateTool#event:annotationCreated</a></li><li><a href="Tools.EllipseCreateTool.html#event:annotationAdded">Tools.EllipseCreateTool#event:annotationAdded</a></li><li><a href="Tools.EllipseCreateTool.html#event:annotationCreated">Tools.EllipseCreateTool#event:annotationCreated</a></li><li><a href="Tools.FreeHandCreateTool.html#event:annotationAdded">Tools.FreeHandCreateTool#event:annotationAdded</a></li><li><a href="Tools.FreeHandCreateTool.html#event:annotationCreated">Tools.FreeHandCreateTool#event:annotationCreated</a></li><li><a href="Tools.FreeTextCreateTool.html#event:annotationAdded">Tools.FreeTextCreateTool#event:annotationAdded</a></li><li><a href="Tools.FreeTextCreateTool.html#event:annotationCreated">Tools.FreeTextCreateTool#event:annotationCreated</a></li><li><a href="Tools.GenericAnnotationCreateTool.html#event:annotationAdded">Tools.GenericAnnotationCreateTool#event:annotationAdded</a></li><li><a href="Tools.GenericAnnotationCreateTool.html#event:annotationCreated">Tools.GenericAnnotationCreateTool#event:annotationCreated</a></li><li><a href="Tools.LineCreateTool.html#event:annotationAdded">Tools.LineCreateTool#event:annotationAdded</a></li><li><a href="Tools.LineCreateTool.html#event:annotationCreated">Tools.LineCreateTool#event:annotationCreated</a></li><li><a href="Tools.PerimeterMeasurementCreateTool.html#event:annotationAdded">Tools.PerimeterMeasurementCreateTool#event:annotationAdded</a></li><li><a href="Tools.PerimeterMeasurementCreateTool.html#event:annotationCreated">Tools.PerimeterMeasurementCreateTool#event:annotationCreated</a></li><li><a href="Tools.PolygonCloudCreateTool.html#event:annotationAdded">Tools.PolygonCloudCreateTool#event:annotationAdded</a></li><li><a href="Tools.PolygonCloudCreateTool.html#event:annotationCreated">Tools.PolygonCloudCreateTool#event:annotationCreated</a></li><li><a href="Tools.PolygonCreateTool.html#event:annotationAdded">Tools.PolygonCreateTool#event:annotationAdded</a></li><li><a href="Tools.PolygonCreateTool.html#event:annotationCreated">Tools.PolygonCreateTool#event:annotationCreated</a></li><li><a href="Tools.PolylineCreateTool.html#event:annotationAdded">Tools.PolylineCreateTool#event:annotationAdded</a></li><li><a href="Tools.PolylineCreateTool.html#event:annotationCreated">Tools.PolylineCreateTool#event:annotationCreated</a></li><li><a href="Tools.RectangleCreateTool.html#event:annotationAdded">Tools.RectangleCreateTool#event:annotationAdded</a></li><li><a href="Tools.RectangleCreateTool.html#event:annotationCreated">Tools.RectangleCreateTool#event:annotationCreated</a></li><li><a href="Tools.RedactionCreateTool.html#event:annotationAdded">Tools.RedactionCreateTool#event:annotationAdded</a></li><li><a href="Tools.RedactionCreateTool.html#event:annotationCreated">Tools.RedactionCreateTool#event:annotationCreated</a></li><li><a href="Tools.SignatureCreateTool.html#event:annotationAdded">Tools.SignatureCreateTool#event:annotationAdded</a></li><li><a href="Tools.SignatureCreateTool.html#event:locationSelected">Tools.SignatureCreateTool#event:locationSelected</a></li><li><a href="Tools.SignatureCreateTool.html#event:saveDefault">Tools.SignatureCreateTool#event:saveDefault</a></li><li><a href="Tools.StickyCreateTool.html#event:annotationAdded">Tools.StickyCreateTool#event:annotationAdded</a></li><li><a href="Tools.StickyCreateTool.html#event:annotationCreated">Tools.StickyCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextAnnotationCreateTool.html#event:annotationAdded">Tools.TextAnnotationCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextAnnotationCreateTool.html#event:annotationCreated">Tools.TextAnnotationCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextHighlightCreateTool.html#event:annotationAdded">Tools.TextHighlightCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextHighlightCreateTool.html#event:annotationCreated">Tools.TextHighlightCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextSquigglyCreateTool.html#event:annotationAdded">Tools.TextSquigglyCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextSquigglyCreateTool.html#event:annotationCreated">Tools.TextSquigglyCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextStrikeoutCreateTool.html#event:annotationAdded">Tools.TextStrikeoutCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextStrikeoutCreateTool.html#event:annotationCreated">Tools.TextStrikeoutCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextUnderlineCreateTool.html#event:annotationAdded">Tools.TextUnderlineCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextUnderlineCreateTool.html#event:annotationCreated">Tools.TextUnderlineCreateTool#event:annotationCreated</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: PDFACompliance</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="PDFNet.html">PDFNet</a>.</span>
+        
+        PDFACompliance
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="PDFACompliance"><span class="type-signature"></span>new PDFACompliance()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>PDFACompliance class is used to validate PDF documents for PDF/A (ISO 19005:1/2/3)
+compliance or to convert existing PDF files to PDF/A compliant documents.</p>
+<p>The conversion option analyzes the content of existing PDF files and performs
+a sequence of modifications in order to produce a PDF/A compliant document.
+Features that are not suitable for long-term archiving (such as encryption,
+obsolete compression schemes, missing fonts, or device-dependent color) are
+replaced with their PDF/A compliant equivalents. Because the conversion process
+applies only necessary changes to the source file, the information loss is
+minimal. Also, because the converter provides a detailed report for each change,
+it is simple to inspect changes and to determine whether the conversion loss
+is acceptable.</p>
+<p>The validation option in PDF/A Manager can be used to quickly determine whether
+a PDF file fully complies with the PDF/A specification according to the
+international standard ISO 19005:1/2/3. For files that are not compliant, the
+validation option can be used to produce a detailed report of compliance
+violations as well as a list of relevant error objects.</p>
+<p>Key Functions:</p>
+<ul>
+<li>Checks if a PDF file is compliant with PDF/A (ISO 19005:1/2/3) specification.</li>
+<li>Converts any PDF to a PDF/A compliant document.</li>
+<li>Supports PDF/A-1a, PDF/A-1b, PDF/A-2b</li>
+<li>Produces a detailed report of compliance violations and associated PDF objects.</li>
+<li>Keeps the required changes a minimum, preserving the consistency of the original.</li>
+<li>Tracks all changes to allow for automatic assessment of data loss.</li>
+<li>Allows user to customize compliance checks or omit specific changes.</li>
+<li>Preserves tags, logical structure, and color information in existing PDF documents.</li>
+<li>Offers automatic font substitution, embedding, and subsetting options.</li>
+<li>Supports automation and batch operation. PDF/A Converter is designed to be used
+in unattended mode in high throughput server or batch environments</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".createFromBuffer"><span class="type-signature">&lt;static> </span>createFromBuffer(convert, buf [, pwd] [, conform] [, excep] [, max_ref_objs] [, first_stop])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Perform PDF/A validation or PDF/A conversion on the input PDF document
+which is stored in a memory buffer.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>convert</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">bool</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>A flag used to instruct PDF/A processor to perform PDF/A
+conversion (if 'true') or PDF/A validation (if 'false'). After PDF/A conversion
+you can save the resulting document using Save() method(s).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>buf</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TypedArray</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>A memory buffer containing the serialized PDF document.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pwd</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    ""
+                
+                </td>
+            
+
+            <td class="description last"><p>A parameter that can be used to specify the password for encrypted PDF documents (typically only useful in the conversion mode).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>conform</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">PDFNet.PDFACompliance.Conformance</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    e_Level1B
+                
+                </td>
+            
+
+            <td class="description last"><p>The PDF conformance level defined in PDFNet.PDFACompliance.Conformance.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>excep</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TypedArray</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    new Int32Array(0)
+                
+                </td>
+            
+
+            <td class="description last"><p>Exceptions to ignore.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>max_ref_objs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    10
+                
+                </td>
+            
+
+            <td class="description last"><p>The maximum number of object references per error condition.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>first_stop</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">bool</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>PDFACompliance object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PDFNet.PDFACompliance.html">PDFNet.PDFACompliance</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".createFromUrl"><span class="type-signature">&lt;static> </span>createFromUrl(convert, url [, pwd] [, conform] [, excep] [, max_ref_objs] [, first_stop], options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Perform PDF/A validation or PDF/A conversion on the input PDF document
+which is stored in a memory buffer.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>convert</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">bool</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>A flag used to instruct PDF/A processor to perform PDF/A
+conversion (if 'true') or PDF/A validation (if 'false'). After PDF/A conversion
+you can save the resulting document using Save() method(s).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>A url from which the serialized PDF document can be downloaded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pwd</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    ""
+                
+                </td>
+            
+
+            <td class="description last"><p>A parameter that can be used to specify the password for encrypted PDF documents (typically only useful in the conversion mode).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>conform</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">PDFNet.PDFACompliance.Conformance</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    e_Level1B
+                
+                </td>
+            
+
+            <td class="description last"><p>The PDF conformance level defined in PDFNet.PDFACompliance.Conformance.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>excep</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TypedArray</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    new Int32Array(0)
+                
+                </td>
+            
+
+            <td class="description last"><p>Exceptions to ignore.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>max_ref_objs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    10
+                
+                </td>
+            
+
+            <td class="description last"><p>The maximum number of object references per error condition.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>first_stop</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">bool</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Additional options</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>withCredentials</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Whether to set the withCredentials property on the XMLHttpRequest</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getPDFAErrorMessage"><span class="type-signature">&lt;static> </span>getPDFAErrorMessage(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>error code identifier (obtained using GetError() method).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to a descriptive error message for the given error identifier.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Frees the native memory of the object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getError"><span class="type-signature"></span>getError(idx)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>idx</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The index in the array of error code identifiers.
+The array is indexed starting from zero.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to the error identifier.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Return value enum:&lt;pre&gt;PDFNet.PDFACompliance.ErrorCode = {	e_PDFA0_1_0 : 10	e_PDFA0_1_1 : 11	e_PDFA0_1_2 : 12	e_PDFA0_1_3 : 13	e_PDFA0_1_4 : 14	e_PDFA0_1_5 : 15	e_PDFA1_2_1 : 121	e_PDFA1_2_2 : 122	e_PDFA1_3_1 : 131	e_PDFA1_3_2 : 132	e_PDFA1_3_3 : 133	e_PDFA1_3_4 : 134	e_PDFA1_4_1 : 141	e_PDFA1_4_2 : 142	e_PDFA1_6_1 : 161	e_PDFA1_7_1 : 171	e_PDFA1_7_2 : 172	e_PDFA1_7_3 : 173	e_PDFA1_7_4 : 174	e_PDFA1_8_1 : 181	e_PDFA1_8_2 : 182	e_PDFA1_8_3 : 183	e_PDFA1_8_4 : 184	e_PDFA1_8_5 : 185	e_PDFA1_8_6 : 186	e_PDFA1_10_1 : 1101	e_PDFA1_11_1 : 1111	e_PDFA1_11_2 : 1112	e_PDFA1_12_1 : 1121	e_PDFA1_12_2 : 1122	e_PDFA1_12_3 : 1123	e_PDFA1_12_4 : 1124	e_PDFA1_12_5 : 1125	e_PDFA1_12_6 : 1126	e_PDFA1_13_1 : 1131	e_PDFA2_2_1 : 221	e_PDFA2_3_2 : 232	e_PDFA2_3_3 : 233	e_PDFA2_3_3_1 : 2331	e_PDFA2_3_3_2 : 2332	e_PDFA2_3_4_1 : 2341	e_PDFA2_4_1 : 241	e_PDFA2_4_2 : 242	e_PDFA2_4_3 : 243	e_PDFA2_4_4 : 244	e_PDFA2_5_1 : 251	e_PDFA2_5_2 : 252	e_PDFA2_6_1 : 261	e_PDFA2_7_1 : 271	e_PDFA2_8_1 : 281	e_PDFA2_9_1 : 291	e_PDFA2_10_1 : 2101	e_PDFA3_2_1 : 321	e_PDFA3_3_1 : 331	e_PDFA3_3_2 : 332	e_PDFA3_3_3_1 : 3331	e_PDFA3_3_3_2 : 3332	e_PDFA3_4_1 : 341	e_PDFA3_5_1 : 351	e_PDFA3_5_2 : 352	e_PDFA3_5_3 : 353	e_PDFA3_5_4 : 354	e_PDFA3_5_5 : 355	e_PDFA3_5_6 : 356	e_PDFA3_6_1 : 361	e_PDFA3_7_1 : 371	e_PDFA3_7_2 : 372	e_PDFA3_7_3 : 373	e_PDFA4_1 : 41	e_PDFA4_2 : 42	e_PDFA4_3 : 43	e_PDFA4_4 : 44	e_PDFA4_5 : 45	e_PDFA4_6 : 46	e_PDFA5_2_1 : 521	e_PDFA5_2_2 : 522	e_PDFA5_2_3 : 523	e_PDFA5_2_4 : 524	e_PDFA5_2_5 : 525	e_PDFA5_2_6 : 526	e_PDFA5_2_7 : 527	e_PDFA5_2_8 : 528	e_PDFA5_2_9 : 529	e_PDFA5_2_10 : 5210	e_PDFA5_2_11 : 5211	e_PDFA5_3_1 : 531	e_PDFA5_3_2_1 : 5321	e_PDFA5_3_2_2 : 5322	e_PDFA5_3_2_3 : 5323	e_PDFA5_3_2_4 : 5324	e_PDFA5_3_2_5 : 5325	e_PDFA5_3_3_1 : 5331	e_PDFA5_3_3_2 : 5332	e_PDFA5_3_3_3 : 5333	e_PDFA5_3_3_4 : 5334	e_PDFA5_3_4_0 : 5340	e_PDFA5_3_4_1 : 5341	e_PDFA5_3_4_2 : 5342	e_PDFA5_3_4_3 : 5343	e_PDFA6_1_1 : 611	e_PDFA6_1_2 : 612	e_PDFA6_2_1 : 621	e_PDFA6_2_2 : 622	e_PDFA6_2_3 : 623	e_PDFA7_2_1 : 721	e_PDFA7_2_2 : 722	e_PDFA7_2_3 : 723	e_PDFA7_2_4 : 724	e_PDFA7_2_5 : 725	e_PDFA7_3_1 : 731	e_PDFA7_3_2 : 732	e_PDFA7_3_3 : 733	e_PDFA7_3_4 : 734	e_PDFA7_3_5 : 735	e_PDFA7_3_6 : 736	e_PDFA7_3_7 : 737	e_PDFA7_3_8 : 738	e_PDFA7_3_9 : 739	e_PDFA7_5_1 : 751	e_PDFA7_8_1 : 781	e_PDFA7_8_2 : 782	e_PDFA7_8_3 : 783	e_PDFA7_8_4 : 784	e_PDFA7_8_5 : 785	e_PDFA7_8_6 : 786	e_PDFA7_8_7 : 787	e_PDFA7_8_8 : 788	e_PDFA7_8_9 : 789	e_PDFA7_8_10 : 7810	e_PDFA7_8_11 : 7811	e_PDFA7_8_12 : 7812	e_PDFA7_8_13 : 7813	e_PDFA7_8_14 : 7814	e_PDFA7_8_15 : 7815	e_PDFA7_8_16 : 7816	e_PDFA7_8_17 : 7817	e_PDFA7_8_18 : 7818	e_PDFA7_8_19 : 7819	e_PDFA7_8_20 : 7820	e_PDFA7_8_21 : 7821	e_PDFA7_8_22 : 7822	e_PDFA7_8_23 : 7823	e_PDFA7_8_24 : 7824	e_PDFA7_8_25 : 7825	e_PDFA7_8_26 : 7826	e_PDFA7_8_27 : 7827	e_PDFA7_8_28 : 7828	e_PDFA7_8_29 : 7829	e_PDFA7_8_30 : 7830	e_PDFA7_8_31 : 7831	e_PDFA7_11_1 : 7111	e_PDFA7_11_2 : 7112	e_PDFA7_11_3 : 7113	e_PDFA7_11_4 : 7114	e_PDFA7_11_5 : 7115	e_PDFA9_1 : 91	e_PDFA9_2 : 92	e_PDFA9_3 : 93	e_PDFA9_4 : 94	e_PDFA3_8_1 : 381	e_PDFA8_2_2 : 822	e_PDFA8_3_3_1 : 8331	e_PDFA8_3_3_2 : 8332	e_PDFA8_3_4_1 : 8341	e_PDFA1_2_3 : 123	e_PDFA1_10_2 : 1102	e_PDFA1_10_3 : 1103	e_PDFA1_12_10 : 11210	e_PDFA1_13_5 : 1135	e_PDFA2_3_10 : 2310	e_PDFA2_4_2_10 : 24220	e_PDFA2_4_2_11 : 24221	e_PDFA2_4_2_12 : 24222	e_PDFA2_4_2_13 : 24223	e_PDFA2_5_10 : 2510	e_PDFA2_5_11 : 2511	e_PDFA2_5_12 : 2512	e_PDFA2_8_3_1 : 2831	e_PDFA2_8_3_2 : 2832	e_PDFA2_8_3_3 : 2833	e_PDFA2_8_3_4 : 2834	e_PDFA2_8_3_5 : 2835	e_PDFA2_10_20 : 21020	e_PDFA2_10_21 : 21021	e_PDFA11_0_0 : 11000	e_PDFA6_2_11_8 : 62118	e_PDFA8_1 : 81	e_PDFA_3E1 : 1	e_PDFA_3E2 : 2	e_PDFA_3E3 : 3	e_PDFA_LAST : 4}&lt;/pre&gt;</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getErrorCount"><span class="type-signature"></span>getErrorCount()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to the number of compliance violations.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getRefObj"><span class="type-signature"></span>getRefObj(id, err_idx)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>error code identifier (obtained using GetError() method).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>err_idx</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The index in the array of object references.
+The array is indexed starting from zero.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to a specific object reference associated with a given error type.
+The return value is a PDF object identifier (i.e. object number for
+'pdftron.SDF.Obj)) for the that is associated with the error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getRefObjCount"><span class="type-signature"></span>getRefObjCount(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>error code identifier (obtained using GetError() method).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to the number of object references associated with a given error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="saveAsFromBuffer"><span class="type-signature"></span>saveAsFromBuffer(linearized)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>linearized</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="saveAsFromFileName"><span class="type-signature"></span>saveAsFromFileName(file_path, linearized)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>serializes the converted PDF/A document to a file on disk.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file_path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the output file name.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>linearized</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An optional flag used to specify whether the the resulting
+PDF/A document should be web-optimized (linearized).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on April 22nd 2019, 12:58:45 pm
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

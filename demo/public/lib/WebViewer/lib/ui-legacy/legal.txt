@@ -1,0 +1,40 @@
+
+Legal Notices:
+-----------------------------------------------------------------------------
+
+Copyright (c) 2002-2019 by PDFTron Systems, Inc. All Rights Reserved.
+PDFTron and PDFNet SDK are either trademarks and/or service marks
+and/or registered trademarks of PDFTron Systems Incorporated
+in Canada and/or other countries.
+
+The Software and information contained herein are proprietary to, and
+comprise valuable trade secrets of, PDFTron Systems Inc., which
+intends to preserve as trade secrets such Software and information.
+
+This Software is furnished pursuant to a written license agreement and
+may be used, copied, distributed, and stored only in accordance with
+the terms of such license and with the inclusion of the above copyright
+notice. This Software and information or any other copies thereof may
+not be provided or otherwise made available to any other person.
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OR CONDITION OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+WARRANTIES OR CONDITIONS OF DESIGN, MERCHANTIBILITY, DURABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND THE WARRANTY AGAINST INFRINGEMENT. THE ENTIRE
+RISK AS TO THE QUALITY AND PERFORMACE OF THE SOFTWARE IS BORNE BY THE USER.
+
+IN NO EVENT WILL PDFTRON'S AGGREGATE LIABILITY WITH RESPECT TO ANY AND ALL
+CLAIMS AT ANY AND ALL TIMES ARISING FROM OR RELATED TO THE SOFTWARE, IN
+CONTRACT, TORT (INCLUDING NEGLIGENCE OR BREACH OF ANY DUTY) OR OTHERWISE
+EXCEED THE CONSIDERATION PAID TO PDFTRON, IF ANY, FOR A LICENSE TO THE
+SOFTWARE. IN NO EVENT WILL PDFTRON BE LIABLE FOR ANY CONSEQUENTIAL, INDIRECT,
+SPECIAL, PUNITIVE, EXEMPLARY OR INCIDENTAL DAMAGES, LOSS OF GOODWILL OR
+BUSINESS PROFITS, EVEN IF PDFTRON HAS BEEN ADVISED OF THE POSSIBILITY OF ANY
+SUCH LOSS OR DAMAGES. THE FOREGOING LIMITATION OF LIABILITY AND EXCLUSION
+OF CERTAIN DAMAGES WILL APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW
+REGARDLESS OF THE SUCCESS OR EFFECTIVENESS OF OTHER REMEDIES.
+
+-----------------------------------------------------------------------------
+
+If you have any questions regarding the above information,
+please contact PDFTron Systems Inc. directly via: info@pdftron.com.

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+  if (window.location.href.slice(-1) !== '/' && window.location.href.slice(-4) !== 'html') {
+    // hacky redirect for mac php server...
+    window.location = window.location.href + '/';
+  }
+</script><link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <a href="https://pdftron.com" target="_blank">
+            <div class="logo"></div>
+          </a>
+          <span class="title">WebViewer</span>
+        </div>
+        <div>
+          <a class="button" href="https://pdftron.com/documentation/web/guides/" target="_blank">Go to Guides</a>
+          <a class="button filled" href="https://pdftron.com/form/contact-sales/" target="_blank">Contact Sales</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="sidebar">
+<p><b>Samples</b></p>
+<p><a href="." class="active" target="_self">Viewing</a></p>
+<p><a href="./annotation" target="_self">Annotation</a></p>
+<p><a href="./customization" target="_self">Customization</a></p>
+<p><a href="./pdf-manipulation" target="_self">PDF manipulation</a></p>
+<p><a href="./advanced" target="_self">Advanced</a></p>
+<p><a href="./full-apis" target="_self">Full apis</a></p>
+<p><b>Showcase</b></p>
+<p><a href="https://pdftron.com/webviewer/demo" target="_blank">Go to showcase</a></p>
+
+      </div>
+      <div class="content">
+        <div id="error-message" style="display: none; background-color: red; color: white">Samples are not runnable from the file system. Please run using "npm start" or use a local web server.</div>
+<h1>Viewing samples</h1>
+<h4><a href="./viewing/viewing/" target="_self">Viewing</a></h4>
+<p>Shows how to call WebViewer constructor to instantiate and load document. You can load local/remote files of your choice.<br />
+<a href="./viewing/viewing/viewing.js" target="_self">Source</a></p><h4><a href="./viewing/viewing-with-legacy-ui/" target="_self">Viewing with legacy UI</a></h4>
+<p>Shows how to call WebViewer constructor to fall back to legacy ui. You can load local/remote files of your choice.<br />
+<a href="./viewing/viewing-with-legacy-ui/viewing-with-legacy-ui.js" target="_self">Source</a></p>
+      </div>
+    </section>
+    <script>
+    if (window.location.href.indexOf('file://') === 0) {
+      alert('Samples are not runnable from the file system. Please run using "npm start" or use a local web server.');
+      document.getElementById('error-message').style.display = 'block';
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+Open source used in legacy UI
+-----------------------------------------------------------------------------
+Drop.js v0.5.4
+https://github.com/HubSpot/drop
+https://github.com/HubSpot/drop/blob/v0.5.4/LICENSE
+
+FileSaver v2.0.0
+https://github.com/eligrey/FileSaver.js/
+https://github.com/eligrey/FileSaver.js/blob/2.0.0/LICENSE.md
+
+html2Canvas v1.0.0-alpha.10
+https://github.com/niklasvh/html2canvas
+https://github.com/niklasvh/html2canvas/blob/v1.0.0-alpha.10/LICENSE
+
+i18next v1.6.0
+https://github.com/i18next/i18next
+https://github.com/i18next/i18next/blob/v2.3.4/LICENSE
+
+jQuery v3.2.1
+https://jquery.com/
+https://github.com/jquery/jquery/blob/3.2.1/LICENSE.txt
+
+Modernizr v3.5.0
+https://modernizr.com/
+https://github.com/Modernizr/Modernizr/blob/v3.5.0/LICENSE
+
+XDomain v0.6.5
+https://github.com/jpillora/xdomain
+https://github.com/jpillora/xdomain/blob/0.6.5/README.md#mit-license
+
+
+Open source used only in legacy desktop UI
+-----------------------------------------------------------------------------
+Autolinker v0.11.2
+https://github.com/gregjacobs/Autolinker.js
+https://github.com/gregjacobs/Autolinker.js/blob/0.11.2/LICENSE
+
+jQuery.flexibleArea
+http://flaviusmatis.github.io/flexibleArea.js/
+https://github.com/flaviusmatis/flexibleArea.js/blob/master/LICENSE.txt
+
+jQuery.mousewheel v3.1
+https://github.com/jquery/jquery-mousewheel
+https://github.com/jquery/jquery-mousewheel/blob/3.1.x/LICENSE.txt
+
+jQuery UI v1.11.1
+https://jqueryui.com/
+https://github.com/jquery/jquery-ui/blob/1-11-stable/LICENSE.txt
+
+
+Open source used only in legacy mobile UI
+-----------------------------------------------------------------------------
+fastclick v0.6.9
+https://github.com/ftlabs/fastclick
+https://github.com/ftlabs/fastclick/blob/v0.6.9/LICENSE.txt
+
+jQuery mobile v1.4.4
+https://jquerymobile.com/
+https://github.com/jquery/jquery-mobile/blob/1.4.4/MIT-LICENSE.txt
+
+touchr
+https://github.com/aichi/Touchr
+https://github.com/aichi/Touchr/blob/master/licence.txt

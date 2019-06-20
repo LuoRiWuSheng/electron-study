@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ./ test-build-app  --platform=win32 --arch=x64 --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.4",
+    "pdfjs": "^2.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "ffi": "^2.3.0",
+    "jquery": "^3.4.0",
+    "electron-rebuild": "^1.8.4"
+  }
+}

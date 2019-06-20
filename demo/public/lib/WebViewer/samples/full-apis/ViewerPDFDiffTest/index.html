@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../style.css">
+	    <link rel="stylesheet" href="./style.css">
+    <script src="../../../lib/webviewer.min.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+    <script src="../modernizr.custom.min.js"></script>
+    <script src="../../../lib/ui-legacy/external/jquery-3.2.1.min.js"></script>
+    
+  </head>
+  <body>
+      <header>
+        <div class="title sample">Diff sample</div>
+      </header>
+      <aside>
+        <div class="PDFDiff">
+            <div class="PageDescription">
+                <p>
+                  A demo of the PDF diff capability to compare two PDF files in WebViewer.
+                </p>
+              </div>
+              <div class="PageSection bordered">
+                <h4 class="PageSection title">First File</h4>
+                <div class="FilePicker"><div>
+                  <input type="file" id="fileUpload1" disabled/><div class="Button gray">
+                  </div>
+                </div>
+              </div>
+              <p class="error"></p>
+              <p class="file-name"></p>
+              <div class="color-legend">
+                <span class="color" style="background-color: rgb(200, 0, 0);"></span>
+                <p>This document is displayed as red</p>
+              </div>
+            </div>
+              <div class="PageSection last bordered">
+                <h4 class="PageSection title">Second File</h4>
+                <div class="FilePicker">
+                  <div>
+                    <input type="file" id="fileUpload2" disabled/>
+                    <div class="Button  gray">
+                  </div>
+                </div>
+              </div>
+              <p class="error"></p>
+              <p class="file-name"></p>
+              <div class="color-legend">
+                <span class="color" style="background-color: rgb(0, 200, 200);"></span>
+                <p>This document is displayed as blue</p>
+              </div>
+            </div>
+              <div class="PageSection">
+                <div id="compareButton" class="Button compare disabled blue">
+                  <div class="button-content" style="font-family: sans-serif">
+                    <p>Compare</p>
+                  </div>
+                </div><div class="color-legend" style="margin-top: 10px;">
+                  <span class="color" style="background-color: black;"></span>
+                  <p>Overlaps are displayed as black</p>
+                </div>
+              </div>
+        </div>
+      </aside>
+    <div id="viewer"></div>
+    <script src="../../menu-button.js"></script>
+    <script>
+      /* global Modernizr */
+      $(function() {
+        Modernizr.addTest('async', function() {
+          try {
+            var result;
+            // eslint-disable-next-line no-eval
+            eval('let a = () => {result = "success"}; let b = async () => {await a()}; b()');
+            return result === 'success';
+          } catch (e) {
+            return false;
+          }
+        });
+
+        var script = Modernizr.async ? 'config.js' : 'configES5.js';
+
+        const viewerElement = document.getElementById('viewer');
+        new PDFTron.WebViewer({
+          path: '../../../lib',
+          l: window.sampleL,
+          config: script,
+          fullAPI: true
+        }, viewerElement);
+      });
+    </script>
+  </body>
+</html>

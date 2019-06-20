@@ -1,0 +1,41 @@
+Open source used in WebViewer Core
+-----------------------------------------------------------------------------
+Backbone.js v0.5.1
+http://backbonejs.org/
+https://github.com/jashkenas/backbone/blob/0.5.2/LICENSE
+
+Forge AES v0.2.5
+https://github.com/digitalbazaar/forge
+https://github.com/digitalbazaar/forge/blob/0.2.5/LICENSE
+
+IndexedDBShim v4.1.0
+https://github.com/axemclion/IndexedDBShim
+https://github.com/axemclion/IndexedDBShim/blob/v4.1.0/LICENSE-MIT.txt
+
+jQuery v3.2.1
+https://jquery.com/
+https://github.com/jquery/jquery/blob/3.2.1/LICENSE.txt
+
+jQuery.tap v1.1.4
+https://github.com/jaridmargolin/jquery.tap
+https://github.com/jaridmargolin/jquery.tap/blob/1.1.4/LICENCE
+
+Moment.js v2.10.3
+https://momentjs.com/
+https://github.com/moment/moment/blob/2.10.3/LICENSE
+
+pako_inflate.js v1.0.5
+https://github.com/nodeca/pako
+https://github.com/nodeca/pako/blob/1.0.5/LICENSE
+
+Simplify.js
+http://mourner.github.io/simplify-js/
+https://github.com/mourner/simplify-js/blob/v1.2.3/LICENSE
+
+Underscore.js v1.5.2
+https://underscorejs.org/
+https://github.com/jashkenas/underscore/blob/1.5.2/LICENSE
+
+XMLWriter v1.0.0
+http://flesler.blogspot.com/2008/03/xmlwriter-for-javascript.html
+https://opensource.org/licenses/bsd-license.php

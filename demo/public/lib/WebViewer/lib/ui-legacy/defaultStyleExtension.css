@@ -1,0 +1,31 @@
+/**
+ * Example of an external stylesheet for ReaderControl.
+ * This file holds CSS style customizations for ReaderControl.
+*/
+
+
+/** Toolbar */
+#control.ui-widget-header {
+    /*background: #eee;*/
+}
+
+.ui-selected .ui-widget-content{
+    /*background: #CBE6EF; */
+}
+
+
+/** Active elements */
+.thumbContainer.selected, .bookmarkWrapper.selected, .searchResultLine.selected,
+.ui-buttonset label.ui-state-active {
+    /* color for UI active selection */
+    /*background: #CBE6EF !important;*/
+}
+
+/** button borders*/
+.ui-state-default, .ui-slider-handle{
+    /*border: 1px solid #777 !important;*/
+}
+
+#sidePanel .ui-state-default{
+    /* border: none !important;*/
+}

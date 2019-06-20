@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+    <canvas id="the-canvas" style="border:1px solid #000;"></canvas>
+    <script src="./src/lib/pdfjs/build/pdf.js"></script>
+    <script src="./src/lib/pdfjs/build/pdf.worker.js"></script>
+    <script>
+      
+        var loadingTask = pdfjsLib.getDocument("./test.pdf");
+        console.log("显示加载的loadingTask是否被销毁--》", loadingTask.destroyed) // false
+        
+        console.log("加载的唯一任务id-》", loadingTask.docId)  // d0
+        
+        // 1 destroy 销毁 loadingTask进程，并取消所有的网络请求
+        // 返回的Promise表示是成功还是失败
+    	loadingTask.destroy().then(val=> {
+    		console.log("resolve", val)
+    	}, error=> {
+    		console.log("reject", error)
+    	})
+        console.log("显示加载的loadingTask是否被销毁--》", loadingTask.destroyed) // true
+        
+        loadingTask.promise.then(function(pdf) {
+        	
+        	console.log(pdf)
+        	
+        	// loadingTask的销毁方法
+            pdf.getPage(1).then(function(page) {
+            	console.log(page)
+	            var scale = 1.5;
+	            var viewport = page.getViewport({ scale: scale, });
+	            console.warn(viewport)
+	            //
+	            // Prepare canvas using PDF page dimensions
+	            //
+	            var canvas = document.getElementById('the-canvas');
+	            var context = canvas.getContext('2d');
+	            canvas.height = "800"
+	            canvas.width = "1000";
+	           /* canvas.height = viewport.height;
+	            canvas.width = viewport.width;*/
+	            //
+	            // Render PDF page into canvas context
+	            //
+	            var renderContext = {
+	                canvasContext: context,
+	                viewport: viewport,
+	            };
+	            page.render(renderContext);
+            });
+            
+            
+            
+        })
+    </script>
+</body>
+</html>

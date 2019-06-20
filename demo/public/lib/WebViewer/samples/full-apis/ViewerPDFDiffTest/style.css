@@ -1,0 +1,84 @@
+.PDFDiff .Button {
+  width: 100%;
+}
+
+.PDFDiff .picker {
+  margin-top: 20px;
+}
+
+.PDFDiff .picker p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.PDFDiff .error {
+  color:red;
+  font-size: 12px;
+  margin: 0;
+}
+
+.PDFDiff .file-name {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.PDFDiff .thumbnail {
+  max-width: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.PDFDiff .color-legend {
+  display: flex;
+  align-items: center;
+}
+
+.PDFDiff .color-legend span {
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin-right: 10px;
+}
+
+.PDFDiff .color-legend p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.PDFDiff .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------------------*/
+#compareButton{
+  text-align: center;
+  border-radius: 5px;
+
+  font-family: Lato;
+  /* font-weight: 300; */
+  font-size: 14px;
+  display: inline-block;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; 
+  
+  background-color: #00a5e4;
+  color: white !important;
+  cursor: pointer;
+}
+
+#compareButton.disabled {
+  background-color: grey;
+  color: white !important;
+  cursor: default;
+}
+

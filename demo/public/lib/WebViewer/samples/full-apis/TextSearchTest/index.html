@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../../../lib/core/external/jquery-3.2.1.min.js"></script>
+    <script src="../../../lib/core/CoreControls.js"></script>
+    <script src="../../../lib/ui-legacy/external/FileSaver.min.js"></script>
+    <script src="../../../lib/core/pdf/PDFNet.js"></script>
+    <script src="../Setup.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src="../modernizr.custom.min.js"></script>
+
+</head>
+<body>
+    <div>
+        <h2>This is a console-based sample</h2>
+        You can watch the console's output print below, or open your developer tools to see the sample's output in more detail. Samples will also output results as file downloads. <br/>
+        Note: in older browsers that do not support ECMAScript 6, we use a compiled ECMAScript 5 compliant version of our samples.
+    </div>
+    
+    <code id="console"></code>
+    <script>
+        "use strict";
+        // Determine whether the browser supports async
+        Modernizr.addTest('async', function(){
+            try{
+                var result;
+                eval('let a = () => {result = "success"}; let b = async () => {await a()}; b()');
+                return result === 'success';
+            }catch(e){
+                return false;
+            }
+        });
+
+        // test for async and fall back to code compiled to ES5 if they are not supported
+        var script = Modernizr.async ? "TextSearchTest.js" : "TextSearchTestES5.js";
+        var scriptTag = document.createElement('script');
+        scriptTag.type = 'text/javascript';
+        scriptTag.onload = scriptTag.onerror = function() {
+            runTextSearchTest(); 
+        };
+        scriptTag.src = script;
+        document.getElementsByTagName('head')[0].appendChild(scriptTag);
+
+        function escapeHTML(text){
+            var map = {
+                '\n': '</br>',
+                '\t': '&Tab;',
+                ' ': '&nbsp;',
+                '<': '&lt;',
+                '&': '&amp;'
+            };
+            return text.replace(/[\n\t &<]/g, function(ch){
+                return map[ch];
+            });
+        }
+
+        // code to hijack console.log and print the results to a tag
+        var old_log = console.log;
+        console.log = function(){
+            var result = '';
+            for(var i = 0; i < arguments.length; ++i){
+                result += arguments[i];
+            }
+            result += '\n';
+            document.getElementById('console').innerHTML += escapeHTML(result + '\n');
+            old_log.apply(this, arguments);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/**
+* Icon List Picker
+*/
+.icon-picker {
+    /* this gets rid of spacing caused by newlines
+    between inline-block elements */
+    font-size: 0;
+}
+
+.icon-picker li.glyphicons, .glyphicons.bordered{
+    padding: 14px 15px;
+    cursor: pointer;
+    margin: 1px 3px 0 0;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    background: #fbfbfb;
+}
+.icon-picker li.glyphicons:before, .glyphicons.bordered:before{
+    font-size: 20px;
+    padding: 4px 0 0 5px;
+    color: #444;
+}
+
+.icon-picker li.glyphicons.ui-state-active,
+.icon-picker li.glyphicons.active{
+    box-shadow: inset 1px 1px 2px grey;
+    background: #f0f0f0;
+}
+
+.icon-picker li.glyphicons.ui-state-active:before,
+.icon-picker li.glyphicons.active:before{
+    color: #27a8e0;
+}
+
+.icon-picker li.glyphicons:hover:before,
+.icon-picker li.glyphicons:hover:before{
+    color: #27a8e0;
+}

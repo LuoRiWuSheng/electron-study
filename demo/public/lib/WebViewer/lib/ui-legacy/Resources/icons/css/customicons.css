@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'CustomIcons';
+  src: url('../fonts/custom.ttf') format('truetype'), url('../fonts/custom.eot?#iefix') format('embedded-opentype'), url('../fonts/custom.woff') format('woff');
+ 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.glyphicons.customicons:before{
+    font-family: 'CustomIcons';
+}
+
+.customicons.rotate:before{
+	content: '\0041';
+}
+.customicons.ibeam:before{
+	content: '\0042';
+}
+.customicons.hand:before{
+	content: '\0043';
+}
+.customicons.hand_drag:before{
+	content: '\0044';
+}
+.customicons.arrow_ew:before{
+	content: '\0045';
+}
+.customicons.arrow_ns:before{
+	content: '\0046';
+}
+.customicons.arrow_nsew:before{
+	content: '\0047';
+}
+.customicons.collapse_left:before{
+	content: '\0048';
+}
+.customicons.callout:before{
+	content: '\0049';
+}
+.customicons.stamp:before{
+	content: '\004A';
+}
+.customicons.eraser:before{
+	content: '\004B';
+}
+.customicons.multiselect:before{
+	content: '\004C';
+}
+.customicons.signature:before{
+	content: '\004D';
+}
+.customicons.vector_path_polyline:before{
+	content: '\004E';
+}
+.customicons.text_caret:before{
+	content: '\004F';
+}
+.customicons.text_ibeam:before{
+	content: '\0050';
+}
+.customicons.single_page:before{
+	content: '\0051';
+}
+.customicons.single_continuous:before{
+	content: '\0052';
+}
+.customicons.facing_page:before{
+	content: '\0053';
+}
+.customicons.facing_continuous:before{
+	content: '\0054';
+}
+.customicons.cover_page:before{
+	content: '\0055';
+}
+.customicons.cover_continuous:before{
+	content: '\0056';
+}
+.customicons.text_highlight:before{
+	content: '\0057';
+}
+.customicons.page_gear:before{
+	content: '\005B';
+}
+.customicons.fill:before{
+	content: '\005D';
+}
+.customicons.vector_arrow:before{
+	content: '\006F';
+}
+.customicons.text_squiggly:before{
+	content: '\0070';
+}
+.customicons.bookmark:before{
+	content: '\e073';
+}

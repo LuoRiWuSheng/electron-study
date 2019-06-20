@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <a href="https://pdftron.com" target="_blank">
+            <div class="logo"></div>
+          </a>
+          <span class="title">WebViewer</span>
+        </div>
+        <div>
+          <a class="button" href="https://pdftron.com/documentation/web/guides/" target="_blank">Go to Guides</a>
+          <a class="button filled" href="https://pdftron.com/form/contact-sales/" target="_blank">Contact Sales</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="sidebar">
+<p><b>Samples</b></p>
+<p><a href=".." target="_self">Viewing</a></p>
+<p><a href="../annotation" target="_self">Annotation</a></p>
+<p><a href="../customization" target="_self">Customization</a></p>
+<p><a href="../pdf-manipulation" target="_self">PDF manipulation</a></p>
+<p><a href="../advanced" class="active" target="_self">Advanced</a></p>
+<p><a href="../full-apis" target="_self">Full apis</a></p>
+<p><b>Showcase</b></p>
+<p><a href="https://pdftron.com/webviewer/demo" target="_blank">Go to showcase</a></p>
+
+      </div>
+      <div class="content">
+        <div id="error-message" style="display: none; background-color: red; color: white">Samples are not runnable from the file system. Please run using "npm start" or use a local web server.</div>
+<h1>Advanced samples</h1>
+<h4><a href="../advanced/xod/" target="_self">XOD</a></h4>
+<p>Shows how to load XOD documents.<br />
+<a href="../advanced/xod/xod.js" target="_self">Source</a></p><h4><a href="../advanced/text-position/" target="_self">Text position</a></h4>
+<p>Shows how to extract text positions from a document. The sample higlights the positions with different colors.<br />
+<a href="../advanced/text-position/text-position.js" target="_self">Source</a></p><h4><a href="../advanced/redaction/" target="_self">Redaction</a></h4>
+<p>Shows how to redact and permanently remove text, images or graphics from a document.<br />
+<a href="../advanced/redaction/redaction-viewer.js" target="_self">Source</a></p><h4><a href="../advanced/diff/" target="_self">Diff Documents</a></h4>
+<p>Shows how to render three synchronized panels where the middle panel shows pixel differences between the two documents.<br />
+<a href="../advanced/diff/synced-viewers.js" target="_self">Source</a></p><h4><a href="../advanced/measurement/" target="_self">Measurement Annotations</a></h4>
+<p>Shows how to create annotations that measure distance, perimeter and area<br />
+<a href="../advanced/measurement/measurement-viewer.js" target="_self">Source</a></p><h4><a href="../advanced/offline/" target="_self">Offline</a></h4>
+<p>Demonstrates how to use ServiceWorker to use WebViewer offline.<br />
+<a href="../advanced/offline/offline.js" target="_self">Source</a></p><h4><a href="../advanced/flipbook/" target="_self">Flipbook</a></h4>
+<p>Demonstrates how to extract canvas of each page. The sample uses <a href="http://www.turnjs.com/" target="_blank">turn.js</a> to render them.<br />
+<a href="../advanced/flipbook/flipbook.js" target="_self">Source</a></p><h4>Angular</h4>
+In the download package, go to `WebViewer/samples/advanced/angular` for the source code.
+
+<h4>Android</h4>
+In the download package, go to `WebViewer/samples/advanced/android` for the source code.
+
+<h4>iOS</h4>
+In the download package, go to `WebViewer/samples/advanced/ios` for the source code.
+
+<h4>Cordova</h4>
+In the download package, go to `WebViewer/samples/advanced/cordova` for the source code.
+
+<h4>Universal Windows Platform (UWP)</h4>
+<p>In the download package, go to `WebViewer/samples/advanced/uwp` for the source code.</p>
+      </div>
+    </section>
+    <script>
+    if (window.location.href.indexOf('file://') === 0) {
+      alert('Samples are not runnable from the file system. Please run using "npm start" or use a local web server.');
+      document.getElementById('error-message').style.display = 'block';
+    }
+    </script>
+  </body>
+</html>

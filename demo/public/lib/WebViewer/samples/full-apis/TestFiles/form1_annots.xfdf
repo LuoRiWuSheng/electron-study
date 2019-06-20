@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><underline color="#00FF00" creationdate="D:20120716081554-07'00'" flags="print" date="D:20120716081554-07'00'" name="114155d4-8b1a-4b52-876f-287774cbb1ce" page="0" coords="64.311996,762.592102,112.112839,762.592102,64.311996,732.716614,112.112839,732.716614" rect="55.403061,730.849365,121.021774,764.459351" subject="Underline" title="achu"
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.000000,642.592102,792.000000,762.592102"
+/></underline
+><highlight color="#FFFF00" creationdate="D:20120716081604-07'00'" flags="print" date="D:20120716081604-07'00'" name="5832b9ad-dc51-40bc-92dc-ed58314e2914" page="0" coords="240.109406,759.096375,367.377930,759.096375,240.109406,741.410278,367.377930,741.410278" rect="235.388062,740.857605,372.099274,759.649048" subject="Highlight" title="achu"
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.000000,639.096375,792.000000,759.096375"
+/></highlight
+><circle color="#FF0000" creationdate="D:20120716081712-07'00'" flags="print" date="D:20120716081712-07'00'" name="25e35882-1372-4585-b046-e4dd3121f127" page="0" fringe="0.500000,0.500000,0.500000,0.500000" rect="489.809723,726.007385,562.497620,743.823059" subject="Oval" title="achu"
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.000000,623.323059,792.000000,743.323059"
+/></circle
+><strikeout color="#FF0000" creationdate="D:20120716081734-07'00'" flags="print" date="D:20120716081734-07'00'" name="42dfcd32-6087-45df-be4d-097a43c93161" page="0" coords="347.167786,632.442261,362.117371,632.442261,347.167786,621.992004,362.117371,621.992004" rect="344.051514,621.338867,365.233643,633.095398" subject="Cross-Out" title="achu"
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.000000,512.442261,792.000000,632.442261"
+/></strikeout
+><freetext color="#FFFFFF" callout="538.986694,178.227829,536.774109,156.946106,536.774109,144.946106" creationdate="D:20120716081803-07'00'" flags="print" IT="FreeTextCallout" head="OpenArrow" date="D:20120716081827-07'00'" name="a676f968-80ce-484b-8d52-c0ecacd56182" page="0" fringe="0.500000,0.500000,0.500000,33.287079" rect="482.274109,128.436111,568.250366,178.233185" subject="Callout" title="achu"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:10.1.3" xfa:spec="2.0.2" style="font-size:12.0pt;text-align:left;color:#FF0000;font-weight:normal;font-style:normal;font-family:Helvetica,sans-serif;font-stretch:normal"
+><p dir="ltr"
+><span style="font-family:Helvetica"
+>Required</span
+></p
+></body
+></contents-richtext
+><defaultappearance
+>1 0 0 rg /Helv 12 Tf</defaultappearance
+><defaultstyle
+>font: Helvetica,sans-serif 12.0pt; text-align:left; color:#FF0000 </defaultstyle
+></freetext
+></annots
+><f href="form1.pdf"
+/><ids original="67B7546B7635ED89E01C7BB03AA168C7" modified="DBE3F5084AC03940B7D8D75036A945B4"
+/></xfdf
+>

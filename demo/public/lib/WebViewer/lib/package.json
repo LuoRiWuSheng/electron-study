@@ -1,0 +1,7 @@
+{
+  "name": "webviewer",
+  "description": "PDFTron WebViewer",
+  "version": "5.0.0",
+  "main": "webviewer.min.js",
+  "author": "PDFTron Systems Inc."
+}

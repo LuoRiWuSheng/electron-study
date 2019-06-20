@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>
+          <a href="https://pdftron.com" target="_blank">
+            <div class="logo"></div>
+          </a>
+          <span class="title">WebViewer</span>
+        </div>
+        <div>
+          <a class="button" href="https://pdftron.com/documentation/web/guides/" target="_blank">Go to Guides</a>
+          <a class="button filled" href="https://pdftron.com/form/contact-sales/" target="_blank">Contact Sales</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="sidebar">
+<p><b>Samples</b></p>
+<p><a href=".." target="_self">Viewing</a></p>
+<p><a href="../annotation" class="active" target="_self">Annotation</a></p>
+<p><a href="../customization" target="_self">Customization</a></p>
+<p><a href="../pdf-manipulation" target="_self">PDF manipulation</a></p>
+<p><a href="../advanced" target="_self">Advanced</a></p>
+<p><a href="../full-apis" target="_self">Full apis</a></p>
+<p><b>Showcase</b></p>
+<p><a href="https://pdftron.com/webviewer/demo" target="_blank">Go to showcase</a></p>
+
+      </div>
+      <div class="content">
+        <div id="error-message" style="display: none; background-color: red; color: white">Samples are not runnable from the file system. Please run using "npm start" or use a local web server.</div>
+<h1>Annotation samples</h1>
+<h4><a href="../annotation/users-and-permissions/" target="_self">Users and permissions</a></h4>
+<p>Describes types of permissions and switching between users. You can also show/hide annotations of specific users.<br />
+<a href="../annotation/users-and-permissions/users-and-permissions.js" target="_self">Source</a></p><h4><a href="../annotation/realtime-collaboration/" target="_self">Realtime collaboration</a></h4>
+<p>An example setup with Firebase backend. For more details, refer to <a href="/web/guides/basics/annotations/realtime-collaboration" target="_self">realtime collaboration guide</a>.<br />
+<a href="../annotation/realtime-collaboration/realtime-collaboration.js" target="_self">Source</a></p><h4><a href="../annotation/custom-annotations/" target="_self">Custom annotations</a></h4>
+<p>Shows how to create and add custom annotations by extending the existing annotation classes.<br />
+<a href="../annotation/custom-annotations/custom-annotations.js" target="_self">Source</a></p>
+      </div>
+    </section>
+    <script>
+    if (window.location.href.indexOf('file://') === 0) {
+      alert('Samples are not runnable from the file system. Please run using "npm start" or use a local web server.');
+      document.getElementById('error-message').style.display = 'block';
+    }
+    </script>
+  </body>
+</html>

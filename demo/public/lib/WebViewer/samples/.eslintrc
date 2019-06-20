@@ -1,0 +1,20 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules":{
+    "no-await-in-loop": 0
+  },
+  "globals": {
+    "PDFNet": true,
+    "PDFTron": true,
+    "saveBufferAsPNG": true,
+    "saveBufferAsPDFDoc": true,
+    "saveBufferAsXOD": true,
+    "saveBuffer": true
+  }
+}

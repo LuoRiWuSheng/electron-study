@@ -1,0 +1,102 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* font-size: 100%;*/
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    -moz-user-select:-moz-none; /*https://developer.mozilla.org/en-US/docs/CSS/user-select*/
+    -ms-user-select:none;
+    user-select:none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+textarea {
+    overflow-y: auto;
+}
+/*
+Get rid of x button in input fields in IE
+http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs
+*/
+input[type=text]::-ms-clear {
+    width: 0;
+    height: 0;
+}
+
+#viewer{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.pageContainer{
+    position : relative;
+    background-color: white;
+    clear: both;
+    z-index: 1;
+
+    box-shadow: .5px 2px 3px rgba(0, 0, 0, .3);
+    -moz-box-shadow: .5px 2px 3px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: .5px 2px 3px rgba(0, 0, 0, .3);
+}
+
+/* link styles*/
+.pageContainer span.link{
+    position: absolute;
+    cursor: pointer;
+    z-index: 40;
+    background-color: rgba(255, 0, 255, 0); /* for IE*/
+}
+.pageContainer span.link:active{
+    border: 2px solid #33CCFF;
+}
+
+/* annotation styles */
+textarea.freetext {
+    position: absolute;
+    z-index: 100;
+    resize: none;
+    cursor: text;
+    outline: none;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}

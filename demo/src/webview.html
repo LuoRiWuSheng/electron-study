@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基于WebViewer 的方式实现pdf预览</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.picker {
+            width: 100%;
+            height: 40px;
+
+            background-color: #222222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.viewer {
+            width: 100%;
+            height: calc(100% - 40px);
+        }
+
+        div.viewer iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>基于WebViewer</h3>
+    <div class='picker'>
+        <button id='myButton'>点击，选择一个pdf文件</button>
+    </div>
+    <div class='viewer' id='viewer'>
+
+    </div>
+    <script src="../public/lib/WebViewer/lib/webviewer.js"></script>
+    <script>
+        const {
+            dialog
+        } = require("electron").remote;
+        const path = require("path")
+        let myWebViewer; // 创建webView实例
+        const viewerEle = document.getElementById('viewer');
+
+        // 创建一个WebViewer实例.
+        myWebViewer = new window.PDFTron.WebViewer({
+            path: '../public/lib/WebViewer/lib',
+            // 密钥，官网注册后，提供的，直接粘贴复制
+            l: 'demo:1197802519@qq.com:744f4a3d01ad2e25c27d0bcacbd81bf88db3be9643c382a56b',
+            // 服务端的一个默认的pdf文件地址
+            //initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo-annotated.pdf'
+        }, viewerEle)
+
+        // 需要等待 webViewer加载完毕，才能使用相应的 API
+        viewerEle.addEventListener("ready", () => {
+            var viewerInstance = myWebViewer.getInstance() // 实例对象在 ready事件中才可使用
+            console.error(viewerInstance)
+            // 调用示例的API-- 官网通过 myWebViewer去调用api，应该是一样的，这个也是实例对象，就没有手动去调用getInstance方法
+            // 下面的 写成 myWebViewer.loadDocument()  也可以
+
+            // loadDocument 的第二个参数是一个对象，当在服务端有要求的时候，使用，就添加HTTP请求头使用的
+            viewerInstance.loadDocument("https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo-annotated.pdf", 
+            {
+                
+                filename: 'a.pdf',
+                // 下面是添加的请求头
+                customHeaders: {
+                    Authorization: "Basic YWxhZGRpbjpvcGVuc2VzYW1l"
+                },
+                withCredentials: true
+            })
+            // 如果 服务端的是一个二进制流文件，可以直接甩到 loadDocument的第一个参数，一样的用法--待测试
+
+            
+        })
+
+
+
+        // 给按钮添加监听事件
+        document.getElementById('myButton').addEventListener('click', () => {
+
+            // 当按钮被点击则弹出一个文件选择对话框。
+            dialog.showOpenDialog({
+                // https://electronjs.org/docs/all?q=remote#dialogshowopendialogbrowserwindow-options-callback
+                properties: ['openFile'], // 允许选择文件， 这里的选项可以修改为 允许多选，单选等
+                filters: [{ // 过滤器
+                    name: "PDFs",
+                    extensions: ['pdf'] // 在这里指定文件后缀，指定后，弹窗只会显示数组中后缀的文件和文件夹，其他类型，全都不会列举出来
+                },
+                {
+                    name: "docx",
+                    extensions: ["doc", "docx"]
+                }
+                ] // 过滤pdf文件类型
+            }, (filepaths) => {  // 用户选择的文件路径的数组
+                console.log("文件路劲-->", filepaths)
+                if(!filepaths) {
+                    // 直接点击弹出框右上角的插，并没有选择文件
+                    return
+                }
+
+                // 只能选择一个文件，直接使用第一个。
+                const filePath = filepaths[0];
+              
+                viewerEle.innerHTML = ''; // 清空之前的内容
+
+
+                // 创建一个WebViewer实例.
+                myWebViewer = new window.PDFTron.WebViewer({
+                    path: '../public/lib/WebViewer/lib',
+                    l: 'demo:1197802519@qq.com:744f4a3d01ad2e25c27d0bcacbd81bf88db3be9643c382a56b'
+                }, viewerEle)
+
+                // 需要等待 webViewer加载完毕，才能使用相应的 API
+                viewerEle.addEventListener("ready", () => {
+                    var viewerInstance = myWebViewer.getInstance() // 实例对象在 ready事件中才可使用
+
+                    // 调用示例的API
+                    // 这里加载一个本地的 pdf文件显示
+                    viewerInstance.loadDocument(filePath, {filename: "自定义文件名"})
+                })
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>

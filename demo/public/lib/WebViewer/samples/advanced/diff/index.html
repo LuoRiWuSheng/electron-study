@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../../lib/webviewer.min.js"></script>
+    <script src="../../../lib/core/external/jquery-3.2.1.min.js"></script>
+    <script src="../../../lib/core/CoreControls.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+    <style>
+    .viewer {
+      display: inline-block;
+      width: calc(100% - 330px);
+      height: calc(100% - 60px);
+      margin-top: 60px;
+      margin-left: 5px;
+      -webkit-box-shadow: 1px 1px 10px #999;
+              box-shadow: 1px 1px 10px #999;
+    }
+
+    #viewers {
+      margin-left: 325px;
+      display: flex;
+      width: 100%;
+    }
+
+    @media (max-width: 800px) {
+      .viewer:first-child {
+        margin-top: 60px;
+      }
+
+      .viewer {
+        margin-top: 10px;
+        width: 100%;
+        height: 90%;
+        -webkit-box-shadow: 1px 1px 10px #999;
+                box-shadow: 1px 1px 10px #999;
+      }
+
+      #viewers {
+        padding: 15px 15px 0px 15px;
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      } 
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Synced viewers diff sample</div>
+    </header>
+    <aside>
+        <h1>Controls</h1>
+        <h2>Choose files to view</h2>
+        First file:
+        <select id="select1" style="width: 100%">
+          <option value="../../../samples/files/test_doc_1.pdf" selected>test_doc_1.pdf</option>
+          <option value="../../../samples/files/test_doc_2.pdf">test_doc_2.pdf</option>
+          <option value="https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo-annotated.pdf">https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo-annotated.pdf</option>
+        </select>
+        Second file:
+        <select id="select2" style="width: 100%">
+          <option value="../../../samples/files/test_doc_1.pdf">test_doc_1.pdf</option>
+          <option value="../../../samples/files/test_doc_2.pdf" selected>test_doc_2.pdf</option>
+          <option value="https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo-annotated.pdf">https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo-annotated.pdf</option>
+        </select>
+        <input id="selectControl" type="submit" value="Process">
+
+        <h2>Or pass a urls to document</h2>
+        <form id="url-form">
+          First file: <input id="url" type="text" style="width: 100%" />
+          Second file: <input id="url2" type="text" style="width: 100%" />
+          <input type="submit" value="Process">
+        </form>
+
+        <h2>Or choose your own files</h2>
+        <form id="file-picker-form">
+          First file: <br/><input id="file-picker" type="file" accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.pptx,.md,.xod" />
+          <br/>
+          Second file: <br/><input id="file-picker2" type="file" accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx,.pptx,.md,.xod" />
+          <br />
+          <input type="submit" value="Process">
+        </form>
+        <hr />
+        <h1>Instructions</h1>
+        <p>Use the dropdown above to view local or remote documents. Press the "Process" button after selecting documents to update the viewers.</p>
+    </aside>
+    <div id="viewers">
+      <div id="leftPanel" class="viewer"></div>
+      <div id="middlePanel" class="viewer"></div>
+      <div id="rightPanel" class="viewer"></div>
+    </div>
+    <script src="../../menu-button.js"></script>
+    <script src="synced-viewers.js"></script>
+  </body>
+</html>

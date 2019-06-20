@@ -1,0 +1,13 @@
+{
+  "name": "lesson-3",
+  "version": "1.0.0",
+  "description": "主进程与渲染进程通讯",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "dependencies": {
+    "electron": "^5.0.4"
+  }
+}

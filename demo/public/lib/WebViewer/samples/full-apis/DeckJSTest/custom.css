@@ -1,0 +1,15 @@
+section .canvasPage {
+    margin: auto;
+    display: block;
+}
+
+.loading {
+    background: url('ajax-loader.gif');
+    display: block;
+    width: 46px;
+    height: 46px;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

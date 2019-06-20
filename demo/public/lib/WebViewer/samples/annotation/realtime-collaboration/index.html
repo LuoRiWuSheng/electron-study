@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../../lib/webviewer.min.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script src="server.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Realtime collaboration sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Share this url:</h2>
+      <input id="url" type="text" style="width: calc(100% - 8px); padding: 2px" readonly>
+      <br />
+      <button id="copy">Copy</button>
+      <hr />
+      <h1>Instructions</h1>
+      <p>Type your name when the prompt comes up. It will set your username and log you in to the realtime collaboration backend. Please note that the backend is being shared globally, so you might see annotations created by strangers.</p>
+      <p>Share the link with others in your local network to start collaborating!</p>
+    </aside>
+    <div id="viewer"></div>
+    <script src="../../menu-button.js"></script>
+    <script src="realtime-collaboration.js"></script>
+
+  </body>
+</html>

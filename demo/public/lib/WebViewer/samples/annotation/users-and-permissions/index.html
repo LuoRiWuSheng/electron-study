@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../../lib/webviewer.min.js"></script>
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Users and permissions sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Select user:</h2>
+      <input type="radio" name="user" id="justin" checked />
+      <label for="justin">Justin (Admin)</label>
+      <br />
+      <input type="radio" name="user" id="sally" />
+      <label for="sally">Sally (User)</label>
+      <br />
+      <input type="radio" name="user" id="brian" />
+      <label for="brian">Brian (Read only)</label>
+      <br />
+      <h2>Set display option:</h2>
+      <input type="checkbox" id="display" checked />
+      <label for="display">Show annotations created by others</label>
+      <hr />
+      <h1>Instructions</h1>
+      <p>Use the buttons to switch between users and show/hide annotations created by others. Each user has different permission levels:</p>
+      <ul>
+        <li><b>Admin:</b> Fully allowed to create/reply/edit/delete any annotations</li>
+        <li><b>User:</b> Allowed to create/reply any annotations, but only allowed to edit/delete his/her own annotations</li>
+        <li><b>Read only:</b> Not allowed to create/reply/edit/delete any annotations</li>
+      </ul>
+    </aside>
+    <div id="viewer"></div>
+    <script src="../../menu-button.js"></script>
+    <script src="users-and-permissions.js"></script>
+
+  </body>
+</html>

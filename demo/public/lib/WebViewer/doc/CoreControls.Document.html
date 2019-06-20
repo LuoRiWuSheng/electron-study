@@ -1,0 +1,8677 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>PDFTron WebViewer HTML5 Class: Document</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">PDFTron WebViewer HTML5</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Actions.html">Actions</a></li><li><a href="Annotations.html">Annotations</a></li><li><a href="CoreControls.html">CoreControls</a></li><li><a href="PartRetrievers.html">PartRetrievers</a></li><li><a href="PDFNet.html">PDFNet</a></li><li><a href="PDFTron.html">PDFTron</a></li><li><a href="Tools.html">Tools</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Actions.Action.html">Actions.Action</a></li><li><a href="Actions.Dispatcher.html">Actions.Dispatcher</a></li><li><a href="Actions.GoTo.html">Actions.GoTo</a></li><li><a href="Actions.GoTo.Dest.html">Actions.GoTo.Dest</a></li><li><a href="Actions.GoToR.html">Actions.GoToR</a></li><li><a href="Actions.Hide.html">Actions.Hide</a></li><li><a href="Actions.JavaScript.html">Actions.JavaScript</a></li><li><a href="Actions.Named.html">Actions.Named</a></li><li><a href="Actions.ResetForm.html">Actions.ResetForm</a></li><li><a href="Actions.SubmitForm.html">Actions.SubmitForm</a></li><li><a href="Actions.URI.html">Actions.URI</a></li><li><a href="Annotations.Annotation.html">Annotations.Annotation</a></li><li><a href="Annotations.Border.html">Annotations.Border</a></li><li><a href="Annotations.BoxControlHandle.html">Annotations.BoxControlHandle</a></li><li><a href="Annotations.BoxSelectionModel.html">Annotations.BoxSelectionModel</a></li><li><a href="Annotations.ButtonWidgetAnnotation.html">Annotations.ButtonWidgetAnnotation</a></li><li><a href="Annotations.CalloutControlHandle.html">Annotations.CalloutControlHandle</a></li><li><a href="Annotations.CalloutSelectionModel.html">Annotations.CalloutSelectionModel</a></li><li><a href="Annotations.CaretAnnotation.html">Annotations.CaretAnnotation</a></li><li><a href="Annotations.CheckButtonWidgetAnnotation.html">Annotations.CheckButtonWidgetAnnotation</a></li><li><a href="Annotations.ChoiceWidgetAnnotation.html">Annotations.ChoiceWidgetAnnotation</a></li><li><a href="Annotations.Color.html">Annotations.Color</a></li><li><a href="Annotations.ControlHandle.html">Annotations.ControlHandle</a></li><li><a href="Annotations.CustomAnnotation.html">Annotations.CustomAnnotation</a></li><li><a href="Annotations.EllipseAnnotation.html">Annotations.EllipseAnnotation</a></li><li><a href="Annotations.Font.html">Annotations.Font</a></li><li><a href="Annotations.Forms.html">Annotations.Forms</a></li><li><a href="Annotations.Forms.Field.html">Annotations.Forms.Field</a></li><li><a href="Annotations.Forms.FieldManager.html">Annotations.Forms.FieldManager</a></li><li><a href="Annotations.FreeHandAnnotation.html">Annotations.FreeHandAnnotation</a></li><li><a href="Annotations.FreeTextAnnotation.html">Annotations.FreeTextAnnotation</a></li><li><a href="Annotations.FreeTextSelectionModel.html">Annotations.FreeTextSelectionModel</a></li><li><a href="Annotations.HTMLAnnotation.html">Annotations.HTMLAnnotation</a></li><li><a href="Annotations.IPathAnnotation.html">Annotations.IPathAnnotation</a></li><li><a href="Annotations.LineAnnotation.html">Annotations.LineAnnotation</a></li><li><a href="Annotations.LineControlHandle.html">Annotations.LineControlHandle</a></li><li><a href="Annotations.LineSelectionModel.html">Annotations.LineSelectionModel</a></li><li><a href="Annotations.Link.html">Annotations.Link</a></li><li><a href="Annotations.ListWidgetAnnotation.html">Annotations.ListWidgetAnnotation</a></li><li><a href="Annotations.MarkupAnnotation.html">Annotations.MarkupAnnotation</a></li><li><a href="Annotations.PathControlHandle.html">Annotations.PathControlHandle</a></li><li><a href="Annotations.PathSelectionModel.html">Annotations.PathSelectionModel</a></li><li><a href="Annotations.Point.html">Annotations.Point</a></li><li><a href="Annotations.PolygonAnnotation.html">Annotations.PolygonAnnotation</a></li><li><a href="Annotations.PolygonControlHandle.html">Annotations.PolygonControlHandle</a></li><li><a href="Annotations.PolygonSelectionModel.html">Annotations.PolygonSelectionModel</a></li><li><a href="Annotations.PolylineAnnotation.html">Annotations.PolylineAnnotation</a></li><li><a href="Annotations.PopupAnnotation.html">Annotations.PopupAnnotation</a></li><li><a href="Annotations.Quad.html">Annotations.Quad</a></li><li><a href="Annotations.RadioButtonWidgetAnnotation.html">Annotations.RadioButtonWidgetAnnotation</a></li><li><a href="Annotations.Rect.html">Annotations.Rect</a></li><li><a href="Annotations.RectangleAnnotation.html">Annotations.RectangleAnnotation</a></li><li><a href="Annotations.RedactionAnnotation.html">Annotations.RedactionAnnotation</a></li><li><a href="Annotations.RedactionSelectionModel.html">Annotations.RedactionSelectionModel</a></li><li><a href="Annotations.SelectionModel.html">Annotations.SelectionModel</a></li><li><a href="Annotations.SignatureWidgetAnnotation.html">Annotations.SignatureWidgetAnnotation</a></li><li><a href="Annotations.StampAnnotation.html">Annotations.StampAnnotation</a></li><li><a href="Annotations.StickyAnnotation.html">Annotations.StickyAnnotation</a></li><li><a href="Annotations.TextHighlightAnnotation.html">Annotations.TextHighlightAnnotation</a></li><li><a href="Annotations.TextMarkupAnnotation.html">Annotations.TextMarkupAnnotation</a></li><li><a href="Annotations.TextSelectionModel.html">Annotations.TextSelectionModel</a></li><li><a href="Annotations.TextSquigglyAnnotation.html">Annotations.TextSquigglyAnnotation</a></li><li><a href="Annotations.TextStrikeoutAnnotation.html">Annotations.TextStrikeoutAnnotation</a></li><li><a href="Annotations.TextUnderlineAnnotation.html">Annotations.TextUnderlineAnnotation</a></li><li><a href="Annotations.TextWidgetAnnotation.html">Annotations.TextWidgetAnnotation</a></li><li><a href="Annotations.WidgetAnnotation.html">Annotations.WidgetAnnotation</a></li><li><a href="Annotations.WidgetFlags.html">Annotations.WidgetFlags</a></li><li><a href="CoreControls.AnnotationManager.html">CoreControls.AnnotationManager</a></li><li><a href="CoreControls.BlackBoxAnnotationManager.html">CoreControls.BlackBoxAnnotationManager</a></li><li><a href="CoreControls.Bookmark.html">CoreControls.Bookmark</a></li><li><a href="CoreControls.DisplayMode.html">CoreControls.DisplayMode</a></li><li><a href="CoreControls.DisplayModeManager.html">CoreControls.DisplayModeManager</a></li><li><a href="CoreControls.Document.html">CoreControls.Document</a></li><li><a href="CoreControls.DocumentViewer.html">CoreControls.DocumentViewer</a></li><li><a href="PartRetrievers.AndroidContentPartRetriever.html">PartRetrievers.AndroidContentPartRetriever</a></li><li><a href="PartRetrievers.ArrayBufferPdfPartRetriever.html">PartRetrievers.ArrayBufferPdfPartRetriever</a></li><li><a href="PartRetrievers.AzurePartRetriever.html">PartRetrievers.AzurePartRetriever</a></li><li><a href="PartRetrievers.ExternalPdfPartRetriever.html">PartRetrievers.ExternalPdfPartRetriever</a></li><li><a href="PartRetrievers.HttpPartRetriever.html">PartRetrievers.HttpPartRetriever</a></li><li><a href="PartRetrievers.IOSPartRetriever.html">PartRetrievers.IOSPartRetriever</a></li><li><a href="PartRetrievers.LocalPartRetriever.html">PartRetrievers.LocalPartRetriever</a></li><li><a href="PartRetrievers.LocalPdfPartRetriever.html">PartRetrievers.LocalPdfPartRetriever</a></li><li><a href="PartRetrievers.MagicPartRetriever.html">PartRetrievers.MagicPartRetriever</a></li><li><a href="PartRetrievers.PartRetriever.html">PartRetrievers.PartRetriever</a></li><li><a href="PartRetrievers.RangeStreamingPartRetriever.html">PartRetrievers.RangeStreamingPartRetriever</a></li><li><a href="PartRetrievers.StreamingPartRetriever.html">PartRetrievers.StreamingPartRetriever</a></li><li><a href="PartRetrievers.WinRTPartRetriever.html">PartRetrievers.WinRTPartRetriever</a></li><li><a href="PDFNet.Action.html">PDFNet.Action</a></li><li><a href="PDFNet.ActionParameter.html">PDFNet.ActionParameter</a></li><li><a href="PDFNet.Annot.html">PDFNet.Annot</a></li><li><a href="PDFNet.AnnotBorderStyle.html">PDFNet.AnnotBorderStyle</a></li><li><a href="PDFNet.AppearanceReferenceList.html">PDFNet.AppearanceReferenceList</a></li><li><a href="PDFNet.AttrObj.html">PDFNet.AttrObj</a></li><li><a href="PDFNet.Bookmark.html">PDFNet.Bookmark</a></li><li><a href="PDFNet.CaretAnnot.html">PDFNet.CaretAnnot</a></li><li><a href="PDFNet.ChunkRenderer.html">PDFNet.ChunkRenderer</a></li><li><a href="PDFNet.CircleAnnot.html">PDFNet.CircleAnnot</a></li><li><a href="PDFNet.ClassMap.html">PDFNet.ClassMap</a></li><li><a href="PDFNet.ColorPt.html">PDFNet.ColorPt</a></li><li><a href="PDFNet.ColorSpace.html">PDFNet.ColorSpace</a></li><li><a href="PDFNet.ContentItem.html">PDFNet.ContentItem</a></li><li><a href="PDFNet.ContentReplacer.html">PDFNet.ContentReplacer</a></li><li><a href="PDFNet.ConversionMonitor.html">PDFNet.ConversionMonitor</a></li><li><a href="PDFNet.Convert.html">PDFNet.Convert</a></li><li><a href="PDFNet.Date.html">PDFNet.Date</a></li><li><a href="PDFNet.Destination.html">PDFNet.Destination</a></li><li><a href="PDFNet.DictIterator.html">PDFNet.DictIterator</a></li><li><a href="PDFNet.DocumentConversion.html">PDFNet.DocumentConversion</a></li><li><a href="PDFNet.Element.html">PDFNet.Element</a></li><li><a href="PDFNet.ElementBuilder.html">PDFNet.ElementBuilder</a></li><li><a href="PDFNet.ElementReader.html">PDFNet.ElementReader</a></li><li><a href="PDFNet.ElementWriter.html">PDFNet.ElementWriter</a></li><li><a href="PDFNet.FDFDoc.html">PDFNet.FDFDoc</a></li><li><a href="PDFNet.FDFField.html">PDFNet.FDFField</a></li><li><a href="PDFNet.Field.html">PDFNet.Field</a></li><li><a href="PDFNet.FileAttachmentAnnot.html">PDFNet.FileAttachmentAnnot</a></li><li><a href="PDFNet.FileSpec.html">PDFNet.FileSpec</a></li><li><a href="PDFNet.Filter.html">PDFNet.Filter</a></li><li><a href="PDFNet.FilterReader.html">PDFNet.FilterReader</a></li><li><a href="PDFNet.FilterWriter.html">PDFNet.FilterWriter</a></li><li><a href="PDFNet.Flattener.html">PDFNet.Flattener</a></li><li><a href="PDFNet.Font.html">PDFNet.Font</a></li><li><a href="PDFNet.FreeTextAnnot.html">PDFNet.FreeTextAnnot</a></li><li><a href="PDFNet.Function.html">PDFNet.Function</a></li><li><a href="PDFNet.GeometryCollection.html">PDFNet.GeometryCollection</a></li><li><a href="PDFNet.GState.html">PDFNet.GState</a></li><li><a href="PDFNet.HighlightAnnot.html">PDFNet.HighlightAnnot</a></li><li><a href="PDFNet.Highlights.html">PDFNet.Highlights</a></li><li><a href="PDFNet.HTML2PDF.html">PDFNet.HTML2PDF</a></li><li><a href="PDFNet.HTML2PDF_Proxy.html">PDFNet.HTML2PDF_Proxy</a></li><li><a href="PDFNet.HTML2PDF_TOCSettings.html">PDFNet.HTML2PDF_TOCSettings</a></li><li><a href="PDFNet.HTML2PDF_WebPageSettings.html">PDFNet.HTML2PDF_WebPageSettings</a></li><li><a href="PDFNet.Image.html">PDFNet.Image</a></li><li><a href="PDFNet.InkAnnot.html">PDFNet.InkAnnot</a></li><li><a href="PDFNet.Iterator.html">PDFNet.Iterator</a></li><li><a href="PDFNet.KeyStrokeActionResult.html">PDFNet.KeyStrokeActionResult</a></li><li><a href="PDFNet.KeyStrokeEventData.html">PDFNet.KeyStrokeEventData</a></li><li><a href="PDFNet.LineAnnot.html">PDFNet.LineAnnot</a></li><li><a href="PDFNet.LinkAnnot.html">PDFNet.LinkAnnot</a></li><li><a href="PDFNet.MarkupAnnot.html">PDFNet.MarkupAnnot</a></li><li><a href="PDFNet.Matrix2D.html">PDFNet.Matrix2D</a></li><li><a href="PDFNet.MovieAnnot.html">PDFNet.MovieAnnot</a></li><li><a href="PDFNet.NameTree.html">PDFNet.NameTree</a></li><li><a href="PDFNet.NumberTree.html">PDFNet.NumberTree</a></li><li><a href="PDFNet.Obj.html">PDFNet.Obj</a></li><li><a href="PDFNet.ObjSet.html">PDFNet.ObjSet</a></li><li><a href="PDFNet.OCG.html">PDFNet.OCG</a></li><li><a href="PDFNet.OCGConfig.html">PDFNet.OCGConfig</a></li><li><a href="PDFNet.OCGContext.html">PDFNet.OCGContext</a></li><li><a href="PDFNet.OCMD.html">PDFNet.OCMD</a></li><li><a href="PDFNet.Optimizer.html">PDFNet.Optimizer</a></li><li><a href="PDFNet.OwnedBitmap.html">PDFNet.OwnedBitmap</a></li><li><a href="PDFNet.Page.html">PDFNet.Page</a></li><li><a href="PDFNet.PageLabel.html">PDFNet.PageLabel</a></li><li><a href="PDFNet.PageSet.html">PDFNet.PageSet</a></li><li><a href="PDFNet.PatternColor.html">PDFNet.PatternColor</a></li><li><a href="PDFNet.PDFACompliance.html">PDFNet.PDFACompliance</a></li><li><a href="PDFNet.PDFDC.html">PDFNet.PDFDC</a></li><li><a href="PDFNet.PDFDCEX.html">PDFNet.PDFDCEX</a></li><li><a href="PDFNet.PDFDoc.html">PDFNet.PDFDoc</a></li><li><a href="PDFNet.PDFDocInfo.html">PDFNet.PDFDocInfo</a></li><li><a href="PDFNet.PDFDocViewPrefs.html">PDFNet.PDFDocViewPrefs</a></li><li><a href="PDFNet.PDFDraw.html">PDFNet.PDFDraw</a></li><li><a href="PDFNet.PDFNet.html">PDFNet.PDFNet</a></li><li><a href="PDFNet.PDFRasterizer.html">PDFNet.PDFRasterizer</a></li><li><a href="PDFNet.PDFView.html">PDFNet.PDFView</a></li><li><a href="PDFNet.PDFViewCtrl.html">PDFNet.PDFViewCtrl</a></li><li><a href="PDFNet.Point.html">PDFNet.Point</a></li><li><a href="PDFNet.PolygonAnnot.html">PDFNet.PolygonAnnot</a></li><li><a href="PDFNet.PolyLineAnnot.html">PDFNet.PolyLineAnnot</a></li><li><a href="PDFNet.PopupAnnot.html">PDFNet.PopupAnnot</a></li><li><a href="PDFNet.ProgressMonitor.html">PDFNet.ProgressMonitor</a></li><li><a href="PDFNet.QuadPoint.html">PDFNet.QuadPoint</a></li><li><a href="PDFNet.Rect.html">PDFNet.Rect</a></li><li><a href="PDFNet.Redaction.html">PDFNet.Redaction</a></li><li><a href="PDFNet.RedactionAnnot.html">PDFNet.RedactionAnnot</a></li><li><a href="PDFNet.RedactionAppearance.html">PDFNet.RedactionAppearance</a></li><li><a href="PDFNet.Redactor.html">PDFNet.Redactor</a></li><li><a href="PDFNet.RoleMap.html">PDFNet.RoleMap</a></li><li><a href="PDFNet.RubberStampAnnot.html">PDFNet.RubberStampAnnot</a></li><li><a href="PDFNet.ScreenAnnot.html">PDFNet.ScreenAnnot</a></li><li><a href="PDFNet.SDFDoc.html">PDFNet.SDFDoc</a></li><li><a href="PDFNet.SecurityHandler.html">PDFNet.SecurityHandler</a></li><li><a href="PDFNet.SElement.html">PDFNet.SElement</a></li><li><a href="PDFNet.Shading.html">PDFNet.Shading</a></li><li><a href="PDFNet.SignatureHandler.html">PDFNet.SignatureHandler</a></li><li><a href="PDFNet.SoundAnnot.html">PDFNet.SoundAnnot</a></li><li><a href="PDFNet.SquareAnnot.html">PDFNet.SquareAnnot</a></li><li><a href="PDFNet.SquigglyAnnot.html">PDFNet.SquigglyAnnot</a></li><li><a href="PDFNet.Stamper.html">PDFNet.Stamper</a></li><li><a href="PDFNet.STree.html">PDFNet.STree</a></li><li><a href="PDFNet.StrikeOutAnnot.html">PDFNet.StrikeOutAnnot</a></li><li><a href="PDFNet.TextAnnot.html">PDFNet.TextAnnot</a></li><li><a href="PDFNet.TextExtractor.html">PDFNet.TextExtractor</a></li><li><a href="PDFNet.TextExtractorLine.html">PDFNet.TextExtractorLine</a></li><li><a href="PDFNet.TextExtractorStyle.html">PDFNet.TextExtractorStyle</a></li><li><a href="PDFNet.TextExtractorWord.html">PDFNet.TextExtractorWord</a></li><li><a href="PDFNet.TextMarkupAnnot.html">PDFNet.TextMarkupAnnot</a></li><li><a href="PDFNet.TextSearch.html">PDFNet.TextSearch</a></li><li><a href="PDFNet.UnderlineAnnot.html">PDFNet.UnderlineAnnot</a></li><li><a href="PDFNet.Vector.html">PDFNet.Vector</a></li><li><a href="PDFNet.ViewChangeCollection.html">PDFNet.ViewChangeCollection</a></li><li><a href="PDFNet.WatermarkAnnot.html">PDFNet.WatermarkAnnot</a></li><li><a href="PDFNet.WidgetAnnot.html">PDFNet.WidgetAnnot</a></li><li><a href="PDFTron.WebViewer.html">PDFTron.WebViewer</a></li><li><a href="Tools.AnnotationEditTool.html">Tools.AnnotationEditTool</a></li><li><a href="Tools.AnnotationSelectTool.html">Tools.AnnotationSelectTool</a></li><li><a href="Tools.AreaMeasurementCreateTool.html">Tools.AreaMeasurementCreateTool</a></li><li><a href="Tools.ArrowCreateTool.html">Tools.ArrowCreateTool</a></li><li><a href="Tools.CalloutCreateTool.html">Tools.CalloutCreateTool</a></li><li><a href="Tools.DistanceMeasurementCreateTool.html">Tools.DistanceMeasurementCreateTool</a></li><li><a href="Tools.EllipseCreateTool.html">Tools.EllipseCreateTool</a></li><li><a href="Tools.FreeHandCreateTool.html">Tools.FreeHandCreateTool</a></li><li><a href="Tools.FreeTextCreateTool.html">Tools.FreeTextCreateTool</a></li><li><a href="Tools.GenericAnnotationCreateTool.html">Tools.GenericAnnotationCreateTool</a></li><li><a href="Tools.LineCreateTool.html">Tools.LineCreateTool</a></li><li><a href="Tools.MarqueeZoomTool.html">Tools.MarqueeZoomTool</a></li><li><a href="Tools.PanTool.html">Tools.PanTool</a></li><li><a href="Tools.PerimeterMeasurementCreateTool.html">Tools.PerimeterMeasurementCreateTool</a></li><li><a href="Tools.PolygonCloudCreateTool.html">Tools.PolygonCloudCreateTool</a></li><li><a href="Tools.PolygonCreateTool.html">Tools.PolygonCreateTool</a></li><li><a href="Tools.PolylineCreateTool.html">Tools.PolylineCreateTool</a></li><li><a href="Tools.RectangleCreateTool.html">Tools.RectangleCreateTool</a></li><li><a href="Tools.RedactionCreateTool.html">Tools.RedactionCreateTool</a></li><li><a href="Tools.SignatureCreateTool.html">Tools.SignatureCreateTool</a></li><li><a href="Tools.StampCreateTool.html">Tools.StampCreateTool</a></li><li><a href="Tools.StickyCreateTool.html">Tools.StickyCreateTool</a></li><li><a href="Tools.TextAnnotationCreateTool.html">Tools.TextAnnotationCreateTool</a></li><li><a href="Tools.TextHighlightCreateTool.html">Tools.TextHighlightCreateTool</a></li><li><a href="Tools.TextSelectTool.html">Tools.TextSelectTool</a></li><li><a href="Tools.TextSquigglyCreateTool.html">Tools.TextSquigglyCreateTool</a></li><li><a href="Tools.TextStrikeoutCreateTool.html">Tools.TextStrikeoutCreateTool</a></li><li><a href="Tools.TextTool.html">Tools.TextTool</a></li><li><a href="Tools.TextUnderlineCreateTool.html">Tools.TextUnderlineCreateTool</a></li><li><a href="Tools.Tool.html">Tools.Tool</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Annotations.Forms.Field.html#event:calculate">Annotations.Forms.Field#event:calculate</a></li><li><a href="Annotations.Forms.Field.html#event:change">Annotations.Forms.Field#event:change</a></li><li><a href="Annotations.Forms.Field.html#event:commit">Annotations.Forms.Field#event:commit</a></li><li><a href="CoreControls.AnnotationManager.html#event:addReply">CoreControls.AnnotationManager#event:addReply</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationChanged">CoreControls.AnnotationManager#event:annotationChanged</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationDoubleClicked">CoreControls.AnnotationManager#event:annotationDoubleClicked</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationHidden">CoreControls.AnnotationManager#event:annotationHidden</a></li><li><a href="CoreControls.AnnotationManager.html#event:annotationSelected">CoreControls.AnnotationManager#event:annotationSelected</a></li><li><a href="CoreControls.AnnotationManager.html#event:deleteReply">CoreControls.AnnotationManager#event:deleteReply</a></li><li><a href="CoreControls.AnnotationManager.html#event:fieldChanged">CoreControls.AnnotationManager#event:fieldChanged</a></li><li><a href="CoreControls.AnnotationManager.html#event:notify">CoreControls.AnnotationManager#event:notify</a></li><li><a href="CoreControls.AnnotationManager.html#event:setNoteText">CoreControls.AnnotationManager#event:setNoteText</a></li><li><a href="CoreControls.AnnotationManager.html#event:updateAnnotationPermission">CoreControls.AnnotationManager#event:updateAnnotationPermission</a></li><li><a href="CoreControls.BlackBoxAnnotationManager.html#event:blackBoxAnnotationsDisabled">CoreControls.BlackBoxAnnotationManager#event:blackBoxAnnotationsDisabled</a></li><li><a href="CoreControls.BlackBoxAnnotationManager.html#event:blackBoxAnnotationsEnabled">CoreControls.BlackBoxAnnotationManager#event:blackBoxAnnotationsEnabled</a></li><li><a href="CoreControls.Document.html#event:colorSeparationAdded">CoreControls.Document#event:colorSeparationAdded</a></li><li><a href="CoreControls.DocumentViewer.html#event:annotationsLoaded">CoreControls.DocumentViewer#event:annotationsLoaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:beforeDocumentLoaded">CoreControls.DocumentViewer#event:beforeDocumentLoaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:changePage">CoreControls.DocumentViewer#event:changePage</a></li><li><a href="CoreControls.DocumentViewer.html#event:click">CoreControls.DocumentViewer#event:click</a></li><li><a href="CoreControls.DocumentViewer.html#event:dblClick">CoreControls.DocumentViewer#event:dblClick</a></li><li><a href="CoreControls.DocumentViewer.html#event:displayModeUpdated">CoreControls.DocumentViewer#event:displayModeUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:displayPageLocation">CoreControls.DocumentViewer#event:displayPageLocation</a></li><li><a href="CoreControls.DocumentViewer.html#event:documentLoaded">CoreControls.DocumentViewer#event:documentLoaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:documentUnloaded">CoreControls.DocumentViewer#event:documentUnloaded</a></li><li><a href="CoreControls.DocumentViewer.html#event:fitModeUpdated">CoreControls.DocumentViewer#event:fitModeUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:keyDown">CoreControls.DocumentViewer#event:keyDown</a></li><li><a href="CoreControls.DocumentViewer.html#event:keyUp">CoreControls.DocumentViewer#event:keyUp</a></li><li><a href="CoreControls.DocumentViewer.html#event:layoutChanged">CoreControls.DocumentViewer#event:layoutChanged</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseEnter">CoreControls.DocumentViewer#event:mouseEnter</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseLeave">CoreControls.DocumentViewer#event:mouseLeave</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseLeftDown">CoreControls.DocumentViewer#event:mouseLeftDown</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseLeftUp">CoreControls.DocumentViewer#event:mouseLeftUp</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseMove">CoreControls.DocumentViewer#event:mouseMove</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseRightDown">CoreControls.DocumentViewer#event:mouseRightDown</a></li><li><a href="CoreControls.DocumentViewer.html#event:mouseRightUp">CoreControls.DocumentViewer#event:mouseRightUp</a></li><li><a href="CoreControls.DocumentViewer.html#event:pageComplete">CoreControls.DocumentViewer#event:pageComplete</a></li><li><a href="CoreControls.DocumentViewer.html#event:pageNumberUpdated">CoreControls.DocumentViewer#event:pageNumberUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:rotationUpdated">CoreControls.DocumentViewer#event:rotationUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:searchInProgress">CoreControls.DocumentViewer#event:searchInProgress</a></li><li><a href="CoreControls.DocumentViewer.html#event:textSelected">CoreControls.DocumentViewer#event:textSelected</a></li><li><a href="CoreControls.DocumentViewer.html#event:toolModeUpdated">CoreControls.DocumentViewer#event:toolModeUpdated</a></li><li><a href="CoreControls.DocumentViewer.html#event:zoomUpdated">CoreControls.DocumentViewer#event:zoomUpdated</a></li><li><a href="Tools.AreaMeasurementCreateTool.html#event:annotationAdded">Tools.AreaMeasurementCreateTool#event:annotationAdded</a></li><li><a href="Tools.AreaMeasurementCreateTool.html#event:annotationCreated">Tools.AreaMeasurementCreateTool#event:annotationCreated</a></li><li><a href="Tools.ArrowCreateTool.html#event:annotationAdded">Tools.ArrowCreateTool#event:annotationAdded</a></li><li><a href="Tools.ArrowCreateTool.html#event:annotationCreated">Tools.ArrowCreateTool#event:annotationCreated</a></li><li><a href="Tools.CalloutCreateTool.html#event:annotationAdded">Tools.CalloutCreateTool#event:annotationAdded</a></li><li><a href="Tools.CalloutCreateTool.html#event:annotationCreated">Tools.CalloutCreateTool#event:annotationCreated</a></li><li><a href="Tools.DistanceMeasurementCreateTool.html#event:annotationAdded">Tools.DistanceMeasurementCreateTool#event:annotationAdded</a></li><li><a href="Tools.DistanceMeasurementCreateTool.html#event:annotationCreated">Tools.DistanceMeasurementCreateTool#event:annotationCreated</a></li><li><a href="Tools.EllipseCreateTool.html#event:annotationAdded">Tools.EllipseCreateTool#event:annotationAdded</a></li><li><a href="Tools.EllipseCreateTool.html#event:annotationCreated">Tools.EllipseCreateTool#event:annotationCreated</a></li><li><a href="Tools.FreeHandCreateTool.html#event:annotationAdded">Tools.FreeHandCreateTool#event:annotationAdded</a></li><li><a href="Tools.FreeHandCreateTool.html#event:annotationCreated">Tools.FreeHandCreateTool#event:annotationCreated</a></li><li><a href="Tools.FreeTextCreateTool.html#event:annotationAdded">Tools.FreeTextCreateTool#event:annotationAdded</a></li><li><a href="Tools.FreeTextCreateTool.html#event:annotationCreated">Tools.FreeTextCreateTool#event:annotationCreated</a></li><li><a href="Tools.GenericAnnotationCreateTool.html#event:annotationAdded">Tools.GenericAnnotationCreateTool#event:annotationAdded</a></li><li><a href="Tools.GenericAnnotationCreateTool.html#event:annotationCreated">Tools.GenericAnnotationCreateTool#event:annotationCreated</a></li><li><a href="Tools.LineCreateTool.html#event:annotationAdded">Tools.LineCreateTool#event:annotationAdded</a></li><li><a href="Tools.LineCreateTool.html#event:annotationCreated">Tools.LineCreateTool#event:annotationCreated</a></li><li><a href="Tools.PerimeterMeasurementCreateTool.html#event:annotationAdded">Tools.PerimeterMeasurementCreateTool#event:annotationAdded</a></li><li><a href="Tools.PerimeterMeasurementCreateTool.html#event:annotationCreated">Tools.PerimeterMeasurementCreateTool#event:annotationCreated</a></li><li><a href="Tools.PolygonCloudCreateTool.html#event:annotationAdded">Tools.PolygonCloudCreateTool#event:annotationAdded</a></li><li><a href="Tools.PolygonCloudCreateTool.html#event:annotationCreated">Tools.PolygonCloudCreateTool#event:annotationCreated</a></li><li><a href="Tools.PolygonCreateTool.html#event:annotationAdded">Tools.PolygonCreateTool#event:annotationAdded</a></li><li><a href="Tools.PolygonCreateTool.html#event:annotationCreated">Tools.PolygonCreateTool#event:annotationCreated</a></li><li><a href="Tools.PolylineCreateTool.html#event:annotationAdded">Tools.PolylineCreateTool#event:annotationAdded</a></li><li><a href="Tools.PolylineCreateTool.html#event:annotationCreated">Tools.PolylineCreateTool#event:annotationCreated</a></li><li><a href="Tools.RectangleCreateTool.html#event:annotationAdded">Tools.RectangleCreateTool#event:annotationAdded</a></li><li><a href="Tools.RectangleCreateTool.html#event:annotationCreated">Tools.RectangleCreateTool#event:annotationCreated</a></li><li><a href="Tools.RedactionCreateTool.html#event:annotationAdded">Tools.RedactionCreateTool#event:annotationAdded</a></li><li><a href="Tools.RedactionCreateTool.html#event:annotationCreated">Tools.RedactionCreateTool#event:annotationCreated</a></li><li><a href="Tools.SignatureCreateTool.html#event:annotationAdded">Tools.SignatureCreateTool#event:annotationAdded</a></li><li><a href="Tools.SignatureCreateTool.html#event:locationSelected">Tools.SignatureCreateTool#event:locationSelected</a></li><li><a href="Tools.SignatureCreateTool.html#event:saveDefault">Tools.SignatureCreateTool#event:saveDefault</a></li><li><a href="Tools.StickyCreateTool.html#event:annotationAdded">Tools.StickyCreateTool#event:annotationAdded</a></li><li><a href="Tools.StickyCreateTool.html#event:annotationCreated">Tools.StickyCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextAnnotationCreateTool.html#event:annotationAdded">Tools.TextAnnotationCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextAnnotationCreateTool.html#event:annotationCreated">Tools.TextAnnotationCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextHighlightCreateTool.html#event:annotationAdded">Tools.TextHighlightCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextHighlightCreateTool.html#event:annotationCreated">Tools.TextHighlightCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextSquigglyCreateTool.html#event:annotationAdded">Tools.TextSquigglyCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextSquigglyCreateTool.html#event:annotationCreated">Tools.TextSquigglyCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextStrikeoutCreateTool.html#event:annotationAdded">Tools.TextStrikeoutCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextStrikeoutCreateTool.html#event:annotationCreated">Tools.TextStrikeoutCreateTool#event:annotationCreated</a></li><li><a href="Tools.TextUnderlineCreateTool.html#event:annotationAdded">Tools.TextUnderlineCreateTool#event:annotationAdded</a></li><li><a href="Tools.TextUnderlineCreateTool.html#event:annotationCreated">Tools.TextUnderlineCreateTool#event:annotationCreated</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: Document</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="CoreControls.html">CoreControls</a>.</span>
+        
+        Document
+        </h2>
+        
+            <div class="class-description"><p>Represents a document with individual pages (canvases) that can be displayed on screen and printed.</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="Document"><span class="type-signature"></span>new Document()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p><span style="color: red; font-size: 1.2em; font-weight: bold">⚠</span> You must NOT instantiate this yourself. Access the document instance as follows:</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Examples</h5>
+        
+    <pre class="sunlight-highlight-javascript">// In your app
+var viewer = new PDFTron.WebViewer({ ... }, viewerElement);
+viewerElement.addEventListener(&#x27;ready&#x27;, function() {
+  var instance = viewer.getInstance();
+  var docViewer = instance.docViewer;
+  var doc = docViewer.getDocument();
+  // doc.someAPI();
+});</pre>
+
+    <pre class="sunlight-highlight-javascript">// In a config file
+$(document).on(&#x27;viewerLoaded&#x27;, function() {
+  var instance = readerControl;
+  var docViewer = instance.docViewer;
+  var doc = docViewer.getDocument();
+  // doc.someAPI();
+});</pre>
+
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".registerDocumentType"><span class="type-signature">&lt;static> </span>registerDocumentType(type, source)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Register new document type with Document class</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Name of the new document type</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Class</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Class of the new document</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".unregisterDocumentType"><span class="type-signature">&lt;static> </span>unregisterDocumentType(type)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Unregister existing document type form Document class</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Name of registered document type</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="cancelLoadCanvas"><span class="type-signature"></span>cancelLoadCanvas(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Cancels the loadCanvasAsync call corresponding to the passed in id</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id returned from the loadCanvasAsync call that will be cancelled.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="cancelLoadThumbnail"><span class="type-signature"></span>cancelLoadThumbnail(requestId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Cancels the request made for thumbnail with the specified request Id</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>requestId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id returned from loadThumbnailAsync</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="cancelOfflineModeDownload"><span class="type-signature"></span>cancelOfflineModeDownload()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Cancels a download for offline mode in progress.  If there is no current download then this does nothing.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="cropPages"><span class="type-signature"></span>cropPages(pageArray, topMargin, botMargin, leftMargin, rightMargin)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Crop the given pages by the given margins. Note that this method will need to wait for the entire file to be downloaded before the change is applied.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array of page numbers to crop</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>topMargin</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>how much to crop from the top</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>botMargin</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>how much to crop from the bottom</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>leftMargin</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>how much to crop from the left</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rightMargin</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>how much to crop from the right</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an object describing the updated state of the pages in the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="documentCompletePromise"><span class="type-signature"></span>documentCompletePromise()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves when all of the page information is available for the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="enableColorSeparations"><span class="type-signature"></span>enableColorSeparations(enabled)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Enables or disables the color separations feature for rendering.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Whether to enable or disable color separations rendering.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="enableSeparation"><span class="type-signature"></span>enableSeparation(name, enabled)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Enables or disables the rendering of a particular color separation.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the separation</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Whether to enable or disable the separation</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="extractPages"><span class="type-signature"></span>extractPages(pageArray, xfdfString)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Extract the given pages from the document. Note that this method will need to wait for the entire file to be downloaded before the change is applied.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array of the page numbers to extract</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xfdfString</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an XFDF string to merge into the document before extracting</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves on completion</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="extractPDFNetLayersContext"><span class="type-signature"></span>extractPDFNetLayersContext(layers)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only][PDFNetJS full only] Get the updated context of a document as a PDFNet object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>layers</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>layers</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to a PDFNet Context object representing the current layers/OCG state.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="extractXFDF"><span class="type-signature"></span>extractXFDF(pages)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Gets the XFDF data for the document's internal annotations.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pages</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of page numbers to get the XFDF data for the document. Note: Only one page
+is supported by XOD documents.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise the resolves to an object with an xfdfString and pages property where pages is the
+array of including the extracted annotation information.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getBookmarks"><span class="type-signature"></span>getBookmarks()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an array containing the bookmarks in the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An array containing the bookmarks in the current document.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;<a href="CoreControls.Bookmark.html">CoreControls.Bookmark</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getColorSeparations"><span class="type-signature"></span>getColorSeparations()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Gets the color separations available on this document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The color separations of the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getDownloadLink"><span class="type-signature"></span>getDownloadLink( [options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDFTron Server only] Provides a URL to a the PDF with annotations and watermarks merged.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An optional object containing download options and parameters.</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>filename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The preferred name for the downloaded file on the client side. This has no effect on the backend target of the returned link, only the filename used by the browser when the link is accessed.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Will be null if not supported. Otherwise a promise that resolves to an object with a <code>url</code> property pointing to the printable PDF.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getFileData"><span class="type-signature"></span>getFileData( [options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF/Office Document only] Asynchronously saves the document and provides the result as an ArrayBuffer. See PDFReaderControl.js for an example of typical usage.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An optional object containing save options and parameters.</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>xfdfString</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An xfdf string containing annotation data to be used when saving. This will usually be retrieved by calling exportAnnotations on a CoreControls.AnnotationManager object.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>finishedWithDocument</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A flag specifying that the document data may be discarded by the worker after use.
+Only use this when completely finished with document processing. When handling larger documents this can be useful to avoid memory exhaustion as only one copy of the document needs to be kept.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>printDocument</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>If true the saved document data will have an open action specifying that it should be printed. This is mostly only used to trigger print actions in the browser's PDF Viewer.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>downloadType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The type to download the file as, by default this is &quot;pdf&quot;. PDF and image files can only be downloaded as PDFs, but office files can be downloaded as &quot;pdf&quot; or as &quot;office&quot; if you want to get the original file without annotations.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>flags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The flags with which to save the document.
+Possible values include CoreControls.SaveOptions.REMOVE_UNUSED (remove unused objects during save) and CoreControls.SaveOptions.LINEARIZED (optimize the document for fast web view and remove unused objects). The default value is CoreControls.SaveOptions.REMOVE_UNUSED.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an array buffer containing PDF document bytes.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getLayersArray"><span class="type-signature"></span>getLayersArray()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Get an array describing the layers/OCG structure in the document.
+Each entry in the array is a layer entry the form {obj: string, visible: boolean, name: titleString, children: [layerEntry1, layerEntry2...]}.
+The children entry contains an array which may contain additional layer entries. Both the obj and visible are optional.
+See the layers sample for an example of how to use getLayersArray and setLayersArray.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to an array representing the layers in the PDF document</p>
+</div>
+
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getLinks"><span class="type-signature"></span>getLinks(pageIndex)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an array containing the links on the specified page of the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, that the links are on.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An array containing the links on the specified page of the document.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getMetadata"><span class="type-signature"></span>getMetadata()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an object with metadata associated with the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An object with document metadata</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getOfflineModeEnabled"><span class="type-signature"></span>getOfflineModeEnabled()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns whether offline mode is currently enabled or not.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPageCount"><span class="type-signature"></span>getPageCount()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns the number of pages in a document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The number of the pages in the current document.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPageInfo"><span class="type-signature"></span>getPageInfo(pageIndex)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an object containing the width and height of a page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, of the requested page.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An object representing the page info. Contains the properties &quot;width&quot; and &quot;height&quot;.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPageMatrix"><span class="type-signature"></span>getPageMatrix(pageIndex)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an object representing the transformation matrix for the page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, of the requested page.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An object representing the page matrix.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPDFCoordinates"><span class="type-signature"></span>getPDFCoordinates(pageIndex, x, y)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an object with the original x and y coordinates converted to PDF coordinates for the page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, that the coordinates are on</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The x coordinate</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The y coordinate</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An object with the x and y PDF coordinates</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPDFDoc"><span class="type-signature"></span>getPDFDoc()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns the PDFNet.PDFDoc object associated with the document. Note that the full API is required to be enabled
+and WebViewer Server cannot be enabled.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that resolves to the PDFDoc object.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="PDFNet.PDFDoc.html">PDFNet.PDFDoc</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getTextPosition"><span class="type-signature"></span>getTextPosition(pageIndex, textStartIndex, textEndIndex, onComplete(quads))</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Gets quads for each of the characters from start to end index.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, that the text is on.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>textStartIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The position where to start getting character quads from.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>textEndIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The position (up to, but not including) where to finish getting characters.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onComplete(quads)</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback to call when the text positions are ready.  quads is an array of objects with (x1,y1,x2,y2,x3,y3,x4,y4)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getType"><span class="type-signature"></span>getType()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Gets the type of the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The type of the document (xod, pdf, office, blackbox)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getViewerCoordinates"><span class="type-signature"></span>getViewerCoordinates(pageIndex, x, y)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an object with the original x and y PDF coordinates converted to Viewer coordinates for the page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, that the coordinates are on</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The x coordinate</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The y coordinate</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An object with the x and y Viewer coordinates</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getXODCoordinates"><span class="type-signature"></span>getXODCoordinates(pageIndex, x, y)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns an object with the original x and y PDF coordinates converted to XOD coordinates for the page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, that the coordinates are on</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The x coordinate</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The y coordinate</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An object with the x and y XOD coordinates</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="includesThumbnails"><span class="type-signature"></span>includesThumbnails()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Used to know if a document contains thumbnails.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>True if the document contains thumbnails.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="initOfflineDB"><span class="type-signature"></span>initOfflineDB(onComplete)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[XOD Document only] Initializes the offline database for use.  Must be called before any other offline mode functions are used.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onComplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The function that's called when the offline database is ready for use.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="insertBlankPages"><span class="type-signature"></span>insertBlankPages(insertBeforeThesePages [, width] [, height])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Inserts blank pages before the given list of pages. Both width and height are in units of PDF points.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>insertBeforeThesePages</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>array of page numbers before which to insert blanks</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>width of the blank pages to insert. By default the width is 612 PDF points.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>height of the blank pages to insert. By default the height is 792 PDF points.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an object with info for any pages inserted</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="insertPages"><span class="type-signature"></span>insertPages(sourceDocument, pageArray, insertBeforeThisPage)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Inserts a set of pages from the provided Document before a given page number. Note that this method will need to wait for the entire file to be downloaded before the change is applied.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceDocument</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Document</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>other document from which to take pages (cannot be the same document)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pageArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>array of page numbers to extract from the given document</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>insertBeforeThisPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>page number before which to insert the pages</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an object describing the updated state of the pages in the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="isDownloaded"><span class="type-signature"></span>isDownloaded()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[XOD Document only] Whether the document has already been downloaded for offline mode or not.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="loadAsync"><span class="type-signature"></span>loadAsync(partRetriever, callback(error), options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Initialize a Document so that it can be used to load page canvases.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>partRetriever</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">CoreControls.PartRetrievers.PartRetriever</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An instance of PartRetriever.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback(error)</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback to call when the Document has been initialized. If there is an error then the error parameter will be defined.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an object that can contain the following optional parameters</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>workerTransportPromise</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Promise</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Required for PDF viewing. A promise that will be resolved when a worker transport has been initialized. This can be created by calling CoreControls.initializeWorkerTransport</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>getPassword</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An method of the form function(callback) where callback is of the form function(password). getPassword will be called when a password is required to load a PDF document and should call the callback with the retrieved password.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extension</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An field used to specify the type of file being read. This is only relevant for PDF viewing and at the moment only works for certain image formats and .pdf</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="loadCanvasAsync"><span class="type-signature"></span>loadCanvasAsync(options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Loads a canvas for a particular page index.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An object specifying the options for loading the canvas. The following parameters should be properties on this object. The only non-optional parameter is pageIndex.</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, of the requested canvas.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>zoom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The zoom value to render the page at.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>getZoom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A function that returns the zoom value to render the page at. Use this instead of &quot;zoom&quot; if the value might change in the process of setting up the canvas.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pageRotation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="CoreControls.html#.PageRotation">CoreControls.PageRotation</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The rotation of the page. Valid values are CoreControls.PageRotation.e_0, CoreControls.PageRotation.e_90, CoreControls.PageRotation.e_180, CoreControls.PageRotation.e_270.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>getPageRotation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A function that returns the rotation of the page. Use this instead of &quot;pageRotation&quot; if the value might change in the process of setting up the canvas.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>finishedLoading</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A callback called after the list of page resources is retrieved. Return true if rendering should continue, false otherwise.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>acquireResources</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A function that returns whether resources need to be acquired or not, defaults to true.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resourcesLoaded</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A callback called after the page's resources have been loaded. Return true if rendering should continue, false otherwise.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>getPageTransform</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A function that returns the x and y values of the page's translation.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>drawComplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback to call when the canvas has been completely rendered.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>drawProgressive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback to call when the canvas has been partially rendered.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>renderRect</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An object with x1, y1, x2, y2 properties which is the partial rectangle to render of the entire page. The top left of the page is (0, 0).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>useProgress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Whether progressive rendering should be used or not.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An id that can be passed to the corresponding Pause, Resume or Cancel functions</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="loadPageText"><span class="type-signature"></span>loadPageText(pageIndex, onComplete(text))</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Gets all the text on the requested page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page number, zero-indexed, that the text is on.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onComplete(text)</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback to call when the text is ready</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="loadThumbnailAsync"><span class="type-signature"></span>loadThumbnailAsync(pageIndex, onLoadThumbnail(HTMLImageElement|HTMLCanvasElement))</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Loads a thumbnail image for a particular page.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The page index of the requested thumbnail (0-indexed).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onLoadThumbnail(HTMLImageElement|HTMLCanvasElement)</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback to call when the thumbnail has been retrieved.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The id of the request that can later be used for cancelling the request
+It is passed an image element if the .xod file contains thumbnails and a canvas element otherwise.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="movePages"><span class="type-signature"></span>movePages(pageArray, insertBeforeThisPage)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Moves the pages given in an array so they appear in sequence before a given page number. Note that this method will need to wait for the entire file to be downloaded before the change is applied.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the page numbers to move</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>insertBeforeThisPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>page number before which to insert the other pages</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an object describing the updated state of the pages in the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="pauseLoadCanvas"><span class="type-signature"></span>pauseLoadCanvas(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Pauses the loadCanvasAsync call corresponding to the passed in id</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id returned from the loadCanvasAsync call that will be paused.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="refreshTextData"><span class="type-signature"></span>refreshTextData()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Refresh the text data stored by the viewer.
+Useful if the text content of the document has changed, e.g. after a redaction.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removePages"><span class="type-signature"></span>removePages(pageArray)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Removes the given page numbers. Note that this method will need to wait for the entire file to be downloaded before the change is applied.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the page numbers to remove</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an object describing the updated state of the pages in the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="resumeLoadCanvas"><span class="type-signature"></span>resumeLoadCanvas(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Resumes the loadCanvasAsync call corresponding to the passed in id</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id returned from the loadCanvasAsync call that will be resumed.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="rotatePages"><span class="type-signature"></span>rotatePages(pageArray, rotation)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Adds the given rotation to the given pages. Note that this method will need to wait for the entire file to be downloaded before the change is applied.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array of the numbers of pages to rotate</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rotation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="CoreControls.html#.PageRotation">CoreControls.PageRotation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the page rotation to add</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a promise that resolves to an object describing the updated state of the pages in the document</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setLayersArray"><span class="type-signature"></span>setLayersArray(layerContext)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Update the array describing the layers/OCG structure in order
+to adjust which layers should be enabled or disabled.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>layerContext</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li>getLayersArray</li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setOfflineModeEnabled"><span class="type-signature"></span>setOfflineModeEnabled(enabled)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[XOD Document only] Sets whether offline mode is enabled or not.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The new value for whether offline mode is enabled or not.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setOverprintPreviewMode"><span class="type-signature"></span>setOverprintPreviewMode(mode)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[PDF Document only] Set the overprint preview mode to be used when rendering
+this document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mode</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The mode to use. Possible values are CoreControls.OverprintPreviewMode.OFF,
+CoreControls.OverprintPreviewMode.ON and CoreControls.OverprintPreviewMode.PDFX_ON</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setWatermark"><span class="type-signature"></span>setWatermark(options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Sets watermark to be added to the document</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Object that contains style/content of the watermark</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">doc.setWatermark({ &lt;br/&gt;  diagonal: { &lt;br/&gt;    fontSize: (number), &lt;br/&gt;    fontFamily: (string), &lt;br/&gt;    color: (string), &lt;br/&gt;    opacity: (number), &lt;br/&gt;    text: (string) &lt;br/&gt;  }, &lt;br/&gt;  header: { &lt;br/&gt;    fontSize: (number), &lt;br/&gt;    fontFamily: (string), &lt;br/&gt;    color: (string), &lt;br/&gt;    opacity: (number), &lt;br/&gt;    left: (string), &lt;br/&gt;    center: (string), &lt;br/&gt;    right: (string) &lt;br/&gt;  }, &lt;br/&gt;  footer: { &lt;br/&gt;    fontSize: (number), &lt;br/&gt;    fontFamily: (string), &lt;br/&gt;    color: (string), &lt;br/&gt;    opacity: (number), &lt;br/&gt;    left: (string), &lt;br/&gt;    center: (string), &lt;br/&gt;    right: (string) &lt;br/&gt;  } &lt;br/&gt;  custom: (function(ctx, pageIndex, pageWidth, pageHeight))});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="storeOffline"><span class="type-signature"></span>storeOffline(onComplete, onProgress)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>[XOD Document only] Downloads the document for offline viewing.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onComplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The function that's called when the document has finished being downloaded or the download has been cancelled</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onProgress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The function that's called on each update in progress of the download.
+The fraction downloaded is passed as a parameter. (eg 50% downloaded passes 0.5)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="unloadCanvasResources"><span class="type-signature"></span>unloadCanvasResources(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Unloads resources for the page associated with the loadCanvasAsync call corresponding to the passed in id.
+So if the loadCanvasAsync call had requested page 2 then page 2's resources will be cleaned up
+(as long as nothing else requires those resources). Note that the canvas element itself is not touched.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id returned from the loadCanvasAsync call that will have it's page resources unloaded</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="unloadResources"><span class="type-signature"></span>unloadResources()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Cleans up the resources associated with the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:colorSeparationAdded">colorSeparationAdded</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Triggered when a color separation is loaded and available on the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>evt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>jQuery's event object</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>colorData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An object with properties of the color separation</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the color separation</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rgb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array containing the R, G and B values for the separation</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on April 22nd 2019, 12:58:40 pm
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

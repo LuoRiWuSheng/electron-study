@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>渲染进程</h3>
+    <button id="crate">渲染进程新建 窗口</button>
+    <button id="tellMain">事件机制，通知主进程创建新窗口</button>
+    <script>
+
+        const { ipcRenderer } = require('electron')
+
+        // 渲染进程发送消息
+        let applyMsg = ipcRenderer.sendSync('synchronous-message', '同步')
+        console.log("接收主进程发过来的同步信息", applyMsg)
+
+        // 做事件监听，事件名叫  asynchronous-reply, 异步监听
+        ipcRenderer.on('asynchronous-reply', (event, arg) => {
+            console.log(arg) 
+        })
+        // 渲染进程发送异步信息
+        ipcRenderer.send('asynchronous-message', '异步信息', "异步-信息2", "异步信息-3")
+
+        let a = {
+            msg: "渲染进程发送异步信息",
+            type: "Object"
+        }
+        // 发送的信息可以是一个对象
+        ipcRenderer.send('asynchronous-2', a)
+
+        // 渲染进程向拥有webContentsId 的窗口发送信息
+        ipcRenderer.sendTo(1, "test-1", "我是参数")
+
+        // 给webview发送信息
+        let cc = ipcRenderer.sendToHost("to-webview", "你好,webview")
+        console.log("a", cc)
+
+        // setTimeout(()=> {
+        //     window.open("http://www.baidu.com")
+        // }, 1500)
+            //window.print()
+
+        let btn = document.querySelector('#crate')
+        btn.addEventListener("click", ()=> {
+            const {BrowserWindow} = require("electron").remote;
+
+            let win = new BrowserWindow({
+                width: 500,
+                heigh: 300
+            })
+            console.log(win)
+
+            win.loadURL("http://www.baidu.com")
+        })
+
+        let tellMain = document.querySelector('#tellMain')
+        tellMain.addEventListener("click", ()=> {
+            ipcRenderer.on("crated-result", (event, arg)=> {
+                console.log("创建的结果-->", arg)
+            })
+
+            let option = {
+                width: 300,
+                height: 200,
+                titleBarStyle: "default",
+                title: "渲染进程新建的窗口"
+            }
+            let initURL = "http://www.baidu.com"
+            ipcRenderer.send("please-create-new-window", option, initURL)
+        })
+    </script>
+
+</body>
+</html>

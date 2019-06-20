@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <link rel='stylesheet' href='../../style.css'>
+    <script src='../../../lib/webviewer.min.js'></script>
+    <script src='../../license-key.js'></script>
+    <script src='../../old-browser-checker.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Internationalization sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Languages</h2>
+      <form id='form'>
+        <input type='radio' name='form' id='en' checked />
+        <label for='en'>English</label>
+        <br />
+        <input type='radio' name='form' id='fr' />
+        <label for='fr'>French</label>
+        <br />
+        <input type='radio' name='form' id='zh_cn' />
+        <label for='zh_cn'>Chinese Simplified</label>
+      </form>
+      <hr />
+      <h1>Instructions</h1>
+      <p>Use the buttons to change languages. You will be able to see the button tooltips (in desktop) being updated into different languages.</p>
+    </aside>
+    <div id='viewer'></div>
+    <script src="../../menu-button.js"></script>
+    <script src='internationalization.js'></script>
+
+  </body>
+</html>

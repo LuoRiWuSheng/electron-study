@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html">
+    <script src="../../license-key.js"></script>
+    <script src='../../old-browser-checker.js'></script>
+
+</head>
+
+<body style="width:100%;height:100%;margin:0px;padding:0px;overflow:hidden">
+    <div id="viewer" style="height: 100%; overflow: hidden;"></div>
+    <script>
+    var deckjsFrame = document.createElement('iframe');
+    deckjsFrame.src = 'boilerplate.html#d=newsletter.pdf';
+    deckjsFrame.frameBorder = 0;
+    deckjsFrame.width = '100%';
+    deckjsFrame.height = '100%';
+    deckjsFrame.setAttribute('allowfullscreen', true);
+    deckjsFrame.setAttribute('webkitallowfullscreen', true);
+    deckjsFrame.setAttribute('mozallowfullscreen', true);
+
+    document.getElementById('viewer').appendChild(deckjsFrame);
+    </script>
+</body>
+</html>

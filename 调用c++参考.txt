@@ -1,0 +1,27 @@
+extern 
+"C" 
+int __declspec(dllexport)
+	My_Test(char *a, int b, int c); 
+
+extern 
+"C" void __declspec(dllexport)
+	My_Hello(char *a, int b, int c);
+
+
+import ffi from 'ffi' // `ffi.Library`用于注册函数，第一个入参为DLL路径，最好为文件绝对路径 
+const dll = ffi.Library( './test.dll', {// My_Test是dll中定义的函数，两者名称需要一致 
+	
+	// [a, [b，c....]] a是函数出参类型，[b，c]是dll函数的入参类型     
+	My_Test: ['int', ['string', 'int', 'int']], // 可以用文本表示类型
+	// 更推荐用`ref.types.xx`表示类型，方便类型检查，`char*`的特殊缩写下文会说明   
+	My_Hello: [ref.types.void, ['string', ref.types.int, ref.types.int]] 
+}) 
+	//同步调用 
+	const result = dll.My_Test('hello', 3, 2) 
+	//异步调用 
+	dll.My_Test.async('hello', 3, 2, (err, result) => {     
+		if(err) {
+			//todo     
+		}     
+		return result 
+	})

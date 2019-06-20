@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <link rel='stylesheet' href='../../style.css'>
+    <script src='../../../lib/webviewer.min.js'></script>
+    <script src='../../license-key.js'></script>
+    <script src='../../old-browser-checker.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Offline sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Documents:</h2>
+      <ul id='documents'></ul>
+      <hr />
+      <h1>Instructions</h1>
+      <p>Use download buttons to download and cache files. After that, go offline by shutting down your local server and refresh. You will still be able to view the downloaded files and use WebViewer.</p>
+      <p>Please note that service worker is not supported in IE11.</p>
+    </aside>
+    <div id='viewer'></div>
+    <script src="../../menu-button.js"></script>
+    <script src='offline.js'></script>
+
+  </body>
+</html>

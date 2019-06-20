@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <link rel='stylesheet' href='../../style.css'>
+    <script src='../../../lib/webviewer.min.js'></script>
+    <script src='../../license-key.js'></script>
+    <script src='../../old-browser-checker.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">UI customization sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Header layout:</h2>
+      <input type='radio' name='header' id='default' checked />
+      <label for='default'>Default</label>
+      <br />
+      <input type='radio' name='header' id='reverse' />
+      <label for='reverse'>Reverse</label>
+      <br />
+      <h2>Features:</h2>
+      <input type='checkbox' id='text-selection' checked />
+      <label for='text-selection'>Text selection</label>
+      <br />
+      <input type='checkbox' id='annotations' checked />
+      <label for='annotations'>Annotations</label>
+      <br />
+      <input type='checkbox' id='notes-panel' checked />
+      <label for='notes-panel'>Notes panel</label>
+      <br />
+      <input type='checkbox' id='file-picker' />
+      <label for='file-picker'>File picker</label>
+      <br />
+      <input type='checkbox' id='print' checked />
+      <label for='print'>Print</label>
+      <br />
+      <input type='checkbox' id='download' checked />
+      <label for='download'>Download</label>
+      <br />
+      <h2>Individual elements:</h2>
+      <input type='checkbox' id='view-controls' checked />
+      <label for='view-controls'>View controls button</label>
+      <br />
+      <input type='checkbox' id='search' checked />
+      <label for='search'>Search button</label>
+      <br />
+      <input type='checkbox' id='pan-tool' checked />
+      <label for='pan-tool'>Pan tool button</label>
+      <br />
+      <input type='checkbox' id='page-nav' checked />
+      <label for='page-nav'>Page-nav overlay</label>
+      <br />
+      <h2>Theme:</h2>
+      <input type='radio' name='theme' id='light' checked />
+      <label for='light'>Light</label>
+      <br />
+      <input type='radio' name='theme' id='dark' />
+      <label for='dark'>Dark</label>
+      <br />
+      <hr />
+      <h1>Instructions</h1>
+      <p>Use the buttons to toggle header layout, features and individual elements.</p>
+    </aside>
+    <div id='viewer'></div>
+    <script src="../../menu-button.js"></script>
+    <script src='ui.js'></script>
+
+  </body>
+</html>

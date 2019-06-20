@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <link rel='stylesheet' href='../../style.css'>
+    <script src='../../../lib/webviewer.min.js'></script>
+    <script src='../../license-key.js'></script>
+    <script src='../../old-browser-checker.js'></script>
+  </head>
+  <body>
+    <header>
+      <div class="title sample">Page operations sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Edit a page</h2>
+      <select id='edit'></select>
+      <button id='rotate'>Rotate</button>
+      <button id='crop'>Crop</button>
+      <button id='delete'>Delete</button>
+      <br />
+      <h2>Move a page</h2>
+      <select id='move-from'></select> to <select id='move-to'></select>
+      <button id='move'>Apply</button>
+      <br />
+      <h2>Insert a blank page</h2>
+      <select id='insert-at'></select> <button id='insert'>Apply</button>
+      <br />
+      <h2>Merge another document</h2>
+      <input id='file-picker' type='file' accept='.pdf,.jpg,.jpeg,.png,.docx,.xlsx,.pptx,.md' />
+      <hr />
+      <h1>Instructions</h1>
+      <p>Use the dropdown to select a page number, and buttons to do page operations. Please note that this samples uses PDFNetJS.</p>
+    </aside>
+    <div id='viewer'></div>
+    <script src="../../menu-button.js"></script>
+    <script src='page-operations.js'></script>
+
+  </body>
+</html>
