@@ -43,7 +43,7 @@ console.log("应用是否打包-->", app.isPackaged)
  * 下面是主进程发送消息给渲染进程，或者接受渲染进程发送过来的消息
  * 
  * */ 
-// 发送异步消息
+// 主进程监听 渲染进程发送过来的 asynchronous-message 异步事件信息
  ipcMain.on("asynchronous-message", (event, arg)=> {
     console.log("主进程接受的信息-->",arg)
   
@@ -58,10 +58,13 @@ console.log("应用是否打包-->", app.isPackaged)
      *  event.frameId  返回一个整数，表示渲染进程的发送信息ID
      *  */ 
 
+     // event.reply 在 electron 2.0.0版本中是不存在的，在 electron 5.0.0中可用
+     // v2.0.0替代方案使用 event.sender.send("asynchronous-reply", "主进程收到信息")
+     // 主进程通过asynchronous-reply 事件，将信息通过【异步】的形式发送给渲染进程
     event.reply("asynchronous-reply", "主进程收到信息")
  })
 
- // 发送同步消息
+ // 主进程监听来自渲染进程的事件，synchronous-message， 该事件是【同步】的
  ipcMain.on("synchronous-message", (event, arg)=> {
      console.log("----------")
      //console.log(event)
@@ -72,6 +75,7 @@ console.log("应用是否打包-->", app.isPackaged)
         age: 12
     }
 
+    // 主进程直接将信息以【同步】的形式传递给渲染进程
     event.returnValue = obj
  })
 
