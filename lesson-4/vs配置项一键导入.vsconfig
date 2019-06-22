@@ -1,0 +1,13 @@
+{
+	"version": "1.0",
+	"components": [
+		"Microsoft.VisualStudio.Workload.VCTools",
+		"microsoft.visualstudio.component.vc.cmake.project",
+		"microsoft.visualstudio.component.testtools.buildtools",
+		"microsoft.component.vc.runtime.ucrtsdk",
+		"microsoft.visualstudio.component.windows81sdk",
+		"microsoft.visualstudio.component.vc.140",
+		"microsoft.visualstudio.component.node.build",
+		"microsoft.visualstudio.component.nuget"
+	]
+}
