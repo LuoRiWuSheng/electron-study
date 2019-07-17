@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .webview-area {
+            border: 1px solid #ddd;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h3>webview-print页面， 使用webView调用打印机</h3>
+
+    <div>
+        <a href="./index.html">回到主页</a>
+    </div>
+    <button id="webveiw-print">使用webview.print接口打印</button>
+    <button id="webiew-print-to-pdf">使用这个print-to-pdf接口打印</button>
+    
+    <hr>
+    <iframe src="1.pdf" plugins frameborder="0"></iframe>
+    <div class="webview-area">
+        <webview id="webview" src="print.html"  style="background: #ddd;" nodeintegration></webview>
+    </div>
+    <script>
+        const {app,ipcRenderer } = require("electron")
+        const { BrowserWindow } = require('electron').remote
+        let printList = []
+        let webview;
+        
+        webview = document.getElementById("webview")
+        let area = document.querySelector(".webview-area")
+        
+        const PDFWindow = require('electron-pdf-window')
+        const win = new BrowserWindow({ width: 800, height: 600 ,webPreferences: {
+            plugins: true
+        }})
+
+        PDFWindow.addSupport(win)
+        const path = require("path")
+        win.loadURL(path.resolve(__dirname, "1.pdf"))
+
+    
+        webview.addEventListener('dom-ready', () => {
+           
+            console.log('webiew dom-ready');
+          
+            ipcRenderer.send("getPrintList")
+            ipcRenderer.on("getPrintList", (event, data)=> {
+                printList = data;
+                console.log(data)
+                if(data[0].status !== 0) {
+                    alert("打印机故障")
+                    return
+                }
+              
+                let toPdf = document.querySelector("#webiew-print-to-pdf")
+                toPdf.addEventListener("click", ()=> {
+                    webview.printToPDF({
+                     deviceName: printList[1].name
+                    }, (err, data)=> {
+                        if(err) {
+                            alert(err, "打印报错")
+                            return
+                        }
+                    
+                    })
+                })
+               
+            })
+
+            webview.addEventListener("ipc-message", (event)=> {
+             
+
+                if(event.channel === "webview-print-do") {
+                    alert(222)
+                    webview.print({
+                        silent: true,
+                        printBackground: true,
+                        deviceName: printList[0].name
+                    })
+                }
+                
+            })
+
+        
+            let p = document.querySelector("#webveiw-print")
+            p.addEventListener("click", ()=> {
+                // 给webview里面发送信息
+                
+            })
+        });
+
+    </script>
+</body>
+</html>

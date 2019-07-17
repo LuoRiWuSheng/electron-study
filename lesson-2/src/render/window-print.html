@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>使用winow.print-调用打印机</h3>
+    <hr>
+    <div>
+        <a href="./index.html">回到主页</a>
+    </div>
+    <div style="margin-top: 30px">
+        <button id="print">打印</button>
+    </div>
+    <script>
+        document.querySelector("#print").addEventListener("click", ()=> {
+            window.print()
+        }, false)
+    </script>
+</body>
+</html>

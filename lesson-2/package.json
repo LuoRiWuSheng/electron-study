@@ -1,0 +1,17 @@
+{
+  "name": "lesson-2",
+  "version": "1.0.0",
+  "description": "主要演示打印功能，使用electron调用打印机的几种方式",
+  "main": "./src/main/main.js",
+  "scripts": {
+    "dev": "electron ./src/main/main.js",
+    "build:win32": "electron-builder --win --ia32 --dir"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^5.0.5",
+    "electron-pdf-window": "^1.0.12"
+  }
+}

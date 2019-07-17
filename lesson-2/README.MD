@@ -6,6 +6,11 @@
 - 使用webView调用打印机
 - 直接使用 window.print调用打印机
 
+**使用webView打印**
+
+
+
+
 ### 打印方式优劣比较
 
 

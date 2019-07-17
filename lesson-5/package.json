@@ -1,0 +1,17 @@
+{
+  "name": "lesson-5",
+  "version": "1.0.0",
+  "description": "- 基于 electron-pdf-window插件包的预览\r - 基于 webview的预览\r -",
+  "main": "./src/main/main.js",
+  "scripts": {
+    "dev": "electron ./src/main/main.js",
+    "build:win32": "electron-builder --win --ia32 --dir"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^5.0.5",
+    "electron-pdf-window": "^1.0.12"
+  }
+}

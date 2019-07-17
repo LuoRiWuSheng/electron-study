@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="a">使用electron-pdf-window 显示pdf</button>
+        <hr>
+        <div>
+            <h3>实现机制</h3>
+            <ul>
+                <li>通过创建一个新的窗口去实现</li>
+                <li>其内部还是使用pdf.js插件去做技术支撑</li>
+                <li>加载pdf地址可以是线上的http://XXXX.pdf也可以是本地文件file:// 协议的，但是本地的还是借助path包去做路径解析比较好</li>
+            </ul>
+        </div>
+        下面2个标签页不支持预览pdf
+
+        <div>
+            &lt;embed src="./1.pdf" type="application/pdf"&gt;&lt;/embed &gt;  
+            <br>
+            &lt;object data="./1.pdf" type="application/pdf"&gt; &lt;/object &gt; 
+        </div>
+        <h3>另一种是直接使用pdf.js显示pdf</h3>
+        <h4>注意： iframe在 electron 5.0高版本目前不支持显示pdf文件</h4>
+    </div>
+    <script>
+        const {
+            BrowserWindow
+        } = require('electron').remote
+
+        window.onload = ()=> {
+            let a = document.getElementById("a")
+
+            a.addEventListener("click", ()=> {
+                createWebView();
+            }, false)
+        }
+
+        function createWebView() {
+            webview = document.createElement("webview")
+            webview.setAttribute("nodeintegration", "")
+            let area = document.querySelector(".webview-area")
+
+            const PDFWindow = require('electron-pdf-window')
+            const win = new BrowserWindow({
+                width: 800,
+                height: 600,
+                webPreferences: {
+                    plugins: true
+                }
+            })
+
+            PDFWindow.addSupport(win)
+            const path = require("path")
+            win.loadURL(path.resolve(__dirname, "1.pdf"))
+
+            document.body.appendChild(webview)
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\Administrator\bin;C:\softForDIY\Git\Git\mingw64\bin;C:\softForDIY\Git\Git\usr\local\bin;C:\softForDIY\Git\Git\usr\bin;C:\softForDIY\Git\Git\usr\bin;C:\softForDIY\Git\Git\mingw64\bin;C:\softForDIY\Git\Git\usr\bin;C:\Users\Administrator\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\softForDIY\mongodb\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\softForDIY\Git\Git\cmd;C:\softForDIY\cmder\Cmder.exe;C:\softForDIY\svn\bin;C:\Users\Administrator\.windows-build-tools\python27;C:\Users\Administrator\.windows-build-tools\python27\Scripts;C:\softForDIY\jdk1.7.0_51\bin;C:\softForDIY\jdk1.7.0_51\jre\bin;C:\Program Files\nodejs;C:\Users\Administrator\.windows-build-tools\python27;C:\softForDIY\node\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Administrator\AppData\Roaming\npm\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Administrator\AppData\Roaming\npm\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\dotnet;C:\softForDIY\mongodb\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\softForDIY\Git\Git\cmd;C:\softForDIY\cmder\Cmder.exe;C:\softForDIY\svn\bin;C:\softForDIY\python-2.7.15;C:\softForDIY\node;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\softForDIY\mongodb\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\softForDIY\Git\Git\usr\bin\vendor_perl;C:\softForDIY\Git\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  8.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:96033:59)
+      at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:88394:38)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
+      at <anonymous>
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
