@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>检测是不是联网了</h3>
+    <hr>
+
+    <ul>
+        <li>1、在断开电脑网络连接的情况下，会触发下面的事件，重新连接也会触发online事件； 如果应用一开始就是联网的，是不会触发 online事件的</li>
+        <li>2、应用只管当前网络状态是不是连接，至于是不是可以连接上互联网，是不管的； 即使，笔记本连接的wifi是一个只开了热点，单没开移动流量的情况下，HTML5的online事件也会认定，属于联网状态</li>
+        <li>3、 现在想把这个封装成一个控件， 在后台监控，在主进程中知道是不是联网，可以通过 ipcRenderer  进程通讯，告诉主进程</li>
+    </ul>
+    <hr>
+    <p>online/ offline事件，兼容性没什么问题，大部分主流浏览器已经实现改机制</p>
+    <div>
+        <button id="queryCanUse">查看兼容性</button>
+    </div>
+    <iframe src="https://www.caniuse.com/#search=online" frameborder="0" width="100%" height="500" style="display:none"></iframe>
+    
+    <hr>
+    <div>
+        <ul>
+            <li>online/offline会从 document.body冒泡到document上，最后到window; 所以，可以用下面的方式进行事件的绑定；该事件一旦绑定，不可移除</li>
+            <li>document.addEventListener("online", ()=> {....})</li>
+            <li>document.body.addEventListener("online", ()=> {....})</li>
+            <li>window.addEventListener("online", ()=> {....})</li>
+            <li>在body标签写行内事件  body online="事件的回调"</li>
+        </ul>
+    </div>
+    <script>
+        const {ipcRenderer } = require("electron")
+
+        // 联网状态
+        let alertOnlineStatus = (event)=> {
+            //console.log(event)
+            // event.type === "online"
+            window.alert(navigator.onLine ? "联网": "没网络")
+
+            // 通过进程通讯，将是否联网告诉主进程
+            ipcRenderer.send("current-is-online", navigator.onLine)
+
+        }
+        // 离线状态
+        let offlineStatus = (event)=> {
+            //console.log(event)
+
+            // event.type === "offline"
+            window.alert(navigator.onLine ? "联网": "没网络")
+            // 通过进程通讯，将是否联网告诉主进程
+            ipcRenderer.send("current-is-online", navigator.onLine)
+        }
+        window.addEventListener("online", alertOnlineStatus)
+        window.addEventListener("offline", offlineStatus)
+        
+        let iframeEle = document.querySelector("iframe")
+        document.querySelector("#queryCanUse").addEventListener("click", function() {
+            // 获取当前iframe的显示状态
+            let isDisplay = iframeEle.style.display;
+           
+            if(isDisplay === "none") {
+                iframeEle.style.display = "block"
+                this.innerText = "隐藏兼容性"
+            } else {
+                iframeEle.style.display = "none"
+                this.innerText = "查看兼容性"
+            }
+        })
+
+        
+
+    </script>
+</body>
+</html>
