@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>b页面</title>
+</head>
+<body>
+    <h3>b页面，这个页面将通过 sessionStorage的方式，将信息传递到c页面</h3>
+    <ul>
+        <li><a href="./a.html">回到a.html页面</a></li>
+        <li><a href="./index.html">回到首页</a></li>
+        <li><button id="goPage">去 c页面，并将信息带过去</button></li>
+    </ul>
+    <div class="info">
+
+    </div>
+    <script>
+        // 拿到localStorage中的信息，并展示到上面的页面中
+        var fromAMsg =  localStorage.getItem("a")
+        fromAMsg = JSON.parse(fromAMsg)    
+
+        var oDiv = document.querySelector(".info")
+        var str = `<ul>
+            <li>来源--${fromAMsg.name}</li>
+            <li>数据类型-- ${fromAMsg.type}</li>
+            <li>数据创建时间--${fromAMsg.date}</li>`
+        
+        oDiv.innerHTML = str;
+
+
+        var oBtn = document.querySelector("#goPage")
+        oBtn.addEventListener("click", ()=> {
+            var data = {
+                msg: "我是b页面，通过 sessionStorage传递过来的",
+                type: "String",
+                date: (new Date().getFullYear()) + "-" +(new Date().getMonth()+1)+ "-" + (new Date().getDate())
+            }
+            sessionStorage.setItem("c", JSON.stringify(data))
+            window.location.href = "./c.html"
+        }, false)
+
+    </script>
+</body>
+</html>

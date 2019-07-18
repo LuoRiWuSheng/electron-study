@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>IndexedDB数据存储的演示</h3>
+    <hr>
+
+    <div>
+        <button id="add">新增</button>
+        <button id="read">读取数据</button>
+        <button id="oBtn2">读取所有数据</button>
+    </div>
+    <div>
+        <button id="oBtn3">更新一条数据</button>
+    </div>
+    <div>
+        <button id="oBtn4">删除一条数据</button>
+    </div>
+    <div><button id="dropDb">删除数据库</button></div>
+    <pre>
+    <b> 数据库实例对象:request.result</b>
+    {
+        name: "saveMoney", // 数据库名字
+        objectStoreNames: {
+            0: "person",
+            length: 1
+        },
+        onabort: null,
+        onclose: null,
+        onerror: null,
+        onversionchange: null,
+        version: 1 // 版本号
+    }
+    <hr>
+    <b>数据库打开的实例对象：event</b>
+    {
+        bubbles: false
+        cancelBubble: false
+        cancelable: false
+        composed: false
+        currentTarget: null
+        defaultPrevented: false
+        eventPhase: 0
+        isTrusted: true
+        path: []
+        returnValue: true
+        srcElement: IDBOpenDBRequest 
+            {
+                error: null
+                onblocked: null
+                onerror: (event)=> {…}
+                onsuccess: (event)=> {…}
+                onupgradeneeded: (event)=> {…}
+                readyState: "done"
+                result: IDBDatabase {....} 上面的那个数据库实例对象
+                source: null
+                transaction: null
+            }
+        target: IDBOpenDBRequest 
+            {
+                error: null
+                onblocked: null
+                onerror: (event)=> {…}
+                onsuccess: (event)=> {…}
+                onupgradeneeded: (event)=> {…}
+                readyState: "done"
+                result: IDBDatabase {....} 上面的那个数据库实例对象
+                source: null
+                transaction: null
+            }
+        timeStamp: 386.8050000000949
+        type: "success" // 数据库写入成功或者失败，type会标明的，也可以通过监听对应的事件得知
+    }
+
+    </pre>
+    <hr>
+    <h3>IDBObjectStore对象包含下面内容</h3>
+    <ul>
+        <li>autoIncrement boolean  是否开启自增</li>
+        <li>indexNames  对象 数据表哪几个字创建了索引</li>
+        <li>keyPath  主键是哪个属性</li>
+        <li>transaction 是一个 IDBTransaction对象</li>
+    </ul>
+    <hr>
+    <h3></h3>
+
+    <hr>
+   
+
+    <script>
+        // 打开数据库
+        let request = window.indexedDB.open("saveMoney", 1);
+
+        // request这个对象有3个事件error、success、upgradeneeded，分别监控数据库的运行情况
+        request.onerror = (event) => {
+            console.log("数据库打开报错", event)
+        }
+
+        // 上一次数据库打开没关闭，就会触发下面的事件
+        request.onblocked = ()=> {
+            console.log("上次数据库打开，没关闭,触发  onnlocked事件")
+        }
+
+        let db;
+
+        request.onsuccess = (event) => {
+            // 拿到数据库对象db
+            db = request.result
+            console.log("db数据库实例对象-->", db)
+            console.log("数据库打开成功", event)
+        }
+
+        // 数据库版本更新（一般是修改数据库表结构，新增，删除表，索引，主键）
+        request.onupgradeneeded = (event) => {
+            // 通过在open打开数据库的时候，跟新版本号，就会触发这个更新事件
+            // 重新更新这个数据库操作对象(数据库实例db)
+            db = event.target.result;
+            console.log("更新数据库", event)
+
+            // 第一次使用，没有仓库，新建表（新建对象仓库）
+            // 表名-- person
+            // 表主键 -- id
+            let objectStore;
+            // 触发更新事件时，检测一下，person表是不是存在
+            if (!db.objectStoreNames.contains("person")) {
+                objectStore = db.createObjectStore("person", {
+                    keyPath: 'id'
+                })
+
+                // 新建索引
+                // createIndex(索引名称， 索引属性，配置对象)
+                objectStore.createIndex("name", "name", {
+                    unique: false
+                })
+                objectStore.createIndex("email", "email", {
+                    unique: true
+                })
+            }
+        }
+
+
+        // 新增数据
+        let add = (random) => {
+            // 操作数据，新建一个事务，通过事务进行curd; 
+            // transaction 的入参(表名， 操作模式[读写readwrite,只读readonly]
+            let request = db.transaction(["person"], "readwrite")
+                .objectStore("person")
+                .add({
+                    id: random,
+                    name: "张三"+random,
+                    age: 22+random,
+                    email: random+"197802519@qq.com"
+                })
+
+            request.onsuccess = (event) => {
+                console.log("数据写入成功", event)
+            }
+
+            request.onerror = (event) => {
+                console.log("数据写入失败", event)
+            }
+        }
+
+        var oAddBtn = document.querySelector("#add")
+        oAddBtn.addEventListener("click", ()=> {
+            let random = parseInt(Math.random() * 10)
+            add(random)
+
+        }, false)
+
+        // 读取数据
+        let read = () => {
+            // 创建一个 事务
+            let transaction = db.transaction(["person"], "readonly")
+            // 通过objectStore方法 获取IDBObjectStore对象，该对象进行操作表
+            let objectStore = transaction.objectStore("person")
+            console.log("获取IDBObjectStore对象--》",objectStore)
+            let request = objectStore.get(1)
+
+            request.onerror = (event) => {
+                console.log("read方法， 事务失败", event)
+            }
+
+            request.onsuccess = (event) => {
+                console.log("request对象--》",request)
+                if (request.result) {
+                    console.log(`Name: ${request.result.name}`)
+                    console.log(`age: ${request.result.age}`)
+                    console.log(`email: ${request.result.email}`)
+                } else {
+                    console.log("未获取到数据")
+                }
+            }
+        }
+
+        let readBtn = document.querySelector("#read");
+        readBtn.addEventListener("click", read, false)
+
+        let readAllData = ()=> {
+            // 创建一个事务
+            let objectStore = db.transaction(["person"], "readonly").objectStore("person")
+            console.warn(objectStore)
+
+            // 读取所有数据，需要操作原型链上的一个方法  openCursor
+            // 然后再监听onsuccess 事件， openCursor是异步的，所以使用事件的形式进行通知
+
+            objectStore.openCursor().onsuccess = (event)=> {
+                // 通过 下面的形式  拿到数据
+                let cursor = event.target.result;
+
+                if(cursor) {
+                    // 这里可以理解为游标， 读取一个，然后往下走一个，读取一个往下挪动
+                    console.log(`Id:--》${cursor.key}`)
+                    console.log(`Name:--》${cursor.value.name}`)
+                    console.log(`Age:--》${cursor.value.age}`)
+                    console.log(`Email:--》${cursor.value.email}`)
+                    // 上面1条数据读取完毕，再读取下一条
+                    cursor.continue();
+                } else {
+                    console.log("读取多条数据时，没有数据了")
+                }
+             
+            }
+
+        }
+
+        // 读取所有数据
+        let oBtn2 = document.querySelector("#oBtn2")
+        oBtn2.addEventListener("click", readAllData, false)
+
+        let putOne = ()=> {
+            let request = db.transaction(["person"], "readwrite")
+                .objectStore("person")
+                .put({
+                    id: 1,
+                    name: "麻子",
+                    age: 102,
+                    email: "110.@qq.com"
+                })
+
+            request.onsuccess = ()=> {
+                console.log("更新数据成功")
+            }
+            
+            request.onerror = ()=> {
+                console.error("更新数据失败")
+            }
+        }
+
+        // 更新数据
+        let oBtn3 = document.querySelector("#oBtn3")
+        oBtn3.addEventListener("click", putOne, false)
+
+        // 删除一条数据
+        let removeOne = ()=> {
+            let request = db.transaction(["person"], "readwrite")
+                .objectStore("person")
+                .delete(1)
+            
+            request.onsuccess = (event)=> {
+                console.log("删除成功", event)
+            }
+            request.onerror = (event)=> {
+                console.error("删除失败", event)
+            }
+        }
+
+        let oBtn4 = document.querySelector("#oBtn4")
+        oBtn4.addEventListener("click", removeOne, false)
+
+
+        // 删除数据库
+        let dropDbFn = ()=> {
+            // 返回 IDBOpenDBRequest对象-- 这里删除一个不存在的数据库，并不会报错
+            let DBDeleteRequest = window.indexedDB.deleteDatabase("saveMoney")
+
+            // 通过事件，告知删除是否成功
+            DBDeleteRequest.onerror = ()=> {
+                console.error("删除 person数据库 失败")
+            }
+
+            DBDeleteRequest.onsuccess = ()=> {
+                console.log("删除 person数据库成功")
+
+            }
+        }
+       
+
+
+        let dropDb = document.querySelector("#dropDb")
+        dropDb.addEventListener("click", dropDbFn, false)
+    </script>
+</body>
+
+</html>

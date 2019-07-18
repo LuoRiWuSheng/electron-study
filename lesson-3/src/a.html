@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>a页面</title>
+</head>
+<body>
+    <h3>a页面</h3>
+    <div><a href="./b.html">跳转到b页面</a></div>
+    <div><a href="./index.html">跳转到index.html页面</a></div>
+    <div>
+        这个页面，存在一条数据
+        <p>我是a页面的数据</p>
+        现在通过 localStorage的方式，将这个数据传递到b页面
+    </div>
+    <script>
+        // 通过localStorage的方式存储一条信息
+        var data = {
+            name: "我是a页面的存储的数据",
+            type: "String",
+            date: (new Date().getFullYear()) + "-" +(new Date().getMonth()+1)+ "-" + (new Date().getDate())
+        }
+        localStorage.setItem("a", JSON.stringify(data))
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>通过sessionStorage的方式进行数据传递--通讯</h3>
+    <ul>
+        <li><a href="./b.html">回到b.html页面</a></li>
+        <li><a href="./index.html">回到首页</a></li>
+     </ul>
+    <div class="info">
+
+    </div>
+
+    <script>
+         // 拿到sessionStorage中的信息，并展示到上面的页面中
+         var fromAMsg =  sessionStorage.getItem("c")
+        fromAMsg = JSON.parse(fromAMsg)    
+
+        var oDiv = document.querySelector(".info")
+        var str = `<ul>
+            <li>来源--${fromAMsg.msg}</li>
+            <li>数据类型-- ${fromAMsg.type}</li>
+            <li>数据创建时间--${fromAMsg.date}</li>`
+        
+        oDiv.innerHTML = str;
+    </script>
+</body>
+
+</html>

@@ -10,6 +10,15 @@
     <h3>渲染进程</h3>
     <button id="crate">渲染进程新建 窗口</button>
     <button id="tellMain">事件机制，通知主进程创建新窗口</button>
+    
+    <div>
+        <ul>
+            <li><a href="./a.html">跳转到a.html，演示 localStorage通讯</a></li>
+            <li><a href="./b.html">跳转到b.html, 演示 sessionStorage通讯</a></li>
+            <li><a href="./indexedDB.html">进入indexedDB演示界面</a></li>
+        </ul>
+    </div>
+    
     <script>
 
         const { ipcRenderer } = require('electron')
