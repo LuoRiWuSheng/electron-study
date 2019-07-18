@@ -13,10 +13,18 @@
 - lesson-7 electron 禁用按键，快捷键
 - lesson-8 electron-vue 升级改造成基于 vue-cli 3.X的版本
 - [lesson-9](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-9) 检测当前网络环境是在线还是离线
-- lesson-10 electron 打包，源码隐藏
+- lesson-10 electron结合rem实现多种屏幕应用的适配实战
+- lesson-11 electron实现注册，登录效果；实现从第三方页面跳回当前的electron应用
+- lesson-12 electron实现粘贴、复制、剪切，监控剪切板变化，剪切板内容类似博客复制时附带小尾巴
+- lesson-13 定时关机，启动当前应用，控制window关机
+- lesson-14 系统崩溃、重启示例
+- lesson-20 electron 打包，源码隐藏
 
 
 ----
+
+**注：**
+>   未加超链接的都是正在编写的内容，come on ！！！
 
 ### 参考学习链接
 
