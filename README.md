@@ -12,7 +12,7 @@
 - lesson-6 electron自动更新，覆盖安装
 - lesson-7 electron 禁用按键，快捷键
 - lesson-8 electron-vue 升级改造成基于 vue-cli 3.X的版本
-- [lesson-9 electron]() 检测当前网络环境是在线还是离线
+- [lesson-9](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-9) 检测当前网络环境是在线还是离线
 - lesson-10 electron 打包，源码隐藏
 
 
