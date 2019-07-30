@@ -9,7 +9,7 @@
 - [lesson-3](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-3) 主要讲主进程与渲染进程通讯
 - lesson-4 调用动态库示例--正在整理 
 - [lesson-5](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-5) electron预览pdf文件的方式
-- lesson-6 electron自动更新，覆盖安装
+- [lesson-6](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-6) electron打包，源码隐藏、自动更新，覆盖安装
 - lesson-7 electron 禁用按键，快捷键
 - lesson-8 electron-vue 升级改造成基于 vue-cli 3.X的版本
 - [lesson-9](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-9) 检测当前网络环境是在线还是离线
@@ -18,8 +18,8 @@
 - lesson-12 electron实现粘贴、复制、剪切，监控剪切板变化，剪切板内容类似博客复制时附带小尾巴
 - lesson-13 定时关机，启动当前应用，控制window关机
 - lesson-14 系统崩溃、重启示例
-- lesson-20 electron 打包，源码隐藏
-
+- lesson-15 HTML5接口，调用摄像头，音频接口，实现拍照
+- lesson-16 程序调用屏幕保护，自定义屏保视频
 
 ----
 
