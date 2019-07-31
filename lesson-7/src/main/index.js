@@ -1,5 +1,7 @@
-const { app, BrowserWindow, globalShortcut, dialog, Menu, MenuItem, ipcMain } = require("electron")
+const { app, BrowserWindow, ipcMain, dialog, globalShortcut } = require("electron")
 const path = require("path")
+const electronLocalshortcut = require('electron-localshortcut');
+
 const getTheLock = app.requestSingleInstanceLock()
 
 let mainWindow = null;
@@ -21,31 +23,38 @@ if (!getTheLock) {
 }
 
 function createWindow () {
+
     mainWindow = new BrowserWindow({
-        width: 1000,
-        height: 600,
         webPreferences: {
-            devTools: true,
             nodeIntegration: true,
-            webviewTag: true
+            devTools: true
         }
     })
 
-    mainWindow.webContents.openDevTools({
-        mode: "bottom"
-    })
-
     mainWindow.webContents.loadURL(path.resolve(__dirname, "../render/index.html"))
+
+    mainWindow.webContents.openDevTools({
+        type: "bottom"
+    })
+    mainWindow.show();
+    mainWindow.focus();
+
+    try {
+        // 检测这个按键是不是被注册，直接抛出异常
+        // window键位 ,单独的 alt,ctrl,等都会直接报错
+        //console.log(globalShortcut.isRegistered("Alt"))
+    } catch(e) {
+        console.log(e)
+    }
+
+     // 使用这个包，注册快捷键需要在 ready 事件之后
+    registerShortCut()
 
     mainWindow.on("close", () => {
         mainWindow = null;
         app.quit()
     })
 
-
-    registerShortCat()
-
-    registerMune()
 }
 
 app.on("activete", () => { // mac才会执行这里,window没有
@@ -63,80 +72,48 @@ app.on('browser-window-focus', () => {
     //console.log("focus")
 })
 
-// 注册全快捷键
-function registerShortCat () {
-    // 检测某个键位是否冲突
-    /*
-   try {
-    console.log(globalShortcut.isRegistered("Super"))
-   } catch(e) {
-    console.log(e)
-   }
-    globalShortcut.register('J', () => {
-        console.log('按键')
-        return false
+
+// 注册本地快捷键，而不是全局的
+let registerShortCut = () => {
+    electronLocalshortcut.register(mainWindow, 'CmdOrCtrl+5', () => {
+        // 在electron 5.0.x版本 showMessageBox会返回一个整数
+        // 在electron 6.x 版本中返回的是 promise
+            /**
+             *  { response: 0, checkboxChecked: false } // 表示点击了 确定按钮
+             *  { response: 1, checkboxChecked: false }  表示点击了  取消按钮
+             */
+
+        dialog.showMessageBox({
+            title: "帮助",//信息提示框标题
+            message: "localshortcut- 通过 ctrl+5注册",//信息提示框内容
+            buttons: ["确定", "取消", "小样"],//下方显示的按钮
+            noLink: true, //win下的样式
+            type: "info",//图标类型
+            detail: "额外的信息"
+        }).then(clickIndex=> {
+            console.log("当前点击的按钮索引--整数--》", clickIndex)
+        }).catch(e=> {
+            console.log("87", e)
+        });
+
+        
+    });
+
+    // 注册成功，控制台返回 1
+    electronLocalshortcut.register(mainWindow, "Ctrl+A", () => {
+        console.log(1)
     })
+    
+    // true
+    console.log( electronLocalshortcut.isRegistered(mainWindow,'Ctrl+A'));  
+    
 
-    globalShortcut.register('Shift+A', () => {
-        console.log('check-all')
-    })
-
-    globalShortcut.register("Super", ()=>{
-        console.log("win键盘")
-    })
-    */
-
-
+    // 判断某个快捷键是不是被注册了
+    console.log("window键位被注册了吗--》", electronLocalshortcut.isRegistered(mainWindow, "Ctrl+A"))
+    
+    // 清除所有的 本地快捷键
+    //console.log("只卸载 CmdOrCtrl+5这个快捷键", electronLocalshortcut.unregister(mainWindow,"Ctrl+A"))
+    // 返回的就是 undefined
+   console.log("卸载所有的本地快捷键", electronLocalshortcut.unregisterAll(mainWindow))
+    
 }
-
-// 注册快捷键
-function registerMune () {
-    var template = [{
-        label: '编辑',
-        submenu: [{
-            label: '撤销',
-            accelerator: 'CmdOrCtrl+Z',
-            role: 'undo'
-        }, {
-            label: '重做',
-            accelerator: 'Shift+CmdOrCtrl+Z',
-            role: 'redo'
-        }, {
-            type: 'separator'
-        }, {
-            label: '复制',
-            accelerator: 'CmdOrCtrl+C',
-            role: 'copy'
-        }, {
-            label: '粘贴',
-            accelerator: 'CmdOrCtrl+V',
-            role: 'paste'
-        }]
-    }, {
-        label: '帮助',
-        role: 'help',
-        submenu: [{
-            label: '学习更多',
-            click: function () {
-                electron.shell.openExternal('http://electron.atom.io')
-            }
-        }]
-    }];
-    const menu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(menu)
-}
-
-ipcMain.on('sigShowRightClickMenu', (event) => {
-    //! 生成菜单
-    const menu = new Menu();
-    menu.append(new MenuItem({ label: 'Hello world' }));
-    menu.append(new MenuItem({ type: 'separator' }));
-    menu.append(new MenuItem({
-        label: 'Electron', click: () => {
-            Electron.shell.openExternal('https://www.baidu.com');
-        }
-    })
-    );
-    const win = BrowserWindow.fromWebContents(event.sender);
-    menu.popup(win);
-});

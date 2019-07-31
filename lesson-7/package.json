@@ -5,9 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "electron ./src/main/index.js"  
+    "dev": "electron ./src/main/index.js"
   },
   "dependencies": {
-    "electron": "^5.0.5"
+    "electron": "^6.0.0",
+    "electron-localshortcut": "^2.0.2"
   }
 }
