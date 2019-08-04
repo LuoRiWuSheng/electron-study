@@ -1,8 +1,8 @@
-version: 2.1.0
+version: 2.1.2
 files:
-  - url: test-build-2.1.0.exe
-    sha512: eKe8OpDH2sVsZVPmoBH0APa2eoY3TXYAacE//KdXHy8x8J/5he5CU0CFANoED2iTVacxB2ozkgG664nI58H96w==
-    size: 82840232
-path: test-build-2.1.0.exe
-sha512: eKe8OpDH2sVsZVPmoBH0APa2eoY3TXYAacE//KdXHy8x8J/5he5CU0CFANoED2iTVacxB2ozkgG664nI58H96w==
-releaseDate: '2019-07-29T10:00:15.916Z'
+  - url: test-build-2.1.2.exe
+    sha512: m88Yjn03EybrRwhc1+aVs9kiSjfjYbXlHzCm4oLqnqM8PC2KvFaIgkmFGWqFNXFPmC//0K3JlNCRGOkrpTWX+A==
+    size: 82867804
+path: test-build-2.1.2.exe
+sha512: m88Yjn03EybrRwhc1+aVs9kiSjfjYbXlHzCm4oLqnqM8PC2KvFaIgkmFGWqFNXFPmC//0K3JlNCRGOkrpTWX+A==
+releaseDate: '2019-08-04T08:27:39.087Z'

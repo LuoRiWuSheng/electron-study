@@ -1,6 +1,6 @@
 {
     "name": "lesson-6",
-    "version": "2.1.0",
+    "version": "2.1.2",
     "author": "luoriwusheng <1197802519@qq.com>",
     "description": "An electron-vue project",
     "license": null,
@@ -65,6 +65,7 @@
         }
     },
     "dependencies": {
+        "auto-launch": "^5.0.5",
         "axios": "^0.18.0",
         "electron-updater": "^4.1.2",
         "vue": "^2.5.16",
