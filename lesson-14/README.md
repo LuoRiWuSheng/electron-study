@@ -2,6 +2,8 @@
 
 *create time 2019-08-05  update time 2019-08-06*
 
+----
+
 ## 基本用法
 
 > 这个崩溃的事件，都是在 BrowserWindow的实例对象的webContents 上，所以，就需要看 webContents
@@ -14,6 +16,7 @@
 ```js
  mainWindow = new BrowserWindow({
     webPreferences: {
+        // 开启node
         nodeIntegration: true
     }
 })
@@ -78,7 +81,7 @@ router.post("/collectLogs", (req, res)=> {
     */
     console.log("日志崩溃信息记录")
     
-    console.log(req.body) // {} 空对象，这里确实不太明白什么原因
+    console.log(req.body) // {} 空对象，这里确实不太明白什么原因--用postman，测试，接收日志的接口是没问题的
 })
 
 ```
@@ -190,6 +193,29 @@ window.onload = ()=> {
 >   在使用 node 8.16.0, electron 4.0.1 是可以的，正常使用，可触发对应的 crash事件
 
 >   猜测，这多半是node底层的API发生了变化，毕竟electron只是一个壳子，最主要的还是node，所以我升级node版本，从 8.16.0 --> 10.16.1 版本， electron直接使用 electron 6.0.0, 虽然electron官方的标准配置是 electron 6.0.0 搭配 node 12.4.0， 还是失败了
+
+2. 在渲染进程中写抛出异常 new Error() 并不会让窗口崩溃
+3. 在渲染进程中写 死循环 ，可以触发 unresponsive 窗口未响应事件
+
+渲染进程 crash.html
+```js
+var i=0;
+document.querySelector("#test-hang").addEventListener("click", ()=> {
+    while(true) {
+        console.log(i)
+        i++;
+    }
+})
+
+```
+我的电脑配置
+- window10 
+- 12G运行内存
+- electron 4.2.8
+
+死循环，大概 1880次  再等5-10秒，就会触发 unresponsive 未响应事件； 每个人的配置多少有点差异，可以看到 console.log打印到多少后，就不再打印了
+
+### 版本差异
 
 以下搭配，在渲染进程中均不能触发  crashed 事件， 无法捕获窗口崩溃
 

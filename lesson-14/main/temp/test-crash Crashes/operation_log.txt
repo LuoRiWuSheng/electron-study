@@ -159,3 +159,21 @@ clients terminated :1
 dumps serviced :0
 dumps reported :0
 [7076:3532:0807/105743.225:VERBOSE1:crash_service_main.cc(100)] Session end. return code is 0
+[15936:18720:0807/120709.925:VERBOSE1:crash_service_main.cc(81)] Session start. cmdline is [--reporter-url=http://127.0.0.1:3000/collectLogs --application-name=test-crash "--crashes-directory=D:\github\electron\lesson-14\main\temp\test-crash Crashes" --v=1]
+[15936:18720:0807/120709.930:VERBOSE1:crash_service.cc(147)] window handle is 00000000003D0B8C
+[15936:18720:0807/120709.930:VERBOSE1:crash_service.cc(275)] pipe name is \\.\pipe\test-crash Crash Service
+dumps at D:\github\electron\lesson-14\main\temp\test-crash Crashes
+[15936:18720:0807/120709.931:VERBOSE1:crash_service.cc(279)] checkpoint is D:\github\electron\lesson-14\main\temp\test-crash Crashes\crash_checkpoint.txt
+server is http://127.0.0.1:3000/collectLogs
+maximum 128 reports/day
+reporter is electron-crash-service
+[15936:18720:0807/120709.931:VERBOSE1:crash_service_main.cc(95)] Ready to process crash requests
+[15936:13668:0807/120709.931:VERBOSE1:crash_service.cc(309)] client start. pid = 16632
+[15936:3512:0807/121517.574:VERBOSE1:crash_service.cc(318)] client end. pid = 16632
+[15936:3512:0807/121518.575:VERBOSE1:crash_service.cc(339)] zero clients. exiting
+[15936:18720:0807/121518.576:VERBOSE1:crash_service.cc(473)] session ending..
+[15936:18720:0807/121518.576:VERBOSE1:crash_service.cc(478)] clients connected :1
+clients terminated :1
+dumps serviced :0
+dumps reported :0
+[15936:18720:0807/121518.577:VERBOSE1:crash_service_main.cc(100)] Session end. return code is 0

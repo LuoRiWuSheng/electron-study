@@ -10,6 +10,9 @@
   
     <button  id="crash">点击我让crash.html渲染进程崩溃掉</button>
     <a href="javascript:process.hang()">点击我，窗口挂起</a>
+    <div>
+        <button id="test-hang">测试死循环会不会触发--窗口挂起事件</button>
+    </div>
     <script>
         document.querySelector("#crash").addEventListener("click", ()=> {
             alert(1)
@@ -18,8 +21,13 @@
         })
         console.log(process)
         
-        
-
+        var i=0;
+        document.querySelector("#test-hang").addEventListener("click", ()=> {
+            while(true) {
+                console.log(i)
+                i++;
+            }
+        })
        
     </script>
 </body>
