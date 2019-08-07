@@ -1,0 +1,15 @@
+{
+  "name": "lesson-14",
+  "version": "1.0.0",
+  "description": "electron崩溃API",
+  "main": "./main/main.js",
+  "license": "MIT",
+  "productName": "test-crash",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "dependencies": {
+    "electron": "4.2.8",
+    "electron-log": "^3.0.7"
+  }
+}

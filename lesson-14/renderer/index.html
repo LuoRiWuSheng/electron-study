@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>electron 测试崩溃</h3>
+
+    <button id="tell-main-crash">使用ipcRender，让主进程崩溃</button>
+
+
+    <div>顺便测试file协议发送一个ajax会出现什么</div>
+    <div>答案是，没什么限制，直接用就行</div>
+
+    <button id="bong-btn">点击我，让渲染进程崩溃</button>
+
+    <script src="./jquery.js"></script>
+    <script>
+        window.$ = window.jQuery = require("./jquery.js")
+        const {
+            BrowserWindow,
+            dialog,
+            
+        } = require("electron").remote;
+        const {ipcRenderer} = require("electron")
+        const path = require("path")
+        let win;
+
+        $(function () {
+
+            $("#bong-btn").on("click", () => {
+                const crashWinPath = path.join('file://', __dirname,
+                    'crash.html')
+                let win = new BrowserWindow({
+                    width: 1000,
+                    height: 320,
+                    webPreferences: {
+                        nodeIntegration: true,
+                        devTools: true
+                    }
+                })
+                win.webContents.openDevTools()
+                win.webContents.on('crashed', (event,killed) => {
+                 
+                    // 崩溃以后，可以在这里调用接口，发送日志等操作
+                    const options = {
+                        type: 'info',
+                        title: '渲染器进程崩溃',
+                        message: '这个进程已经崩溃.',
+                        buttons: ['重载', '关闭']
+                    }
+
+                    dialog.showMessageBox(options, (index) => {
+                        if (index === 0) win.reload()
+                        else win.close()
+                    })
+                })
+                
+                // 监听窗口的 未响应事件
+                win.on('unresponsive', ()=> {
+                    console.log("未响应")
+                    const options = {
+                        type: 'info',
+                        title: '渲染器进程挂起',
+                        message: '渲染器进程挂起.',
+                        buttons: ['重载', '关闭']
+                    }
+
+                    dialog.showMessageBox(options, (index) => {
+                        if (index === 0) {
+                            console.log("重载")
+                            win.reload()
+                        } else {
+                            win.close()
+                        }
+                    })
+                }) 
+
+
+                win.on('close', () => {
+                    win = null
+                })
+                win.loadURL(crashWinPath)
+                win.show()
+            })
+            
+
+            $("#tell-main-crash").on("click", mainCrash)
+
+
+
+            //testAjaxPromise()
+        })
+
+        function testAjaxPromise() {
+            $.ajax({
+                url: "http://127.0.0.1:3000/testPromise",
+                type: "GET"
+            }).done(function (res) {
+                // 这里面还是 ajax的3个返回参数
+                // 1、 数据
+                // 2、 textStatus   状态  success
+                // 3、 jqXHR 对象
+                console.log(arguments)
+                console.log(res)
+                alert("ajax-done")
+            }).fail(function (err) {
+                alert("ajax--fail")
+                console.log(err)
+
+            })
+        }
+    
+        function mainCrash() {
+            ipcRenderer.send("bong", "你崩溃掉")
+        }
+    </script>
+</body>
+
+</html>
