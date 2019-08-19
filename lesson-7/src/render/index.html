@@ -12,7 +12,12 @@
     首页
     <input type="text">
     <button id="a">点击</button>
+    <button id="readFile">读取当前目录下的文件</button>
     <script>
+        const fs = require("fs")
+        const path = require("path")
+        const iconvLite = require("iconv-lite")
+
         const {
             remote
         } = require('electron');
@@ -75,6 +80,19 @@
             Menu.setApplicationMenu(dockMenu);
 
         }
+        var readFileBtn =  document.querySelector("#readFile")
+        readFileBtn.addEventListener("click", ()=> {
+            console.log(path.resolve(__dirname, "1.txt"))
+            fs.readFile(path.resolve(__dirname, "1.txt"), (err,data)=> {
+                if(err) {
+                    alert("读取文件报错")
+                    console.log(err)
+                    return
+                }
+
+                console.log(iconvLite.decode(data, "gbk"))
+            })
+        })
     </script>
 </body>
 

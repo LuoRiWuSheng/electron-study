@@ -1,10 +1,10 @@
 import { app, BrowserWindow, ipcMain, dialog } from 'electron'
 import { autoUpdater } from 'electron-updater'
 
+let AutoLaunchInstance;
 
 // 引入开机自启动包
 const AutoLaunch = require('auto-launch');
-
 
 /**
  * Set `__static` path to static files in production
@@ -60,7 +60,7 @@ app.on('activate', () => {
 
 // 检查是不是自动重启
 var checkIsAutoLaunch = () => {
-    let AutoLaunchInstance = new AutoLaunch({
+    AutoLaunchInstance = new AutoLaunch({
         name: app.getName()
     })
 
@@ -82,6 +82,8 @@ var checkIsAutoLaunch = () => {
             message: err
         })
     });
+
+    bindingAutoLaunch()
 }
 
 if (process.env.NODE_ENV !== 'development') {
@@ -137,5 +139,17 @@ function sendUpdateMessage (eventName, text) {
     mainWindow.webContents.send('message', {
         eventName,
         msg: text
+    })
+}
+
+function bindingAutoLaunch() {
+    // 手动设置--禁用开机自启
+    ipcMain.on("disable-auto-launch", ()=> {
+        AutoLaunchInstance.disable();
+    })
+
+    // 手动设置，开机自启动
+    ipcMain.on("enable-auto-launch", ()=> {
+        AutoLaunchInstance.enable()
     })
 }
