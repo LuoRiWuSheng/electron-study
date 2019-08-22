@@ -14,6 +14,7 @@
 
 目前只测试window平台打包，linux和 macos没测试； macos需要代码签名，签名过后才能发布到mac的应用商店； 签名自行参考其他文章，自动升级可以看下面的源码操作
 
+- electron-vue框架升级（升级的内容只是局部的，具体看下面的）
 
 
 
@@ -55,11 +56,26 @@ npm run build
 
 ### 针对原版本的 electron-vue 模板升级了以下的包
 
+> 首先，你要明确需要升级的内容，为了避免比较繁琐的升级方式，我采用npm-check 这个包
+
+全局安装
+```js
+npm install npm-check -g 
+```
+这个包主要是检测你当前项目的package.json文件中的开发依赖，生产依赖，哪些是需要升级的
+安装完成后， 使用如下
+
+```js
+// 列举所有需要升级的包
+npm-check -u
+```
+上下移动选择包，空格是选择是不是要升级当前的包，回车表示确认，直接安装你当前所有勾选星号的包
+
 - electron ^5.0.8
 - vue ^2.5.16
 - electron-builder ^21.1.5
 - electron-debug ^3.0.1
-- electron-devtools-installer ^2.2.4
+- electron-devtools-installer ^2.2.4 这个没啥用，可以不升级
 
 ### 注意事项
 
