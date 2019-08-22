@@ -1,7 +1,0 @@
-The icons used in this project:
-_________________________________________
-Glyphicons
-
-Jan Kovařík
-http://glyphicons.com
-_________________________________________

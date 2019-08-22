@@ -1,9 +1,0 @@
-@import '../../constants/popup';
-
-.ContextMenuPopup {
-  @extend %popup;
-
-  @include mobile {
-    display: none !important;
-  }
-}
