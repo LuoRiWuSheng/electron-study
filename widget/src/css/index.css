@@ -1,6 +1,0 @@
-html,
-body {
-    /*让整个html变成可拖拽对象*/
-   /* -webkit-app-region: drag; */
-    /* -webkit-app-region: nn-drap -- 不可拖拽 */
-}

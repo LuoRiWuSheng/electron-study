@@ -7,7 +7,7 @@
 - lesson-1 暂未补充
 - [lesson-2](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-2) 主要讲打印
 - [lesson-3](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-3) 主要讲主进程与渲染进程通讯
-- lesson-4 调用动态库示例--正在整理 
+- [lesson-4](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-4) 调用动态库示例
 - [lesson-5](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-5) electron预览pdf文件的方式
 - [lesson-6](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-6) electron打包，源码隐藏、自动更新，覆盖安装, 应用自启动， electron-vue框架升级
 - [lesson-7](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-7) electron 禁用按键，快捷键

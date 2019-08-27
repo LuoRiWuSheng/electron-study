@@ -1,0 +1,15 @@
+{
+  "name": "lesson-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ./main/index.js"
+  },
+  "dependencies": {
+    "electron": "4.2.9",
+    "electron-rebuild": "^1.8.6",
+    "ffi": "^2.3.0"
+  },
+  "devDependencies": {}
+}

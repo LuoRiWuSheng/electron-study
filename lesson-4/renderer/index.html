@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  首页
+  <pre>
+      /*
+      * var tools = ffi.Library(动态库的地址, {
+      *   动态库中暴露出的方法 不清楚，就问c++
+      *    fn1： [返回值类型, [入参1类型, 入参2类型]],
+      *    fn2： [返回值类型, [入参1类型, 入参2类型]]
+      * })
+      * 
+      * tools.fn1(传入参数)
+      * tools.fn2(传入参数)
+      * /
+
+  </pre>
+  <script>
+    // 使用node的path去解析解析出dll存放位置
+    const path = require('path')
+    // 引入ffi模块
+    const ffi = require('ffi');
+    console.log(ffi)
+
+    // 加载dll的库
+    var current = ffi.Library(path.resolve(__dirname, "hello.dll"), {
+      'Hello': ['int', ["String"]]
+    });
+    alert(current.Hello("你好")); // 这里参数不可不传
+  </script>
+</body>
+
+</html>
