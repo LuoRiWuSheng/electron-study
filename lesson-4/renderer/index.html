@@ -23,6 +23,7 @@
       * /
 
   </pre>
+  <button id="btn">调用接口</button>
   <script>
     // 使用node的path去解析解析出dll存放位置
     const path = require('path')
@@ -34,7 +35,11 @@
     var current = ffi.Library(path.resolve(__dirname, "hello.dll"), {
       'Hello': ['int', ["String"]]
     });
-    alert(current.Hello("你好")); // 这里参数不可不传
+
+    document.querySelector("#btn").addEventListener("click", ()=> {
+      alert(current.Hello("你好"))
+    })
+
   </script>
 </body>
 

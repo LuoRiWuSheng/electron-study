@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add ffi
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
   C:\softForDIY\cmder\bin;C:\softForDIY\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\softForDIY\cmder\vendor\conemu-maximus5;C:\softForDIY\cmder\vendor\conemu-maximus5\ConEmu;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\softForDIY\mongodb\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\softForDIY\Git\Git\cmd;C:\softForDIY\cmder\Cmder.exe;C:\Users\Administrator\.windows-build-tools\python27\;C:\Users\Administrator\.windows-build-tools\python27\Scripts;C:\softForDIY\jdk1.7.0_51\bin;C:\softForDIY\jdk1.7.0_51\jre\bin;C:\softForDIY\svn\bin;C:\softForDIY\flutter-1.8.2\bin;C:\Program Files\nodejs\;C:\Users\Administrator\.windows-build-tools\python27\;C:\softForDIY\node\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Administrator\AppData\Roaming\npm\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Administrator\AppData\Roaming\npm\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\softForDIY\mongodb\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\softForDIY\Git\Git\cmd;C:\softForDIY\cmder\Cmder.exe;C:\softForDIY\svn\bin;C:\softForDIY\python-2.7.15;C:\softForDIY\node\;C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\softForDIY\mongodb\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\softForDIY\Git\Git\mingw64;C:\softForDIY\Git\Git\usr\bin;C:\softForDIY\cmder
@@ -26,8 +26,9 @@ npm manifest:
       "start": "electron ./main/index.js"
     },
     "dependencies": {
-      "electron": "4.2.9",
-      "electron-rebuild": "^1.8.6"
+      "electron": "^6.0.4",
+      "electron-rebuild": "^1.8.6",
+      "ffi": "^2.3.0"
     },
     "devDependencies": {}
   }

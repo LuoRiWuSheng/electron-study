@@ -298,7 +298,14 @@ npm install XXX包
 - Can't find Python executable "xxx\python.exe", you can set the PYTHON env variable.
 > python环境变量没设置
 
+- 安装完新的插件包以后，如果报错之类的，请重新执行编译
+
 ## 参考资料
 [node-ffi使用指南](https://www.imooc.com/article/46931) from 慕课网
 [苏南大叔](https://newsn.net/)
 [node-gyp](https://github.com/nodejs/node-gyp#readme)
+
+## 以下的electron，如果你想要调用dll，请放弃，不行
+
+- electron 6.x以上
+- electron 5.x以上
