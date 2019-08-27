@@ -301,9 +301,9 @@ npm install XXX包
 - 安装完新的插件包以后，如果报错之类的，请重新执行编译
 
 ## 参考资料
-[node-ffi使用指南](https://www.imooc.com/article/46931) from 慕课网
-[苏南大叔](https://newsn.net/)
-[node-gyp](https://github.com/nodejs/node-gyp#readme)
+- [node-ffi使用指南](https://www.imooc.com/article/46931) from 慕课网
+- [苏南大叔](https://newsn.net/)
+- [node-gyp](https://github.com/nodejs/node-gyp#readme)
 
 ## 以下的electron，如果你想要调用dll，请放弃，不行
 
