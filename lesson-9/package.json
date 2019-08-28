@@ -1,6 +1,6 @@
 {
   "name": "lesson-9",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "检测electron是否在线",
   "main": "index.js",
   "license": "MIT",
