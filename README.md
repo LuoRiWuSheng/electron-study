@@ -4,7 +4,7 @@
 
 ### 目录结构说明(应用场景篇)
 
-- lesson-1 暂未补充
+- lesson-1 初学electron-起步篇-暂未补充
 - [lesson-2](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-2) 主要讲打印
 - [lesson-3](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-3) 主要讲主进程与渲染进程通讯
 - [lesson-4](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-4) 调用动态库示例
@@ -20,6 +20,10 @@
 - [lesson-14](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-14) 系统崩溃、重启示例
 - [lesson-15](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-15) HTML5接口，调用摄像头，音频接口，实现拍照
 - lesson-16 程序调用屏幕保护，自定义屏保视频
+- lesson-17 屏幕截图、标注
+- lesson-18 录制音频,上传音频到后台
+- lesson-19 向webview中注入脚本
+- lesson-20 electron打包，图标定制，自定义安装位置，更新
 
 
 ----
