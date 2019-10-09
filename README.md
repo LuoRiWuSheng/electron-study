@@ -24,6 +24,8 @@
 - lesson-18 录制音频,上传音频到后台
 - lesson-19 向webview中注入脚本
 - lesson-20 electron打包，图标定制，自定义安装位置，更新
+- lesson-21 electron透明窗口
+- [lesson-22](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-22) electron-vue 单页应用，模拟chrome搜索栏，方便开发环境快速调试
 
 
 ----
