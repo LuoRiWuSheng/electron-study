@@ -47,6 +47,7 @@
 
 ### 参考学习链接
 
-[vue-electron实战](https://github.com/jkchao/vue-electron.git)
-[vue-api-带demo的桌面软件]( https://github.com/demopark/electron-api-demos-Zh_CN.git)
-[CloudDisk-网盘小应用](https://github.com/zjinh/CloudDisk)
+- [vue-electron实战](https://github.com/jkchao/vue-electron.git)
+- [vue-api-带demo的桌面软件]( https://github.com/demopark/electron-api-demos-Zh_CN.git)
+- [CloudDisk-网盘小应用](https://github.com/zjinh/CloudDisk)
+- [贝壳云笔记客户端](https://github.com/Beatrice950201/eibk_client)
