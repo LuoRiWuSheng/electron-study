@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #content {
+      color: red;
+      font-size: 26px;
+      padding: 50px 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>第一个窗口</h3>
+  以下是接收的内容
+  <div id="content">
+
+  </div>
+  <div>
+    <button id="btn">发送一条消息到d.html</button>
+  </div>
+  <script>
+    const {ipcRenderer} = require('electron')
+    const {webContents, BrowserWindow } = require('electron').remote
+    let BrowserId;
+    let fromWindow;
+
+    // 拿到窗口的id
+    ipcRenderer.on("compute-factorial", (event, id)=> {
+      BrowserId = id
+      console.log(id)
+      fromWindow = BrowserWindow.fromId(id)
+    })
+
+    ipcRenderer.on('from-d-html-page', (event, arg)=> {
+      document.querySelector('#content').innerHTML = arg
+    })
+
+    
+  </script>
+</body>
+</html>

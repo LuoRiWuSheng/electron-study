@@ -6,7 +6,7 @@
 - 获取应用是否打包
 - 获取应用的打包路径
 - 判断当前窗口是什么类型
-- 渲染进程与渲染进程之间进行通讯(10种传递数据)
+- 渲染进程与渲染进程之间进行通讯(11种传递数据)
     + 通过 remote 进行通讯
     + 通过 localStorage (a页面传，b.html接)
     + 通过 sessionStorage (b页面传, c页面接)
@@ -17,6 +17,7 @@
     + webview 传递数据
     + postMessage跨源传参
     + 如果使用 vue全家桶，则可以使用 vuex进行数据管理，可以传递参数; 当然react也有数据管理的包
+    + 将数据写入文件
 
 **注意事项**
 
@@ -47,7 +48,9 @@
 ## 运行
 
 ```js
-    npm run dev
-    或者
-    yarn run dev
+    安装依赖
+    yarn 或者 npm install 
+    
+    运行
+    npm run dev  或者  yarn run dev
 ```

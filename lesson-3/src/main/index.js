@@ -9,7 +9,7 @@ function createWindow() {
 
     mainWin = new BrowserWindow({
         width: 800,
-        height: 400,
+        height: 900,
         webPreferences: {
             nodeIntegration: true,
             devTools: true,
@@ -17,7 +17,7 @@ function createWindow() {
         }
     })
 
-    mainWin.loadURL(path.resolve(__dirname, "index.html"))
+    mainWin.loadURL(path.resolve(__dirname, "../renderer/index.html"))
 
     mainWin.on("close", ()=> {
         mainWin = null;

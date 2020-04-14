@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>渲染进程与渲染进程之间通讯</title>
+  <style>
+    .p {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>渲染进程与渲染进程之间通讯</h3>
+  <a href="./index.html">返回主界面</a>
+  <hr>
+  <div>
+    <button id="btn-1">创建窗口-1</button>
+    <button id="btn-2">创建窗口-2</button>
+    <button id="getAllWin">获取所有已经打开的窗口</button>
+  </div>
+  <div>
+
+    <div class="p">
+      <button id="send-1">当前窗口--向---》 窗口1--- 发送消息</button>
+    </div>
+    <div class="p"> <button id="send-2">窗口1--向---》当前窗口 --- 发送消息</button></div>
+  </div>
+  <script>
+    const {
+      ipcRenderer
+    } = require('electron')
+    const {
+      BrowserWindow,
+
+      webContents
+    } = require("electron").remote
+    const remote = require('electron').remote
+    const app = require('electron').remote.app
+    const path = require('path')
+
+    let win_1 = null;
+    let win_2 = null;
+
+    let btn1 = document.querySelector("#btn-1")
+    let btn2 = document.querySelector("#btn-2")
+    let getAllWin = document.querySelector("#getAllWin")
+
+    btn1.addEventListener("click", () => {
+      // 避免重复开窗口
+      if (win_1) {
+        return;
+      }
+      win_1 = new BrowserWindow({
+        webPreferences: {
+          nodeIntegration: true
+        }
+      })
+
+      win_1.loadFile(path.resolve(__dirname, './son/1.html'))
+      win_1.webContents.openDevTools()
+
+      console.log("webContents的id", win_1.webContents.id)
+
+      win_1.webContents.on('did-finish-load', function () {
+        // 将这个id发到创建的页面，然后sendTo方法会使用到
+        win_1.webContents.send('compute-factorial', win_1.webContents.id)
+      })
+
+
+      win_1.on('close', () => {
+        win_1 = null
+      })
+    })
+
+    btn2.addEventListener("click", () => {
+      if (win_2) {
+        return;
+      }
+      win_2 = new BrowserWindow({
+        webPreferences: {
+          nodeIntegration: true
+        }
+      })
+      global.win_2;
+      win_2.loadURL(path.resolve(__dirname, './son/2.html'))
+
+      win_2.webContents.openDevTools()
+      win_2.on('close', () => {
+        win_2 = null
+      })
+
+    })
+
+    // 获取所有已经打开的窗口
+    getAllWin.addEventListener('click', () => {
+      let arr = remote.getAllWindows()
+
+      // 列举窗口的标题，看到对应的窗口
+
+      arr.forEach(win => {
+        console.log(win.getTitle())
+      });
+    })
+
+    // 发送消息
+    let send_1 = document.querySelector('#send-1')
+    let send_2 = document.querySelector('#send-2')
+    let send_3 = document.querySelector('#send-3')
+
+
+
+    // 当前窗口向 其他渲染窗口发送信息
+    send_1.addEventListener('click', () => {
+      win_1.webContents.send('from-d-html-page', '我是从d.html页面发送过来的一条消息')
+
+    })
+  
+  </script>
+</body>
+
+</html>
