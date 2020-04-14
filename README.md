@@ -26,7 +26,7 @@
 - lesson-20 electron打包，图标定制，自定义安装位置，更新
 - lesson-21 electron透明窗口
 - [lesson-22](https://github.com/LuoRiWuSheng/electron-study/tree/master/lesson-22) electron-vue 单页应用，模拟chrome搜索栏，方便开发环境快速调试
-
+- [lesson-23]() 集成富文本
 
 ----
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3>测试最大化，最小化</h3>
+  <div>
+    <button id="max">
+    最大化
+  </button>
+  <button id="min">最小化</button>  
+</div>
+  <script>
+    const {ipcRenderer} = require('electron')
+
+    const btn1 = document.querySelector('#max')
+    const btn2 = document.querySelector('#min')
+
+    btn1.addEventListener('click', ()=> {
+      ipcRenderer.send('change-frame', true)
+    })
+
+    btn2.addEventListener('click', ()=> {
+      ipcRenderer.send('change-frame', false)
+    })
+  </script>
+</body>
+</html>
