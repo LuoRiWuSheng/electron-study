@@ -8,7 +8,7 @@
     "dev": "electron ./src/main/index.js"
   },
   "dependencies": {
-    "electron": "^6.0.0",
+    "electron": "^9.1.0",
     "electron-localshortcut": "^2.0.2",
     "iconv-lite": "^0.5.0"
   }
