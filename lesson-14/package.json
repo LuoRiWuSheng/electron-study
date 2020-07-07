@@ -9,7 +9,7 @@
     "dev": "electron ."
   },
   "dependencies": {
-    "electron": "4.2.8",
+    "electron": "9.1.0",
     "electron-log": "^3.0.7"
   }
 }
