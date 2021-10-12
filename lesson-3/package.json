@@ -8,6 +8,6 @@
     "dev": "electron ./src/main/index.js"
   },
   "dependencies": {
-    "electron": "^5.0.4"
+    "electron": "^11.5.0"
   }
 }
